@@ -52,7 +52,7 @@
 		C92BAB1424B8BD2E0026567F /* Game.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Game.xcdatamodel; sourceTree = "<group>"; };
 		C9435F8124B9FB3F00C86CC1 /* GameEntity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameEntity+Extension.swift"; sourceTree = "<group>"; };
 		C948BC2024B9E440006ADC94 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		C961B00E24ADD112008AF274 /* fundamental-sub-one.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fundamental-sub-one.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C961B00E24ADD112008AF274 /* gamebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gamebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C961B01124ADD112008AF274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C961B01324ADD112008AF274 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C961B01724ADD113008AF274 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		C961B00524ADD112008AF274 = {
 			isa = PBXGroup;
 			children = (
-				C961B01024ADD112008AF274 /* fundamental-sub-one */,
+				C961B01024ADD112008AF274 /* gamebook */,
 				C961B00F24ADD112008AF274 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,12 +113,12 @@
 		C961B00F24ADD112008AF274 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C961B00E24ADD112008AF274 /* fundamental-sub-one.app */,
+				C961B00E24ADD112008AF274 /* gamebook.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C961B01024ADD112008AF274 /* fundamental-sub-one */ = {
+		C961B01024ADD112008AF274 /* gamebook */ = {
 			isa = PBXGroup;
 			children = (
 				C92BAB1924B8CC5B0026567F /* Models */,
@@ -133,7 +133,7 @@
 				C961B01F24ADD113008AF274 /* Info.plist */,
 				C961B01924ADD113008AF274 /* Preview Content */,
 			);
-			path = "fundamental-sub-one";
+			path = gamebook;
 			sourceTree = "<group>";
 		};
 		C961B01924ADD113008AF274 /* Preview Content */ = {
@@ -215,9 +215,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C961B00D24ADD112008AF274 /* fundamental-sub-one */ = {
+		C961B00D24ADD112008AF274 /* gamebook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C961B02224ADD113008AF274 /* Build configuration list for PBXNativeTarget "fundamental-sub-one" */;
+			buildConfigurationList = C961B02224ADD113008AF274 /* Build configuration list for PBXNativeTarget "gamebook" */;
 			buildPhases = (
 				C961B00A24ADD112008AF274 /* Sources */,
 				C961B00B24ADD112008AF274 /* Frameworks */,
@@ -227,9 +227,9 @@
 			);
 			dependencies = (
 			);
-			name = "fundamental-sub-one";
+			name = gamebook;
 			productName = "fundamental-sub-one";
-			productReference = C961B00E24ADD112008AF274 /* fundamental-sub-one.app */;
+			productReference = C961B00E24ADD112008AF274 /* gamebook.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -247,7 +247,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C961B00924ADD112008AF274 /* Build configuration list for PBXProject "fundamental-sub-one" */;
+			buildConfigurationList = C961B00924ADD112008AF274 /* Build configuration list for PBXProject "gamebook" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -260,7 +260,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C961B00D24ADD112008AF274 /* fundamental-sub-one */,
+				C961B00D24ADD112008AF274 /* gamebook */,
 			);
 		};
 /* End PBXProject section */
@@ -449,15 +449,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"fundamental-sub-one/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"gamebook/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "fundamental-sub-one/Info.plist";
+				INFOPLIST_FILE = gamebook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chathil.fundamental-sub-one";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.gamebook;
+				PRODUCT_NAME = gamebook;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -468,15 +469,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"fundamental-sub-one/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"gamebook/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "fundamental-sub-one/Info.plist";
+				INFOPLIST_FILE = gamebook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chathil.fundamental-sub-one";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.gamebook;
+				PRODUCT_NAME = gamebook;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -485,7 +487,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C961B00924ADD112008AF274 /* Build configuration list for PBXProject "fundamental-sub-one" */ = {
+		C961B00924ADD112008AF274 /* Build configuration list for PBXProject "gamebook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C961B02024ADD113008AF274 /* Debug */,
@@ -494,7 +496,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C961B02224ADD113008AF274 /* Build configuration list for PBXNativeTarget "fundamental-sub-one" */ = {
+		C961B02224ADD113008AF274 /* Build configuration list for PBXNativeTarget "gamebook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C961B02324ADD113008AF274 /* Debug */,
