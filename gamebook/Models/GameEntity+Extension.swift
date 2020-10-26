@@ -9,11 +9,11 @@
 import Foundation
 import CoreData
 
-extension GameEntity: Identifiable {
+extension GameEntity {
     
     var genresString: [String] {
         get {
-            return genres as? Array<String> ?? []
+            genres as? Array<String> ?? []
         }
         set {
             genres = newValue as NSArray
