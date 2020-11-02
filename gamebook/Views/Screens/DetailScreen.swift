@@ -20,7 +20,11 @@ struct DetailScreen: View {
         ScrollView {
             VStack(alignment: .leading) {
                 ZStack(alignment: .bottomLeading) {
-                    GamePoster(url: (likedGame?.backgroundUrl ??  gameData.game?.backgroundUrl ?? URL(string: "http://www.google.com"))! ).frame(height: 316).padding(.bottom)
+                    GamePoster(url: (likedGame?.backgroundUrl ??
+                                        gameData.game?.backgroundUrl ??
+                                        URL(string: "http://www.google.com" /*Replace with link that return image*/))!)
+                        .frame(height: 316)
+                        .padding(.bottom)
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             ForEach(game?.publisherNames ?? likedGame?.publishersString ?? [], id: \.self) {
@@ -32,16 +36,22 @@ struct DetailScreen: View {
                 
                 Text(game?.name ?? likedGame?.name ?? "No Name").font(.largeTitle).fontWeight(.bold).padding(.leading)
                 
-                HStack{
+                HStack {
                     Image("meta").resizable().frame(width: 26, height: 26, alignment: .center)
                     Text(String(game?.metacritic ?? likedGame?.metacritic ?? 0)).font(.body).bold()
-                    Image(systemName: "star.fill").resizable().scaledToFill().frame(width: 24, height: 24, alignment: .center).foregroundColor(Color("primary"))
+                    Image(systemName: "star.fill")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 24, height: 24, alignment: .center)
+                        .foregroundColor(Color("primary"))
                     Text(String(game?.gameRating ?? likedGame?.gameRating ?? "0/ 0")).font(.body).bold()
                 }.padding(.leading)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        Chip(text: game?.releaseDate ?? likedGame?.released ?? "No Date").lineLimit(1).padding(.leading).frame(minWidth: 126, alignment: .leading)
+                        Chip(text: game?.releaseDate ??
+                                likedGame?.released ??
+                                "No Date").lineLimit(1).padding(.leading).frame(minWidth: 126, alignment: .leading)
                         if game?.esrb != nil {
                             Chip(text: game!.esrb!)
                         }
@@ -54,15 +64,14 @@ struct DetailScreen: View {
                 Text(game?.descriptionRaw ?? likedGame?.descriptionRaw ?? "No Description").font(.body).padding()
                 
             }
-        }.onAppear{
-        self.gameData.loadGame()
-        
+        }.onAppear {
+            self.gameData.loadGame()
+            
         }.edgesIgnoringSafeArea(.all)
         
     }
     
 }
-
 
 struct GamePoster: View {
     @Environment(\.imageCache) var cache: ImageCache
@@ -70,7 +79,11 @@ struct GamePoster: View {
     
     var body: some View {
         GeometryReader {geo in
-            AsyncImage(url: self.url, cache: self.cache, placeholder: DetailImagePlaceholder()).scaledToFill().frame(width: geo.size.width, height: 316, alignment: .center)
+            AsyncImage(url: self.url,
+                       cache: self.cache,
+                       placeholder: DetailImagePlaceholder())
+                .scaledToFill()
+                .frame(width: geo.size.width, height: 316, alignment: .center)
         }
     }
 }
@@ -83,6 +96,8 @@ struct DetailImagePlaceholder: View {
 
 struct DetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        DetailScreen(gameData: GameItemData(gameService: GameStore.shared, gameId: Game.fakeGame.id, game: Game.fakeGame))
+        DetailScreen(gameData: GameItemData(gameService: GameStore.shared,
+                                            gameId: Game.fakeGame.id,
+                                            game: Game.fakeGame))
     }
 }

@@ -29,7 +29,7 @@ struct FavoriteScreen: View {
     }
     
     var body: some View {
-        ZStack(alignment: .bottomTrailing){
+        ZStack(alignment: .bottomTrailing) {
             List {
                 ForEach(result, id: \.uuid) { (game: GameEntity) in
                     NavigationLink(destination: DetailScreen(gameData:

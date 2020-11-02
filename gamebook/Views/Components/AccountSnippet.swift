@@ -13,7 +13,7 @@ struct AccountSnippet: View {
     let user: User
     var body: some View {
         VStack(alignment: .leading) {
-            NavigationLink(destination: AboutScreen(user: user), tag: 1, selection: $action){
+            NavigationLink(destination: AboutScreen(user: user), tag: 1, selection: $action) {
                 EmptyView()
             }.frame(width: 0)
             HStack(alignment: .top) {
@@ -28,7 +28,9 @@ struct AccountSnippet: View {
                     HStack {
                         Text("Account").font(.body).foregroundColor(.black)
                         Image(systemName: "chevron.right.2").foregroundColor(Color(.black))
-                    }.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16)).background(Color("primary")).clipShape(Capsule())
+                    }.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+                    .background(Color("primary"))
+                    .clipShape(Capsule())
                 }
                 Spacer()
                 Image(user.photo).resizable().frame(width: 120, height: 120).clipShape(Circle())

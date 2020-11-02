@@ -17,15 +17,17 @@ struct HomeScreen: View {
     @State private var showingActionSheet = false
     
     var body: some View {
-       return NavigationView {
+        return NavigationView {
             List {
                 AccountSnippet(user: User.fakeUser).padding(EdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 0))
                 FavoriteRow()
                 FindRow()
                 ForEach(gameData.games) {(game) in
-                    NavigationLink(destination: DetailScreen(gameData:
-                        GameItemData(gameService: GameStore.shared, gameId: game.id, game: game), likedGame: nil)) {
-                            GameRow(game: game, likedGame: nil).environmentObject(self.gameData)
+                    NavigationLink(destination: DetailScreen(gameData: GameItemData(gameService: GameStore.shared,
+                                                                                    gameId: game.id,
+                                                                                    game: game),
+                                                             likedGame: nil)) {
+                        GameRow(game: game, likedGame: nil).environmentObject(self.gameData)
                     }
                 }
             }
@@ -35,10 +37,11 @@ struct HomeScreen: View {
             .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
                 self.navBarHidden = true
             }.gesture(DragGesture().onChanged {_ in
-                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                UIApplication.shared
+                    .sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
             })
-                .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
-                    self.navBarHidden = false
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+                self.navBarHidden = false
             }
         }.phoneOnlyStackNavigationView()
     }
@@ -46,6 +49,9 @@ struct HomeScreen: View {
 
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScreen().environmentObject(GameHomeData(gameService: GameStore.shared, context: CoreDataStack(containerName: "LikedGame").viewContext)).environment(\.colorScheme, .dark)
+        HomeScreen().environmentObject(
+            GameHomeData(gameService: GameStore.shared,
+                         context: CoreDataStack(containerName: "LikedGame").viewContext))
+            .environment(\.colorScheme, .dark)
     }
 }

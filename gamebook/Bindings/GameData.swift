@@ -12,9 +12,9 @@ import CoreData
 final class GameHomeData: ObservableObject {
     private let gameService: GameService
     private let context: NSManagedObjectContext
-    @Published var error: String? = nil
+    @Published var error: String?
     @Published var isLoading: Bool = false
-    @Published var games:[Game] = []
+    @Published var games: [Game] = []
     @Published var likedIds: [Int32] = []
     
     init(gameService: GameService, context: NSManagedObjectContext) {
@@ -29,10 +29,10 @@ final class GameHomeData: ObservableObject {
         self.gameService.fetchGames(successHandler: {[weak self] (games) in
             self?.games = games.results
             self?.isLoading = false
-        }) { (error) in
+        }, errorHandler: { (error) in
             self.isLoading = false
             self.error = error.localizedDescription
-        }
+        })
     }
     
     func searchGames(query: String) {
@@ -41,9 +41,9 @@ final class GameHomeData: ObservableObject {
         self.gameService.searchGame(query: query, params: nil, successHandler: {[weak self] (response) in
             self?.isLoading = false
             self?.games = response.results
-            }, errorHandler: {[weak self] (error) in
-                self?.isLoading = false
-                self?.error = error.localizedDescription
+        }, errorHandler: {[weak self] (error) in
+            self?.isLoading = false
+            self?.error = error.localizedDescription
         })
     }
 }

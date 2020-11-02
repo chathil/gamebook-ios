@@ -25,7 +25,7 @@ public class GameStore: GameService {
     }()
     
     func fetchGames(successHandler: @escaping (Games) -> Void, errorHandler: @escaping (Error) -> Void) {
-        guard let urlComponents = URLComponents(string: baseUrl) else { errorHandler (GameError.invalidEndpoint)
+        guard let urlComponents = URLComponents(string: baseUrl) else { errorHandler(GameError.invalidEndpoint)
             return
         }
         
@@ -63,7 +63,10 @@ public class GameStore: GameService {
         }.resume()
     }
     
-    func searchGame(query: String, params: [String : String]?, successHandler: @escaping (Games) -> Void, errorHandler: @escaping (Error) -> Void) {
+    func searchGame(query: String,
+                    params: [String: String]?,
+                    successHandler: @escaping (Games) -> Void,
+                    errorHandler: @escaping (Error) -> Void) {
         
         guard var urlComponents = URLComponents(string: baseUrl) else {
             errorHandler(GameError.invalidEndpoint)
@@ -104,10 +107,11 @@ public class GameStore: GameService {
             }
             
         }.resume()
-        
     }
     
-    public func fetchGame(id: Int32, successHandler: @escaping (Game) -> Void, errorHandler: @escaping (Error) -> Void) {
+    public func fetchGame(id: Int32,
+                          successHandler: @escaping (Game) -> Void,
+                          errorHandler: @escaping (Error) -> Void) {
         guard let url = URL(string: "\(baseUrl)/\(id)") else {
             handleError(errorHandler: errorHandler, error: GameError.invalidEndpoint)
             return

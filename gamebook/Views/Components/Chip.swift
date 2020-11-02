@@ -13,7 +13,9 @@ struct Chip: View {
     var body: some View {
         Text(text).font(.caption)
             .fontWeight(.regular).foregroundColor(.black).lineLimit(1)
-            .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16)).background(Color("primary")).clipShape(Capsule())
+            .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+            .background(Color("primary"))
+            .clipShape(Capsule())
     }
 }
 

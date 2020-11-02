@@ -13,8 +13,8 @@ struct FavoriteRow: View {
     @State private var action: Int? = 0
     
     var body: some View {
-         HStack{
-            NavigationLink(destination: FavoriteScreen(), tag: 1, selection: $action){
+         HStack {
+            NavigationLink(destination: FavoriteScreen(), tag: 1, selection: $action) {
                 EmptyView()
             }.frame(width: 0)
             GeometryReader { geo in
