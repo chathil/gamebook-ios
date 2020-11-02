@@ -11,7 +11,7 @@ import Combine
 final class GameItemData: ObservableObject {
     private let gameService: GameService
     
-    @Published var game: Game? = nil
+    @Published var game: Game?
     @Published var isLoading: Bool = false
     private let gameId: Int32
     
@@ -31,9 +31,9 @@ final class GameItemData: ObservableObject {
         gameService.fetchGame(id: gameId, successHandler: {[weak self] (game) in
             self?.game = game
             self?.isLoading = false
-        }) { (error) in
+        }, errorHandler: { (error) in
             self.isLoading = false
             print(error.localizedDescription)
-        }
+        })
     }
 }

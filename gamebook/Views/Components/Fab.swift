@@ -11,7 +11,13 @@ import SwiftUI
 struct Fab: View {
     let systemImage: String
     var body: some View {
-        Image(systemName: systemImage).foregroundColor(.black).padding(24).background(Color("primary")).cornerRadius(16).padding().shadow(color: Color("accent").opacity(0.6), radius: 16, x: 0, y: 0)
+        Image(systemName: systemImage)
+            .foregroundColor(.black)
+            .padding(24)
+            .background(Color("primary"))
+            .cornerRadius(16)
+            .padding()
+            .shadow(color: Color("accent").opacity(0.6), radius: 16, x: 0, y: 0)
     }
 }
 

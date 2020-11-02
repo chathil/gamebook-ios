@@ -10,10 +10,9 @@ import Foundation
 import CoreData
 
 extension GameEntity {
-    
     var genresString: [String] {
         get {
-            genres as? Array<String> ?? []
+            genres as? [String] ?? []
         }
         set {
             genres = newValue as NSArray
@@ -22,7 +21,7 @@ extension GameEntity {
     
     var publishersString: [String] {
         get {
-            return publishers as? Array<String> ?? []
+            return publishers as? [String] ?? []
         }
         set {
             publishers = newValue as NSArray
@@ -36,23 +35,21 @@ extension GameEntity {
     var genre: String {
         return genresString.first ?? "No Genre"
     }
-    
-    static func isLiked(context: NSManagedObjectContext, completion: @escaping([Int32]) -> ()) {
+    static func isLiked(context: NSManagedObjectContext, completion: @escaping([Int32]) -> Void) {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: GameEntity.entity().name ?? "Game")
         context.perform {
             do {
                 let results = try context.fetch(fetchRequest)
-                let ids = results.map {
-                    $0.value(forKeyPath: "id") as! Int32
-                }
-                completion(ids)
+                    .map {$0.value(forKeyPath: "id")}
+                completion(results as? [Int32] ?? [])
             } catch let error as NSError {
                 print("Could not fetch. \(error), \(error.userInfo)")
             }
+
         }
     }
     
-    static func delete(context: NSManagedObjectContext, id: Int32, completion: @escaping() -> () ) {
+    static func delete(context: NSManagedObjectContext, id: Int32, completion: @escaping() -> Void ) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: GameEntity.entity().name ?? "Game")
         fetchRequest.fetchLimit = 1
         fetchRequest.predicate = NSPredicate(format: "id == \(id)")

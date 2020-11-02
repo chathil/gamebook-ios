@@ -19,7 +19,14 @@ struct GameRow: View {
     
     var body: some View {
         HStack {
-            AsyncImage(url: game?.backgroundUrl ?? likedGame?.backgroundUrl, cache: cache, placeholder: ImagePlaceholder()).scaledToFill().frame(width: 112, height: 112, alignment: .center).clipped().padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 12))
+            AsyncImage(
+                url: game?.backgroundUrl ?? likedGame?.backgroundUrl,
+                cache: cache,
+                placeholder: ImagePlaceholder())
+                .scaledToFill()
+                .frame(width: 112, height: 112, alignment: .center)
+                .clipped()
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 12))
             
             VStack(alignment: .leading) {
                 Text(game?.name ?? likedGame!.name ?? "No Name")
@@ -29,23 +36,31 @@ struct GameRow: View {
                     Chip(text: game?.releaseDate ?? likedGame?.released ?? "No Date")
                     Chip(text: game?.genre ?? likedGame?.genre ?? "No Genre")
                 }.padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
-                HStack{
+                HStack {
                     LikeButton(game: self.game, likedGame: self.likedGame, context: self.context).padding(.trailing)
                     Image("meta").resizable().frame(width: 20, height: 20, alignment: .center)
                     Text(String(game?.metacritic ?? likedGame?.metacritic ?? 0)).font(.caption).bold()
-                    Image(systemName: "star.fill").resizable().scaledToFill().frame(width: 18, height: 18, alignment: .center).foregroundColor(Color("primary"))
+                    Image(systemName: "star.fill")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 18, height: 18, alignment: .center)
+                        .foregroundColor(Color("primary"))
                     Text(String(game?.gameRating ?? likedGame?.gameRating ?? "No Rating")).font(.caption).bold()
                 }
             }
             Spacer()
-        }.clipShape(RoundedRectangle(cornerRadius: 16.0)).padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+        }.clipShape(RoundedRectangle(cornerRadius: 16.0))
+        .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
     }
 }
 
 struct ImagePlaceholder: View {
     var body : some View {
         Image("imgplaceholder").resizable().scaledToFit(
-        ).background(Color(.darkGray)).frame(width: 112, height: 112, alignment: .center).clipped().padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 12))
+        ).background(Color(.darkGray))
+        .frame(width: 112, height: 112, alignment: .center)
+        .clipped()
+        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 12))
     }
 }
 

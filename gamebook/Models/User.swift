@@ -14,10 +14,8 @@ struct User {
     private let emailKey = "models.user.email"
     let photo = "me"
     
-    var fullName : String {
-        get {
-            firstName + " " + lastName
-        }
+    var fullName: String {
+        firstName + " " + lastName
     }
     
     var firstName: String {

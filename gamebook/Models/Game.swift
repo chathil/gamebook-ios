@@ -23,7 +23,6 @@ public struct Game: Codable, Identifiable {
     public let descriptionRaw: String?
     private let esrbRating: EsrbRating?
     private let publishers: [Publishers]?
-
     
     public var backgroundUrl: URL {
         return URL(string: backgroundImage ?? "https://api.rawg.io/api/games")!
@@ -35,7 +34,7 @@ public struct Game: Codable, Identifiable {
     
     public var genre: String {
         if let genres = genres {
-           return genres.isEmpty ? "No Genre" : genres[0].name
+            return genres.isEmpty ? "No Genre" : genres[0].name
         }
         return "No Genre"
     }
@@ -83,7 +82,17 @@ extension Game {
     }
     
     static var fakeGame: Game {
-        Game(id: 1, name: "Fake Game 2020", released: Date(), backgroundImage: "bgimg", rating: 1.0, ratingTop: 5.0, metacritic: 90, genres: [], descriptionRaw: nil, esrbRating: nil, publishers: nil)
+        Game(id: 1,
+             name: "Fake Game 2020",
+             released: Date(),
+             backgroundImage: "bgimg",
+             rating: 1.0,
+             ratingTop: 5.0,
+             metacritic: 90,
+             genres: [],
+             descriptionRaw: nil,
+             esrbRating: nil,
+             publishers: nil)
     }
     
 }

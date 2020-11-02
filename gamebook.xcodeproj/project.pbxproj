@@ -10,6 +10,7 @@
 		C906303A24BC8A4500EB4F98 /* AddGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303924BC8A4500EB4F98 /* AddGameScreen.swift */; };
 		C906303E24BCC87200EB4F98 /* EditProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303D24BCC87200EB4F98 /* EditProfileScreen.swift */; };
 		C906304024BCCA9400EB4F98 /* Fab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303F24BCCA9400EB4F98 /* Fab.swift */; };
+		C92A34422546C686001271EB /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C92A34412546C686001271EB /* .swiftlint.yml */; };
 		C92BAB0E24B8A79B0026567F /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BAB0D24B8A79B0026567F /* FavoriteScreen.swift */; };
 		C92BAB1024B8B2220026567F /* FavoriteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BAB0F24B8B2220026567F /* FavoriteRow.swift */; };
 		C92BAB1224B8BAF60026567F /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BAB1124B8BAF60026567F /* LikeButton.swift */; };
@@ -46,6 +47,7 @@
 		C906303924BC8A4500EB4F98 /* AddGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameScreen.swift; sourceTree = "<group>"; };
 		C906303D24BCC87200EB4F98 /* EditProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileScreen.swift; sourceTree = "<group>"; };
 		C906303F24BCCA9400EB4F98 /* Fab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fab.swift; sourceTree = "<group>"; };
+		C92A34412546C686001271EB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C92BAB0D24B8A79B0026567F /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
 		C92BAB0F24B8B2220026567F /* FavoriteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRow.swift; sourceTree = "<group>"; };
 		C92BAB1124B8BAF60026567F /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		C961B00524ADD112008AF274 = {
 			isa = PBXGroup;
 			children = (
+				C92A34412546C686001271EB /* .swiftlint.yml */,
 				C961B01024ADD112008AF274 /* gamebook */,
 				C961B00F24ADD112008AF274 /* Products */,
 			);
@@ -222,6 +225,7 @@
 				C961B00A24ADD112008AF274 /* Sources */,
 				C961B00B24ADD112008AF274 /* Frameworks */,
 				C961B00C24ADD112008AF274 /* Resources */,
+				C92A343F2546C541001271EB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -270,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92A34422546C686001271EB /* .swiftlint.yml in Resources */,
 				C961B01E24ADD113008AF274 /* LaunchScreen.storyboard in Resources */,
 				C961B01B24ADD113008AF274 /* Preview Assets.xcassets in Resources */,
 				C961B01824ADD113008AF274 /* Assets.xcassets in Resources */,
@@ -277,6 +282,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C92A343F2546C541001271EB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect\n    swiftlint \nelse \n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" \nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C961B00A24ADD112008AF274 /* Sources */ = {
@@ -450,8 +475,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"gamebook/Preview Content\"";
+				DEVELOPMENT_TEAM = DLJ5AWZAF9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = gamebook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -461,6 +488,7 @@
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.gamebook;
 				PRODUCT_NAME = gamebook;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -470,8 +498,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"gamebook/Preview Content\"";
+				DEVELOPMENT_TEAM = DLJ5AWZAF9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = gamebook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -481,6 +511,7 @@
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.gamebook;
 				PRODUCT_NAME = gamebook;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

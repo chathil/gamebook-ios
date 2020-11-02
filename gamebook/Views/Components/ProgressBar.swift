@@ -13,17 +13,18 @@ struct ProgressBar: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
-                Rectangle().frame(width: geometry.size.width , height: geometry.size.height)
+                Rectangle().frame(width: geometry.size.width, height: geometry.size.height)
                     .opacity(0.3)
                     .foregroundColor(Color("primary"))
                 
-                Rectangle().frame(width: min(CGFloat(self.progress)*geometry.size.width, geometry.size.width), height: geometry.size.height)
+                Rectangle()
+                    .frame(width: min(CGFloat(self.progress)*geometry.size.width, geometry.size.width),
+                           height: geometry.size.height)
                     .foregroundColor(Color("primary"))
                     .animation(.linear)
             }.frame(height: 8).cornerRadius(45.0)
         }
     }}
-
 
 struct ProgressBar2: View {
     
@@ -33,11 +34,13 @@ struct ProgressBar2: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
-                Rectangle().frame(width: geometry.size.width , height: geometry.size.height)
+                Rectangle().frame(width: geometry.size.width, height: geometry.size.height)
                     .opacity(0.3)
                     .foregroundColor(Color("primary"))
                 
-                Rectangle().frame(width: min(CGFloat(self.progress)*geometry.size.width, geometry.size.width), height: geometry.size.height)
+                Rectangle()
+                    .frame(width: min(CGFloat(self.progress)*geometry.size.width, geometry.size.width),
+                           height: geometry.size.height)
                     .foregroundColor(Color("primary"))
                     .animation(.linear)
             }.frame(height: 8).cornerRadius(45.0)

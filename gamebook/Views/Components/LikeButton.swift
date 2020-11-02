@@ -18,9 +18,14 @@ struct LikeButton: View {
     var context: NSManagedObjectContext
     
     var body: some View {
-        Image(systemName: (likedGame != nil || gameData.likedIds.contains(game?.id ?? 0)) ? "heart.fill" : "heart").resizable().scaledToFill().frame(width: 18, height: 18, alignment: .center).foregroundColor(Color("primary")).onTapGesture {
-            self.likeDislike()
-        }
+        Image(systemName: (likedGame != nil || gameData.likedIds.contains(game?.id ?? 0)) ? "heart.fill" : "heart")
+            .resizable()
+            .scaledToFill()
+            .frame(width: 18, height: 18, alignment: .center)
+            .foregroundColor(Color("primary"))
+            .onTapGesture {
+                self.likeDislike()
+            }
     }
     // MARK: repeated code
     private func likeDislike() {
@@ -45,7 +50,7 @@ struct LikeButton: View {
             } catch let error as NSError {
                 print(error.localizedDescription)
             }
-        }else {
+        } else {
             if let likedGame = self.likedGame {
                 if let idx = gameData.likedIds.firstIndex(of: likedGame.id) {
                     print(idx)

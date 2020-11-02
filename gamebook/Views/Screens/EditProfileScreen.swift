@@ -22,25 +22,58 @@ struct EditProfileScreen: View {
                 Spacer()
                 Image("profile").resizable().scaledToFill().frame(width: 186, height: 186)
             }.padding()
-            TextField("First Name...", text: $fName).font(.body).padding(24).clipShape(Rectangle()).frame(height: 56).background(Color("primary-black")).cornerRadius(16).padding([.leading, .trailing])
-            TextField("Last Name...", text: $lName).font(.body).padding(24).clipShape(Rectangle()).frame(height: 56).background(Color("primary-black")).cornerRadius(16).padding([.leading, .trailing])
-            TextField("Email...", text: $email).font(.body).padding(24).clipShape(Rectangle()).frame(height: 56).background(Color("primary-black")).cornerRadius(16).padding([.leading, .trailing])
+            TextField("First Name...", text: $fName)
+                .font(.body)
+                .padding(24)
+                .clipShape(Rectangle())
+                .frame(height: 56)
+                .background(Color("primary-black"))
+                .cornerRadius(16)
+                .padding([.leading, .trailing])
+            TextField("Last Name...", text: $lName)
+                .font(.body)
+                .padding(24)
+                .clipShape(Rectangle())
+                .frame(height: 56)
+                .background(Color("primary-black"))
+                .cornerRadius(16)
+                .padding([.leading, .trailing])
+            TextField("Email...", text: $email)
+                .font(.body)
+                .padding(24)
+                .clipShape(Rectangle())
+                .frame(height: 56)
+                .background(Color("primary-black"))
+                .cornerRadius(16)
+                .padding([.leading, .trailing])
             
             Spacer()
             
             GeometryReader { geo in
-                Text("Save").font(.body).fontWeight(.medium).foregroundColor(.black).padding(24).frame(width:geo.size.width).onTapGesture {
-                    self.user.firstName = self.fName
-                    self.user.lastName = self.lName
-                    self.user.email = self.email
-                    self.showingForm = false
-                }
+                Text("Save")
+                    .font(.body)
+                    .fontWeight(.medium)
+                    .foregroundColor(.black)
+                    .padding(24)
+                    .frame(width: geo.size.width)
+                    .onTapGesture {
+                        self.user.firstName = self.fName
+                        self.user.lastName = self.lName
+                        self.user.email = self.email
+                        self.showingForm = false
+                    }
             }.background(Color("primary")).cornerRadius(16).frame(height: 56).padding([.leading, .trailing])
             
             GeometryReader { geo in
-                Text("Cancle").font(.body).fontWeight(.medium).foregroundColor(.black).padding(24).frame(width:geo.size.width).onTapGesture {
-                    self.showingForm = false
-                }
+                Text("Cancel")
+                    .font(.body)
+                    .fontWeight(.medium)
+                    .foregroundColor(.black)
+                    .padding(24)
+                    .frame(width: geo.size.width)
+                    .onTapGesture {
+                        self.showingForm = false
+                    }
             }.background(Color("primary")).cornerRadius(16).frame(height: 56).padding([.leading, .trailing])
             
         }.onAppear {

@@ -9,14 +9,18 @@
 import SwiftUI
 
 struct FindRow: View {
-    @State private var searchText : String = ""
+    @State private var searchText: String = ""
     
     var body: some View {
-        VStack{
+        VStack {
             HStack {
                 VStack(alignment: .leading) {
                     Text("Find").font(.largeTitle).fontWeight(.bold)
-                    Text("Type the name of the game below to find it").font(.caption).fontWeight(.medium).foregroundColor(.gray).multilineTextAlignment(.leading)
+                    Text("Type the name of the game below to find it")
+                        .font(.caption)
+                        .fontWeight(.medium)
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.leading)
                         .fixedSize(horizontal: false, vertical: true)
                         .foregroundColor(.gray)
                 }
