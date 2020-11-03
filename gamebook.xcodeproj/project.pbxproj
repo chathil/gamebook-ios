@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95B6724B085EA0EB17D956F1 /* Pods_gamebook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24D3D25F62125C7EBCBCB08 /* Pods_gamebook.framework */; };
+		C9009080255045B100E90D75 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C900907F255045B100E90D75 /* RealmSwift */; };
+		C9009082255045B100E90D75 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C9009081255045B100E90D75 /* Realm */; };
+		C9009086255046CF00E90D75 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C9009085255046CF00E90D75 /* Alamofire */; };
+		C900908A2550478300E90D75 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C90090892550478300E90D75 /* SDWebImage */; };
+		C900908E25504AD500E90D75 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C900908D25504AD500E90D75 /* SDWebImageSwiftUI */; };
+		C900909225505BC300E90D75 /* Cleanse in Frameworks */ = {isa = PBXBuildFile; productRef = C900909125505BC300E90D75 /* Cleanse */; };
 		C906303A24BC8A4500EB4F98 /* AddGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303924BC8A4500EB4F98 /* AddGameScreen.swift */; };
 		C906303E24BCC87200EB4F98 /* EditProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303D24BCC87200EB4F98 /* EditProfileScreen.swift */; };
 		C906304024BCCA9400EB4F98 /* Fab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303F24BCCA9400EB4F98 /* Fab.swift */; };
@@ -44,6 +51,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		542B7409A2701E29009F2D5C /* Pods-gamebook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gamebook.debug.xcconfig"; path = "Target Support Files/Pods-gamebook/Pods-gamebook.debug.xcconfig"; sourceTree = "<group>"; };
+		A24D3D25F62125C7EBCBCB08 /* Pods_gamebook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gamebook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C15B06681E4BBF703D97C9 /* Pods-gamebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gamebook.release.xcconfig"; path = "Target Support Files/Pods-gamebook/Pods-gamebook.release.xcconfig"; sourceTree = "<group>"; };
 		C906303924BC8A4500EB4F98 /* AddGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameScreen.swift; sourceTree = "<group>"; };
 		C906303D24BCC87200EB4F98 /* EditProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileScreen.swift; sourceTree = "<group>"; };
 		C906303F24BCCA9400EB4F98 /* Fab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fab.swift; sourceTree = "<group>"; };
@@ -87,12 +97,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C900909225505BC300E90D75 /* Cleanse in Frameworks */,
+				C900908E25504AD500E90D75 /* SDWebImageSwiftUI in Frameworks */,
+				C9009086255046CF00E90D75 /* Alamofire in Frameworks */,
+				C9009082255045B100E90D75 /* Realm in Frameworks */,
+				C900908A2550478300E90D75 /* SDWebImage in Frameworks */,
+				C9009080255045B100E90D75 /* RealmSwift in Frameworks */,
+				95B6724B085EA0EB17D956F1 /* Pods_gamebook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B3BA406F6BD2FC74CA9D50D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A24D3D25F62125C7EBCBCB08 /* Pods_gamebook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F2AF4230B5D907756F9B4DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				542B7409A2701E29009F2D5C /* Pods-gamebook.debug.xcconfig */,
+				A6C15B06681E4BBF703D97C9 /* Pods-gamebook.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C92BAB1924B8CC5B0026567F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +144,8 @@
 				C92A34412546C686001271EB /* .swiftlint.yml */,
 				C961B01024ADD112008AF274 /* gamebook */,
 				C961B00F24ADD112008AF274 /* Products */,
+				7F2AF4230B5D907756F9B4DF /* Pods */,
+				2B3BA406F6BD2FC74CA9D50D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,6 +258,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C961B02224ADD113008AF274 /* Build configuration list for PBXNativeTarget "gamebook" */;
 			buildPhases = (
+				5A8631B31B7EB4A7FC3D0D5D /* [CP] Check Pods Manifest.lock */,
 				C961B00A24ADD112008AF274 /* Sources */,
 				C961B00B24ADD112008AF274 /* Frameworks */,
 				C961B00C24ADD112008AF274 /* Resources */,
@@ -232,6 +269,14 @@
 			dependencies = (
 			);
 			name = gamebook;
+			packageProductDependencies = (
+				C900907F255045B100E90D75 /* RealmSwift */,
+				C9009081255045B100E90D75 /* Realm */,
+				C9009085255046CF00E90D75 /* Alamofire */,
+				C90090892550478300E90D75 /* SDWebImage */,
+				C900908D25504AD500E90D75 /* SDWebImageSwiftUI */,
+				C900909125505BC300E90D75 /* Cleanse */,
+			);
 			productName = "fundamental-sub-one";
 			productReference = C961B00E24ADD112008AF274 /* gamebook.app */;
 			productType = "com.apple.product-type.application";
@@ -260,6 +305,13 @@
 				Base,
 			);
 			mainGroup = C961B00524ADD112008AF274;
+			packageReferences = (
+				C900907E255045B100E90D75 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				C9009084255046CF00E90D75 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C90090882550478300E90D75 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				C900908C25504AD500E90D75 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				C900909025505BC300E90D75 /* XCRemoteSwiftPackageReference "Cleanse" */,
+			);
 			productRefGroup = C961B00F24ADD112008AF274 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,6 +336,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5A8631B31B7EB4A7FC3D0D5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gamebook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C92A343F2546C541001271EB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,7 +373,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect\n    swiftlint \nelse \n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" \nfi\n";
+			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -473,6 +547,7 @@
 		};
 		C961B02324ADD113008AF274 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 542B7409A2701E29009F2D5C /* Pods-gamebook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -496,6 +571,7 @@
 		};
 		C961B02424ADD113008AF274 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6C15B06681E4BBF703D97C9 /* Pods-gamebook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -539,6 +615,82 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C900907E255045B100E90D75 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.1.1;
+			};
+		};
+		C9009084255046CF00E90D75 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
+		C90090882550478300E90D75 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.4;
+			};
+		};
+		C900908C25504AD500E90D75 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		C900909025505BC300E90D75 /* XCRemoteSwiftPackageReference "Cleanse" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/square/Cleanse";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C900907F255045B100E90D75 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C900907E255045B100E90D75 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		C9009081255045B100E90D75 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C900907E255045B100E90D75 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		C9009085255046CF00E90D75 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9009084255046CF00E90D75 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C90090892550478300E90D75 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C90090882550478300E90D75 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		C900908D25504AD500E90D75 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C900908C25504AD500E90D75 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		C900909125505BC300E90D75 /* Cleanse */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C900909025505BC300E90D75 /* XCRemoteSwiftPackageReference "Cleanse" */;
+			productName = Cleanse;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C92BAB1324B8BD2E0026567F /* LikedGame.xcdatamodeld */ = {
