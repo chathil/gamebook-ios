@@ -15,7 +15,8 @@ protocol LocalDataSourceProtocol: class {
     func getGames() -> AnyPublisher<[GameEntity], Error>
     func getGame(id: Int32) -> AnyPublisher<GameEntity?, Error>
     func addGames(from games: [GameEntity]) -> AnyPublisher<Bool, Error>
-    func likeDislike(game: GameEntity) -> AnyPublisher<[Int32], Error>
+    func likeDislike(game: GameEntity) -> AnyPublisher<[GameEntity], Error>
+    func initialLiked() -> AnyPublisher<[GameEntity], Error>
 }
 
 final class LocalDataSource: NSObject {
@@ -93,8 +94,8 @@ extension LocalDataSource: LocalDataSourceProtocol {
         }.eraseToAnyPublisher()
     }
     
-    func likeDislike(game: GameEntity) -> AnyPublisher<[Int32], Error> {
-        return Future<[Int32], Error> { completion in
+    func likeDislike(game: GameEntity) -> AnyPublisher<[GameEntity], Error> {
+        return Future<[GameEntity], Error> { completion in
             if let realm = self.realm {
                 let cachedGame: Results<GameEntity> = {
                     realm.objects(GameEntity.self).filter("id == \(game.id)")
@@ -113,10 +114,13 @@ extension LocalDataSource: LocalDataSourceProtocol {
                             realm.delete(alreadyLiked)
                         }
                     }
-                    let likedIds: Results<LikedGameIdEntity> = {
+                    let likedIds = {
                         realm.objects(LikedGameIdEntity.self)
+                    }().toArray(ofType: LikedGameIdEntity.self).map { $0.id }
+                    let likedGames: Results<GameEntity> = {
+                        realm.objects(GameEntity.self).filter("id IN %@", likedIds)
                     }()
-                    completion(.success(likedIds.toArray(ofType: LikedGameIdEntity.self).map { $0.id }))
+                    completion(.success(likedGames.toArray(ofType: GameEntity.self)))
                 } catch {
                     completion(.failure(DatabaseError.requestFailed))
                 }
@@ -126,13 +130,17 @@ extension LocalDataSource: LocalDataSourceProtocol {
         }.eraseToAnyPublisher()
     }
     
-    func likedIds() -> AnyPublisher<[Int32], Error> {
-        return Future<[Int32], Error> { completion in
+    func initialLiked() -> AnyPublisher<[GameEntity], Error> {
+        return Future<[GameEntity], Error> { completion in
             if let realm = self.realm {
-                let liked: Results<LikedGameIdEntity> = {
+                let likedIds = {
                     realm.objects(LikedGameIdEntity.self)
+                }().toArray(ofType: LikedGameIdEntity.self).map { $0.id }
+               
+                let likedGames: Results<GameEntity> = {
+                    realm.objects(GameEntity.self).filter("id IN %@", likedIds)
                 }()
-                completion(.success(liked.toArray(ofType: LikedGameIdEntity.self).map { $0.id }))
+                completion(.success(likedGames.toArray(ofType: GameEntity.self)))
             }
         }.eraseToAnyPublisher()
     }

@@ -23,13 +23,15 @@ struct HomeScreen: View {
             FindRow()
             ForEach(self.presenter.games, id: \.id) { game in
                 self.presenter.linkBuilder(for: game) {
-                    GameRow(game: game, isLiked: presenter.isLiked(game: game), like: { presenter.likeDislike(game: game) })
+                    GameRow(game: game, isLiked: presenter.likedIds.contains(game)) {
+                        presenter.likeDislike(game: game)
+                    }
                 }
             }
         }
         .onAppear {
-            self.presenter.initialLiked()
             self.presenter.getGames()
+            self.presenter.initialLiked()
         }
         .environment(\.defaultMinListRowHeight, 132).listSeparatorStyleNone()
         .navigationBarTitle("")

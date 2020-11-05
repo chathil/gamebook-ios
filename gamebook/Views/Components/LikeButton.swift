@@ -10,9 +10,9 @@ import SwiftUI
 import CoreData
 
 struct LikeButton: View {
-    @State var isLiked: Bool
+    let iconSystemName: String
     var body: some View {
-        Image(systemName: isLiked ? "heart.fill" : "heart")
+        Image(systemName: iconSystemName)
             .resizable()
             .scaledToFill()
             .frame(width: 18, height: 18, alignment: .center)

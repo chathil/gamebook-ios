@@ -12,7 +12,7 @@ import SDWebImageSwiftUI
 
 struct GameRow: View {
     let game: GameModel
-    @State var isLiked: Bool
+    let isLiked: Bool
     let like: () -> Void
     
     var body: some View {
@@ -38,7 +38,7 @@ struct GameRow: View {
                     Chip(text: game.genres[0])
                 }.padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
                 HStack {
-                    LikeButton(isLiked: isLiked).onTapGesture {
+                    LikeButton(iconSystemName: isLiked ? "heart.fill" : "heart").onTapGesture {
                         like()
                     }.padding(.trailing)
                     Image("meta").resizable().frame(width: 20, height: 20, alignment: .center)
@@ -54,16 +54,6 @@ struct GameRow: View {
             Spacer()
         }.clipShape(RoundedRectangle(cornerRadius: 16.0))
         .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
-    }
-}
-
-struct ImagePlaceholder: View {
-    var body : some View {
-        Image("imgplaceholder").resizable().scaledToFit(
-        ).background(Color(.darkGray))
-        .frame(width: 112, height: 112, alignment: .center)
-        .clipped()
-        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 12))
     }
 }
 

@@ -16,7 +16,7 @@ class HomePresenter: ObservableObject {
     private let homeUseCase: HomeUseCase
     
     @Published var games: [GameModel] = []
-    @Published var likedIds: [Int32] = []
+    @Published var likedIds: [GameModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
     
@@ -28,7 +28,7 @@ class HomePresenter: ObservableObject {
     func getGames() {
         loadingState = true
         homeUseCase.getGames().receive(on: RunLoop.main)
-            .sink(receiveCompletion: { completion in
+            .sink(receiveCompletion: { [self] completion in
                 switch completion {
                 case .failure: self.errorMessage = String(describing: completion)
                 case .finished: self.loadingState = false
@@ -40,7 +40,7 @@ class HomePresenter: ObservableObject {
     
     func likeDislike(game: GameModel) {
         homeUseCase.likeDislike(game: game).receive(on: RunLoop.main)
-            .sink(receiveCompletion: {_ in},
+            .sink(receiveCompletion: { _ in },
                   receiveValue: {
                     self.likedIds = $0
                   }).store(in: &cancellables)
@@ -54,9 +54,6 @@ class HomePresenter: ObservableObject {
                   }).store(in: &cancellables)
     }
     
-    func isLiked(game: GameModel) -> Bool {
-        return self.likedIds.contains(game.id)
-    }
     func linkBuilder<Content: View>(
         for game: GameModel,
         @ViewBuilder content: () -> Content
