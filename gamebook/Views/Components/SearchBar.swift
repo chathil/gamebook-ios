@@ -9,12 +9,11 @@
 import SwiftUI
 
 struct SearchBar: View {
-    @EnvironmentObject private var gameData: GameHomeData
     @State private var query = ""
     @State private var isEditing = false
     
     private func textFieldChanged(_ text: String) {
-        gameData.searchGames(query: text)
+//        gameData.searchGames(query: text)
     }
     
     var body: some View {
@@ -54,7 +53,7 @@ struct SearchBar: View {
                 Button(action: {
                     self.isEditing = false
                     self.query = ""
-                    self.gameData.loadGames()
+//                    self.gameData.loadGames()
                     UIApplication.shared
                         .sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }, label: {

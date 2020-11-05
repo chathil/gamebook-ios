@@ -8,44 +8,47 @@
 
 import SwiftUI
 import CoreData
+import SDWebImageSwiftUI
 
 struct GameRow: View {
-    @Environment(\.imageCache) var cache: ImageCache
-    @Environment(\.managedObjectContext)
-    var context: NSManagedObjectContext
-    
-    @State var game: Game?
-    let likedGame: GameEntity?
+    let game: GameModel
+    @State var isLiked: Bool
+    let like: () -> Void
     
     var body: some View {
         HStack {
-            AsyncImage(
-                url: game?.backgroundUrl ?? likedGame?.backgroundUrl,
-                cache: cache,
-                placeholder: ImagePlaceholder())
+            WebImage(url: URL(string: game.backgroundImage))
+                .resizable()
+                .placeholder {
+                        Rectangle().foregroundColor(.gray)
+                    }
+                    .indicator(.activity) 
+                .transition(.fade(duration: 0.5)) // Fade Transition with duration
                 .scaledToFill()
                 .frame(width: 112, height: 112, alignment: .center)
                 .clipped()
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 12))
             
             VStack(alignment: .leading) {
-                Text(game?.name ?? likedGame!.name ?? "No Name")
+                Text(game.name)
                     .font(.headline)
                     .fontWeight(.bold).lineLimit(2)
                 HStack {
-                    Chip(text: game?.releaseDate ?? likedGame?.released ?? "No Date")
-                    Chip(text: game?.genre ?? likedGame?.genre ?? "No Genre")
+                    Chip(text: game.released)
+                    Chip(text: game.genres[0])
                 }.padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
                 HStack {
-                    LikeButton(game: self.game, likedGame: self.likedGame, context: self.context).padding(.trailing)
+                    LikeButton(isLiked: isLiked).onTapGesture {
+                        like()
+                    }.padding(.trailing)
                     Image("meta").resizable().frame(width: 20, height: 20, alignment: .center)
-                    Text(String(game?.metacritic ?? likedGame?.metacritic ?? 0)).font(.caption).bold()
+                    Text(String(game.metacritic)).font(.caption).bold()
                     Image(systemName: "star.fill")
                         .resizable()
                         .scaledToFill()
                         .frame(width: 18, height: 18, alignment: .center)
                         .foregroundColor(Color("primary"))
-                    Text(String(game?.gameRating ?? likedGame?.gameRating ?? "No Rating")).font(.caption).bold()
+                    Text(String(game.gameRating)).font(.caption).bold()
                 }
             }
             Spacer()
@@ -64,8 +67,8 @@ struct ImagePlaceholder: View {
     }
 }
 
-struct GameRow_Previews: PreviewProvider {
-    static var previews: some View {
-        GameRow(game: Game.fakeGame, likedGame: nil)
-    }
-}
+//struct GameRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GameRow(game: Game.fakeGame, likedGame: nil)
+//    }
+//}

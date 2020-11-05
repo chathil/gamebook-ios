@@ -10,7 +10,6 @@ import SwiftUI
 import CoreData
 
 struct AddGameScreen: View {
-    var context: NSManagedObjectContext
     @Binding var showingForm: Bool
     @State var title: String = ""
     @State var desc: String = ""
@@ -70,27 +69,7 @@ struct AddGameScreen: View {
                     .padding(24)
                     .frame(width: geo.size.width)
                     .onTapGesture {
-                        // MARK: repeated code
-                        let newGame = GameEntity(context: self.context)
-                        
-                        newGame.backgroundImage = self.image
-                        newGame.descriptionRaw = self.desc
-                        newGame.esrbRating = "0"
-                        newGame.gameRating = self.rating
-                        newGame.name = self.title
-                        newGame.id = 0
-                        newGame.released = self.releaseDate
-                        newGame.metacritic = 0
-                        newGame.genresString = []
-                        newGame.publishersString = []
-                        newGame.uuid = UUID()
-                        do {
-                            try self.context.save()
-                            self.showingForm = false
-                        } catch let error as NSError {
-                            print("error")
-                            print(error.localizedDescription)
-                        }
+                        print("save")
                     }.disabled(self.title.isEmpty)
             }.background(Color(self.title.isEmpty ? "primary-black" : "primary" ))
             .cornerRadius(16)
@@ -117,6 +96,6 @@ struct AddGameScreen: View {
 
 struct AddGameScreen_Previews: PreviewProvider {
     static var previews: some View {
-        AddGameScreen(context: CoreDataStack(containerName: "LikedGame").viewContext, showingForm: .constant(true))
+        AddGameScreen(showingForm: .constant(true))
     }
 }
