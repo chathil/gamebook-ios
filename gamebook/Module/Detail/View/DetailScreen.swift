@@ -7,10 +7,12 @@
 //
 
 import SwiftUI
+import Cleanse
+import SDWebImageSwiftUI
 
 struct DetailScreen: View {
     @ObservedObject var presenter: DetailPresenter
-    
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -63,29 +65,23 @@ struct DetailScreen: View {
 
 struct GamePoster: View {
     @State var url: URL
-    
     var body: some View {
-        //        GeometryReader {geo in
-        //            AsyncImage(url: self.url,
-        //                       cache: self.cache,
-        //                       placeholder: DetailImagePlaceholder())
-        //                .scaledToFill()
-        //                .frame(width: geo.size.width, height: 316, alignment: .center)
-        //        }
-        Text("Image Here")
+                GeometryReader {geo in
+                    WebImage(url: url)
+                        .resizable()
+                        .placeholder {
+                                Rectangle().foregroundColor(.gray)
+                            }
+                            .indicator(.activity)
+                        .transition(.fade(duration: 0.5)) // Fade Transition with duration
+                        .scaledToFill()
+                        .frame(width: geo.size.width, height: 316, alignment: .center)
+                }
     }
 }
 
-struct DetailImagePlaceholder: View {
-    var body : some View {
-        Image("game").resizable().scaledToFill().frame(height: 316).clipped()
+struct DetailScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        DetailScreen(presenter: DetailPresenter(detailUseCase: DetailInteractorPreview()))
     }
 }
-
-//struct DetailScreen_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailScreen(gameData: GameItemData(gameService: GameStore.shared,
-//                                            gameId: Game.fakeGame.id,
-//                                            game: Game.fakeGame))
-//    }
-//}

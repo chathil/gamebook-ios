@@ -12,7 +12,7 @@ import Cleanse
 
 class HomePresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
-    private let homeRouter: HomeRouter
+    private let homeRouter: HomeRouter?
     private let homeUseCase: HomeUseCase
     
     @Published var games: [GameModel] = []
@@ -20,7 +20,7 @@ class HomePresenter: ObservableObject {
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
     
-    init(homeUseCase: HomeUseCase, homeRouter: HomeRouter) {
+    init(homeUseCase: HomeUseCase, homeRouter: HomeRouter?) {
         self.homeUseCase = homeUseCase
         self.homeRouter = homeRouter
     }
@@ -59,7 +59,7 @@ class HomePresenter: ObservableObject {
         @ViewBuilder content: () -> Content
     ) -> some View {
         NavigationLink(
-            destination: homeRouter.makeDetailView(for: game)) { content() }
+            destination: homeRouter?.makeDetailView(for: game)) { content() }
     }
 }
     

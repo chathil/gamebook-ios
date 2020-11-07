@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import CoreData
+import Cleanse
 
 struct HomeScreen: View {
     
@@ -48,9 +48,10 @@ struct HomeScreen: View {
     }
 }
 
-//struct HomeScreen_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HomeScreen(gameData: GameHomeData.fake)
-//            .environment(\.colorScheme, .dark)
-//    }
-//}
+struct HomeScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeScreen(presenter: HomePresenter(
+                    homeUseCase: HomeInteractorPreview(),
+                    homeRouter: nil))
+    }
+}

@@ -51,8 +51,10 @@
 		C97943642551AE7600189390 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97943632551AE7600189390 /* HomePresenter.swift */; };
 		C97943682551AEA800189390 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97943672551AEA800189390 /* HomeRouter.swift */; };
 		C97E0F302552A00B00E3E975 /* LikedGameIdEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97E0F2F2552A00B00E3E975 /* LikedGameIdEntity.swift */; };
+		C9A6022325558F5300AFCDCB /* AppPreviewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A6022225558F5300AFCDCB /* AppPreviewComponent.swift */; };
 		C9B8DD1C24AEEE3E0058299A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B8DD1B24AEEE3E0058299A /* UserModel.swift */; };
 		C9B8DD2924AF27EC0058299A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B8DD2824AF27EC0058299A /* SearchBar.swift */; };
+		C9F738CE25553B7E008A00CB /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F738CD25553B7E008A00CB /* FavoriteInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,8 +100,10 @@
 		C97943632551AE7600189390 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		C97943672551AEA800189390 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		C97E0F2F2552A00B00E3E975 /* LikedGameIdEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedGameIdEntity.swift; sourceTree = "<group>"; };
+		C9A6022225558F5300AFCDCB /* AppPreviewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreviewComponent.swift; sourceTree = "<group>"; };
 		C9B8DD1B24AEEE3E0058299A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		C9B8DD2824AF27EC0058299A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		C9F738CD25553B7E008A00CB /* FavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +243,7 @@
 			children = (
 				C97943432551A60700189390 /* CommonModules.swift */,
 				C97943462551A61600189390 /* AppComponent.swift */,
+				C9A6022225558F5300AFCDCB /* AppPreviewComponent.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 			children = (
 				C97943372551A31E00189390 /* HomeInteractor.swift */,
 				C979433B2551A33100189390 /* DetailInteractor.swift */,
+				C9F738CD25553B7E008A00CB /* FavoriteInteractor.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -575,6 +581,7 @@
 			files = (
 				C979435D2551A91900189390 /* View+Ext.swift in Sources */,
 				C961B01224ADD112008AF274 /* AppDelegate.swift in Sources */,
+				C9A6022325558F5300AFCDCB /* AppPreviewComponent.swift in Sources */,
 				C97943472551A61600189390 /* AppComponent.swift in Sources */,
 				C961B02D24ADD1EF008AF274 /* HomeScreen.swift in Sources */,
 				C961B03924ADD276008AF274 /* FindRow.swift in Sources */,
@@ -587,6 +594,7 @@
 				C97669C125511D4A00325594 /* RemoteDataSource.swift in Sources */,
 				C97943382551A31E00189390 /* HomeInteractor.swift in Sources */,
 				C97669AE2551180D00325594 /* ContentView.swift in Sources */,
+				C9F738CE25553B7E008A00CB /* FavoriteInteractor.swift in Sources */,
 				C961B03524ADD221008AF274 /* ProgressBar.swift in Sources */,
 				C97669C625511DC100325594 /* GameEntity.swift in Sources */,
 				C92BAB1024B8B2220026567F /* FavoriteRow.swift in Sources */,

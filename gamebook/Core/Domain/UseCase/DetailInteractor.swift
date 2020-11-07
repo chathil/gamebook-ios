@@ -34,16 +34,30 @@ class DetailInteractor: DetailUseCase {
 extension DetailInteractor {
     struct AssistedSeed: AssistedFactory {
         typealias Seed = GameModel
-        typealias Element = DetailInteractor
+        typealias Element = DetailUseCase
     }
     struct Module: Cleanse.Module {
         public static func configure(binder: UnscopedBinder) {
             binder
-                .bindFactory(DetailInteractor.self)
+                .bindFactory(DetailUseCase.self)
                 .with(AssistedSeed.self)
                 .to { (seed: Assisted<GameModel>, repository: Provider<GamebookRepository>) in
                     return DetailInteractor(repository: repository.get(), game: seed)
                 }
         }
     }
+}
+
+class DetailInteractorPreview: DetailUseCase {
+    func getGame() -> AnyPublisher<GameModel?, Error> {
+        return Future<GameModel?, Error> { completion in
+            completion(.success(GameResponse.fakeGame.toDomainModel()))
+        }.eraseToAnyPublisher()
+    }
+    
+    func getGame() -> GameModel {
+        return GameResponse.fakeGame.toDomainModel()
+    }
+    
+    
 }

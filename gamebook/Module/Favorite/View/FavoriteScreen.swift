@@ -28,8 +28,8 @@ struct FavoriteScreen: View {
     }
 }
 
-//struct FavoriteScreen_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FavoriteScreen().environment(\.managedObjectContext, CoreDataStack(containerName: "LikedGame").viewContext)
-//    }
-//}
+struct FavoriteScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        FavoriteScreen(showingForm: false)
+    }
+}

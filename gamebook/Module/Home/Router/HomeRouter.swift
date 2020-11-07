@@ -9,7 +9,9 @@
 import SwiftUI
 import Cleanse
 
-class HomeRouter {
+protocol HomeRouterProtocol {}
+
+class HomeRouter: HomeRouterProtocol {
     let detailUseCase: Factory<DetailInteractor.AssistedSeed>
     init(detailUseCase: Factory<DetailInteractor.AssistedSeed>) {
         self.detailUseCase = detailUseCase
@@ -24,7 +26,10 @@ extension HomeRouter {
     struct Module: Cleanse.Module {
         static func configure(binder: Binder<Unscoped>) {
             binder.include(module: DetailInteractor.Module.self)
+            binder.bind(HomeRouterProtocol.self).to(factory: HomeRouter.init)
             binder.bind(HomeRouter.self).to(factory: HomeRouter.init)
         }
     }
 }
+
+class HomeRouterPreview: HomeRouterProtocol {}

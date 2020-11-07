@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Combine
+import Cleanse
 
 class DetailPresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
@@ -33,5 +34,13 @@ class DetailPresenter: ObservableObject {
                 self.game = $0 ?? self.game
             }).store(in: &cancellables)
     }
-    
+}
+
+extension DetailPresenter {
+    struct Module: Cleanse.Module {
+        static func configure(binder: Binder<Unscoped>) {
+            binder.include(module: DetailInteractor.Module.self)
+            binder.bind(DetailPresenter.self).to(factory: DetailPresenter.init)
+        }
+    }
 }

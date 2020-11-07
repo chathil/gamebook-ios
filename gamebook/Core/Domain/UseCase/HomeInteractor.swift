@@ -43,3 +43,23 @@ extension HomeInteractor {
         }
     }
 }
+
+class HomeInteractorPreview: HomeUseCase {
+    func getGames() -> AnyPublisher<[GameModel], Error> {
+        return Future<[GameModel], Error> { completion in
+            completion(.success(GameResponse.fakeGames.map { $0.toDomainModel() }))
+        }.eraseToAnyPublisher()
+    }
+    
+    func likeDislike(game: GameModel) -> AnyPublisher<[GameModel], Error> {
+        return Future<[GameModel], Error> { completion in
+            completion(.success(GameResponse.fakeGames.map { $0.toDomainModel() }))
+        }.eraseToAnyPublisher()
+    }
+    
+    func likedIds() -> AnyPublisher<[GameModel], Error> {
+        return Future<[GameModel], Error> { completion in
+            completion(.success(GameResponse.fakeGames.map { $0.toDomainModel() }))
+        }.eraseToAnyPublisher()
+    }
+}
