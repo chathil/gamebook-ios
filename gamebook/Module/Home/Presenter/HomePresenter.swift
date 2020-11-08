@@ -12,15 +12,17 @@ import Cleanse
 
 class HomePresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
-    private let homeRouter: HomeRouter?
+    private let homeRouter: HomeRouter
     private let homeUseCase: HomeUseCase
     
+    @State private var action: Int? = 0
+    @State private var showingForm = false
     @Published var games: [GameModel] = []
     @Published var likedIds: [GameModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
     
-    init(homeUseCase: HomeUseCase, homeRouter: HomeRouter?) {
+    init(homeUseCase: HomeUseCase, homeRouter: HomeRouter) {
         self.homeUseCase = homeUseCase
         self.homeRouter = homeRouter
     }
@@ -47,20 +49,29 @@ class HomePresenter: ObservableObject {
     }
     
     func initialLiked() {
-        homeUseCase.likedIds().receive(on: RunLoop.main)
+        homeUseCase.likedGames().receive(on: RunLoop.main)
             .sink(receiveCompletion: {_ in},
                   receiveValue: {
                     self.likedIds = $0
                   }).store(in: &cancellables)
     }
     
-    func linkBuilder<Content: View>(
+    func detailLinkBuilder<Content: View>(
         for game: GameModel,
         @ViewBuilder content: () -> Content
     ) -> some View {
         NavigationLink(
-            destination: homeRouter?.makeDetailView(for: game)) { content() }
+            destination: homeRouter.makeDetailView(for: game)) { content() }
     }
+    
+    func favoriteLinkBuilder<Content: View>(
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        NavigationLink(destination: homeRouter.makeFavoriteView(showingFrom: showingForm)) {
+            content()
+        }
+    }
+    
 }
     
 extension HomePresenter {

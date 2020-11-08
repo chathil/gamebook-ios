@@ -10,13 +10,21 @@ import SwiftUI
 import CoreData
 
 struct FavoriteScreen: View {
-    
+    @ObservedObject var presenter: FavoritePresenter
     @State var showingForm = false
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             List {
-                Text("Favorite")
+                ForEach(self.presenter.games, id: \.id) { game in
+                    self.presenter.linkBuilder(for: game) {
+                        GameRow(game: game, isLiked: true) {
+                            presenter.likeDislikeGame(game: game)
+                        }
+                    }
+                }
+            }.onAppear {
+                self.presenter.initialLiked()
             }
             Fab(systemImage: "plus").onTapGesture {
                 self.showingForm.toggle()
@@ -28,8 +36,8 @@ struct FavoriteScreen: View {
     }
 }
 
-struct FavoriteScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        FavoriteScreen(showingForm: false)
-    }
-}
+//struct FavoriteScreen_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FavoriteScreen(showingForm: false)
+//    }
+//}

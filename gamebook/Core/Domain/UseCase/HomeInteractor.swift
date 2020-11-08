@@ -12,7 +12,7 @@ import Cleanse
 protocol HomeUseCase {
     func getGames() -> AnyPublisher<[GameModel], Error>
     func likeDislike(game: GameModel) -> AnyPublisher<[GameModel], Error>
-    func likedIds() -> AnyPublisher<[GameModel], Error>
+    func likedGames() -> AnyPublisher<[GameModel], Error>
 }
 
 class HomeInteractor: HomeUseCase {
@@ -29,8 +29,8 @@ class HomeInteractor: HomeUseCase {
         return repository.likeDislike(game: game)
     }
     
-    func likedIds() -> AnyPublisher<[GameModel], Error> {
-        return repository.likedIds()
+    func likedGames() -> AnyPublisher<[GameModel], Error> {
+        return repository.likedGames()
     }
     
 }
@@ -57,7 +57,7 @@ class HomeInteractorPreview: HomeUseCase {
         }.eraseToAnyPublisher()
     }
     
-    func likedIds() -> AnyPublisher<[GameModel], Error> {
+    func likedGames() -> AnyPublisher<[GameModel], Error> {
         return Future<[GameModel], Error> { completion in
             completion(.success(GameResponse.fakeGames.map { $0.toDomainModel() }))
         }.eraseToAnyPublisher()

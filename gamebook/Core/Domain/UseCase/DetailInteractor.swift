@@ -58,6 +58,4 @@ class DetailInteractorPreview: DetailUseCase {
     func getGame() -> GameModel {
         return GameResponse.fakeGame.toDomainModel()
     }
-    
-    
 }

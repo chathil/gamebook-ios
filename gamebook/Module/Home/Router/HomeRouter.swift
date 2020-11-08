@@ -9,27 +9,34 @@
 import SwiftUI
 import Cleanse
 
-protocol HomeRouterProtocol {}
-
-class HomeRouter: HomeRouterProtocol {
+class HomeRouter {
     let detailUseCase: Factory<DetailInteractor.AssistedSeed>
-    init(detailUseCase: Factory<DetailInteractor.AssistedSeed>) {
+    let favoriteUseCase: FavoriteInteractor
+    
+    init(detailUseCase: Factory<DetailInteractor.AssistedSeed>, favoriteUseCase: FavoriteInteractor) {
         self.detailUseCase = detailUseCase
+        self.favoriteUseCase = favoriteUseCase
     }
+    
     func makeDetailView(for game: GameModel) -> some View {
         let presenter = DetailPresenter(detailUseCase: detailUseCase.build(game))
         return DetailScreen(presenter: presenter)
+    }
+    
+    func makeFavoriteView(showingFrom: Bool) -> some View {
+        let presenter = FavoritePresenter(
+            favoriteUseCase: favoriteUseCase,
+            favoriteRouter: FavoriteRouter(detailUseCase: detailUseCase))
+        return FavoriteScreen(presenter: presenter, showingForm: showingFrom)
     }
 }
 
 extension HomeRouter {
     struct Module: Cleanse.Module {
-        static func configure(binder: Binder<Unscoped>) {
+        static func configure(binder: Binder<Singleton>) {
             binder.include(module: DetailInteractor.Module.self)
-            binder.bind(HomeRouterProtocol.self).to(factory: HomeRouter.init)
+            binder.include(module: FavoriteInteractor.Module.self)
             binder.bind(HomeRouter.self).to(factory: HomeRouter.init)
         }
     }
 }
-
-class HomeRouterPreview: HomeRouterProtocol {}

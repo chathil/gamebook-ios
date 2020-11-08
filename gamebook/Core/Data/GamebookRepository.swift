@@ -15,7 +15,7 @@ protocol GamebookRepositoryProtocol {
     func searchGames(query: String) -> AnyPublisher<[GameModel], Error>
     func getGame(id: Int32) -> AnyPublisher<GameModel?, Error>
     func likeDislike(game: GameModel) -> AnyPublisher<[GameModel], Error>
-    func likedIds() -> AnyPublisher<[GameModel], Error>
+    func likedGames() -> AnyPublisher<[GameModel], Error>
 }
 
 final class GamebookRepository: NSObject {
@@ -77,7 +77,7 @@ extension GamebookRepository: GamebookRepositoryProtocol {
         return self.local.likeDislike(game: game.toEntity()).map { GameEntities(entities: $0).toDomainModels() }.eraseToAnyPublisher()
     }
     
-    func likedIds() -> AnyPublisher<[GameModel], Error> {
+    func likedGames() -> AnyPublisher<[GameModel], Error> {
         return self.local.initialLiked().eraseToAnyPublisher().map { GameEntities(entities: $0).toDomainModels() }.eraseToAnyPublisher()
     }
 }
