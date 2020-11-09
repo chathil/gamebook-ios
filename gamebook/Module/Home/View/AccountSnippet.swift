@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct AccountSnippet: View {
-    @ObservedObject var user: User
+    @State var user: User
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {

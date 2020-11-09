@@ -10,7 +10,7 @@ import SwiftUI
 
 struct EditProfileScreen: View {
     @Binding var showingForm: Bool
-    let user: User
+    @Binding var user: User
     @State var fName: String = ""
     @State var lName: String = ""
     @State var email: String = ""
@@ -84,8 +84,8 @@ struct EditProfileScreen: View {
     }
 }
 
-struct EditProfileScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        EditProfileScreen(showingForm: .constant(false), user: User.fakeUser)
-    }
-}
+//struct EditProfileScreen_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EditProfileScreen(showingForm: .constant(false), user: User.fakeUser)
+//    }
+//}

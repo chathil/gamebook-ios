@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User: ObservableObject {
+class User {
     private let firstNameKey = "models.user.fname"
     private let lastNameKey = "models.user.lname"
     private let emailKey = "models.user.email"
@@ -45,8 +45,4 @@ class User: ObservableObject {
         }
     }
     
-}
-
-extension User {
-    static let fakeUser = User()
 }

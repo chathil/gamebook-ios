@@ -12,13 +12,13 @@ import Cleanse
 struct HomeScreen: View {
     
     @ObservedObject var presenter: HomePresenter
-    @ObservedObject var user: User
+    @State var user: User
     @State private var navBarHidden: Bool = true
     
     var body: some View {
         List {
             
-            self.presenter.aboutLinkBuilder(for: user) {
+            self.presenter.aboutLinkBuilder(for: $user) {
                 AccountSnippet(user: user).padding(EdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 0))
             }
             

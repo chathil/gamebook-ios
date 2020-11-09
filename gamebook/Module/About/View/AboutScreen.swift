@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AboutScreen: View {
     @State var showingForm = false
-    let user: User
+    @State var user: User = User()
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -36,7 +36,7 @@ struct AboutScreen: View {
                     Fab(systemImage: "pencil").onTapGesture {
                         self.showingForm = true
                     }.sheet(isPresented: $showingForm) {
-                        EditProfileScreen(showingForm: self.$showingForm, user: user)
+                        EditProfileScreen(showingForm: self.$showingForm, user: $user)
                     }
                 }
                 
@@ -57,8 +57,8 @@ struct AboutScreen: View {
     }
 }
 
-struct AboutScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        AboutScreen(user: User.fakeUser)
-    }
-}
+//struct AboutScreen_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AboutScreen(user: User.fakeUser)
+//    }
+//}

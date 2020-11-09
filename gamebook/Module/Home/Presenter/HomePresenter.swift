@@ -73,7 +73,7 @@ class HomePresenter: ObservableObject {
     }
     
     func aboutLinkBuilder<Content: View> (
-        for user: User,
+        for user: Binding<User>,
         @ViewBuilder content: () -> Content
     ) -> some View {
         NavigationLink(destination: homeRouter.makeAboutView(for: user)) {
