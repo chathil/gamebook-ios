@@ -36,7 +36,7 @@ struct AboutScreen: View {
                     Fab(systemImage: "pencil").onTapGesture {
                         self.showingForm = true
                     }.sheet(isPresented: $showingForm) {
-                        EditProfileScreen(showingForm: self.$showingForm, user: self.user)
+                        EditProfileScreen(showingForm: self.$showingForm, user: user)
                     }
                 }
                 

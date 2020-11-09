@@ -10,7 +10,7 @@ import SwiftUI
 
 struct EditProfileScreen: View {
     @Binding var showingForm: Bool
-    @State var user: User
+    let user: User
     @State var fName: String = ""
     @State var lName: String = ""
     @State var email: String = ""

@@ -12,11 +12,15 @@ import Cleanse
 struct HomeScreen: View {
     
     @ObservedObject var presenter: HomePresenter
+    @ObservedObject var user: User
     @State private var navBarHidden: Bool = true
     
     var body: some View {
         List {
-            AccountSnippet(user: User.fakeUser).padding(EdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 0))
+            
+            self.presenter.aboutLinkBuilder(for: user) {
+                AccountSnippet(user: user).padding(EdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 0))
+            }
             
             self.presenter.favoriteLinkBuilder {
                 FavoriteRow()

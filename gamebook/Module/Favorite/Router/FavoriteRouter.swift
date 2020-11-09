@@ -28,5 +28,3 @@ extension FavoriteRouter {
         }
     }
 }
-
-

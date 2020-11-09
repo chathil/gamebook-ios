@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User {
+class User: ObservableObject {
     private let firstNameKey = "models.user.fname"
     private let lastNameKey = "models.user.lname"
     private let emailKey = "models.user.email"

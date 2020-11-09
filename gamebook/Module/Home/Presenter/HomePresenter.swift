@@ -67,7 +67,16 @@ class HomePresenter: ObservableObject {
     func favoriteLinkBuilder<Content: View>(
         @ViewBuilder content: () -> Content
     ) -> some View {
-        NavigationLink(destination: homeRouter.makeFavoriteView(showingFrom: showingForm)) {
+        NavigationLink(destination: homeRouter.makeFavoriteView()) {
+            content()
+        }
+    }
+    
+    func aboutLinkBuilder<Content: View> (
+        for user: User,
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        NavigationLink(destination: homeRouter.makeAboutView(for: user)) {
             content()
         }
     }

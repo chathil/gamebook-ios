@@ -23,11 +23,15 @@ class HomeRouter {
         return DetailScreen(presenter: presenter)
     }
     
-    func makeFavoriteView(showingFrom: Bool) -> some View {
+    func makeFavoriteView() -> some View {
         let presenter = FavoritePresenter(
             favoriteUseCase: favoriteUseCase,
             favoriteRouter: FavoriteRouter(detailUseCase: detailUseCase))
-        return FavoriteScreen(presenter: presenter, showingForm: showingFrom)
+        return FavoriteScreen(presenter: presenter)
+    }
+    
+    func makeAboutView(for user: User) -> some View {
+        return AboutScreen(user: user)
     }
 }
 

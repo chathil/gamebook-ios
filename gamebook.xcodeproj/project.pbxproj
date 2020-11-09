@@ -17,6 +17,7 @@
 		C906303A24BC8A4500EB4F98 /* AddGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303924BC8A4500EB4F98 /* AddGameScreen.swift */; };
 		C906303E24BCC87200EB4F98 /* EditProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303D24BCC87200EB4F98 /* EditProfileScreen.swift */; };
 		C906304024BCCA9400EB4F98 /* Fab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303F24BCCA9400EB4F98 /* Fab.swift */; };
+		C90FC3572557A89000D17864 /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90FC3562557A89000D17864 /* AboutPresenter.swift */; };
 		C92A34422546C686001271EB /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C92A34412546C686001271EB /* .swiftlint.yml */; };
 		C92BAB0E24B8A79B0026567F /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BAB0D24B8A79B0026567F /* FavoriteScreen.swift */; };
 		C92BAB1024B8B2220026567F /* FavoriteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BAB0F24B8B2220026567F /* FavoriteRow.swift */; };
@@ -65,6 +66,7 @@
 		C906303924BC8A4500EB4F98 /* AddGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameScreen.swift; sourceTree = "<group>"; };
 		C906303D24BCC87200EB4F98 /* EditProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileScreen.swift; sourceTree = "<group>"; };
 		C906303F24BCCA9400EB4F98 /* Fab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fab.swift; sourceTree = "<group>"; };
+		C90FC3562557A89000D17864 /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
 		C92A34412546C686001271EB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C92BAB0D24B8A79B0026567F /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
 		C92BAB0F24B8B2220026567F /* FavoriteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRow.swift; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 		C97943562551A86000189390 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				C90FC3562557A89000D17864 /* AboutPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				C9E0F753255695E1007144C3 /* FavoritePresenter.swift in Sources */,
 				C906304024BCCA9400EB4F98 /* Fab.swift in Sources */,
 				C961B03724ADD257008AF274 /* AccountSnippet.swift in Sources */,
+				C90FC3572557A89000D17864 /* AboutPresenter.swift in Sources */,
 				C97669C125511D4A00325594 /* RemoteDataSource.swift in Sources */,
 				C97943382551A31E00189390 /* HomeInteractor.swift in Sources */,
 				C97669AE2551180D00325594 /* ContentView.swift in Sources */,

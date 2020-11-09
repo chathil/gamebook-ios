@@ -9,13 +9,9 @@
 import SwiftUI
 
 struct AccountSnippet: View {
-    @State private var action: Int? = 0
-    let user: User
+    @ObservedObject var user: User
     var body: some View {
         VStack(alignment: .leading) {
-            NavigationLink(destination: AboutScreen(user: user), tag: 1, selection: $action) {
-                EmptyView()
-            }.frame(width: 0)
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
                     Text(user.lastName).font(.largeTitle).fontWeight(.bold)
@@ -38,8 +34,6 @@ struct AccountSnippet: View {
             Text("Complete Your Profile").font(.headline)
             ProgressBar().frame(width: 216)
             Spacer()
-        }.onTapGesture {
-            self.action = 1
         }
     }
 }
