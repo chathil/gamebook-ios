@@ -1,7 +1,5 @@
 disabled_rules: # rule identifiers to exclude from running
 - trailing_whitespace
-- force_try
-- force_cast
 
 identifier_name:
   excluded: # excluded via string array

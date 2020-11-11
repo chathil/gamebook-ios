@@ -30,7 +30,7 @@ class HomeRouter {
         return FavoriteScreen(presenter: presenter)
     }
     
-    func makeAboutView(for user: Binding<User>) -> some View {
+    func makeAboutView() -> some View {
         return AboutScreen()
     }
 }

@@ -10,18 +10,11 @@ import SwiftUI
 import Cleanse
 
 struct ContentView: View {
-    @EnvironmentObject var homePresenter: HomePresenter
-    
+    let homePresenter: HomePresenter
     
     var body: some View {
         NavigationView {
-            HomeScreen(presenter: homePresenter, user: User.fakeUser)
+            HomeScreen(presenter: homePresenter)
         }.phoneOnlyStackNavigationView()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

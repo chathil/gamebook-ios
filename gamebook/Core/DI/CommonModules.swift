@@ -36,11 +36,11 @@ struct RootWindowModule: Cleanse.Module {
             .bind()
             .tagged(with: UIViewController.Root.self)
             .to { (homeInteractor: Provider<HomeInteractor>, homeRouter: Provider<HomeRouter>) -> UIViewController in
-                let contentView = ContentView()
-                    .environmentObject(HomePresenter(
-                        homeUseCase: homeInteractor.get(),
-                        homeRouter: homeRouter.get()
-                    ))
+                let contentView = ContentView(homePresenter: HomePresenter(
+                    homeUseCase: homeInteractor.get(),
+                    homeRouter: homeRouter.get()
+                ))
+                    .environmentObject(User.fakeUser)
                 return UIHostingController(rootView: contentView)
             }
     }

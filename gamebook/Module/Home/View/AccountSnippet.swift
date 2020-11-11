@@ -14,7 +14,7 @@ struct AccountSnippet: View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
-                    Text(user.lastName).font(.largeTitle).fontWeight(.bold)
+                    Text(user.lastName ?? "24B").font(.largeTitle).fontWeight(.bold)
                     Text("Some text that supposed\nto describes something")
                         .font(.caption)
                         .fontWeight(.medium)
