@@ -9,8 +9,7 @@
 import SwiftUI
 
 struct FindRow: View {
-    @State private var searchText: String = ""
-    
+    @Binding var query: String
     var body: some View {
         VStack {
             HStack {
@@ -27,13 +26,13 @@ struct FindRow: View {
                 Image("game").resizable().scaledToFill().frame(width: 186, height: 186)
                 Spacer()
             }
-            SearchBar()
+            SearchBar(query: $query)
         }.padding([.bottom, .leading]).background(Color("primary-black")).cornerRadius(16)
     }
 }
 
 struct FindRow_Previews: PreviewProvider {
     static var previews: some View {
-        FindRow()
+        FindRow(query: .constant("Search here"))
     }
 }

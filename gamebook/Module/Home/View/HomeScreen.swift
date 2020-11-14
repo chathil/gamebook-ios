@@ -10,30 +10,34 @@ import SwiftUI
 import Cleanse
 
 struct HomeScreen: View {
-    
     @ObservedObject var presenter: HomePresenter
-    @EnvironmentObject var user: User
+    @EnvironmentObject private var user: User
     @State private var navBarHidden: Bool = true
-    
     var body: some View {
         List {
-            
             self.presenter.aboutLinkBuilder {
-                AccountSnippet(user: user).padding(EdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 0))
+                AccountSnippet().padding(EdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 0))
             }
-            
             self.presenter.favoriteLinkBuilder {
                 FavoriteRow()
             }
+            FindRow(query: self.$presenter.query)
             
-            FindRow()
-            ForEach(self.presenter.games, id: \.id) { game in
-                self.presenter.detailLinkBuilder(for: game) {
-                    GameRow(game: game, isLiked: presenter.likedIds.contains(game)) {
-                        presenter.likeDislike(game: game)
+            if self.presenter.loadingState {
+                ForEach(0...5, id: \.self) { _ in
+                    GameRowLoading()
+                }
+            } else {
+                ForEach(self.presenter.games, id: \.id) { game in
+                    self.presenter.detailLinkBuilder(for: game) {
+                        GameRow(game: game, isLiked: presenter.likedIds.contains(game)) {
+                            presenter.likeDislike(game: game)
+                        }
                     }
                 }
             }
+            
+            
         }
         .onAppear {
             self.presenter.getGames()

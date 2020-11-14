@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct AccountSnippet: View {
-    @State var user: User
+    @EnvironmentObject private var user: User
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
-                    Text(user.lastName ?? "24B").font(.largeTitle).fontWeight(.bold)
+                    Text(user.lastName).font(.largeTitle).fontWeight(.bold)
                     Text("Some text that supposed\nto describes something")
                         .font(.caption)
                         .fontWeight(.medium)
@@ -40,6 +40,6 @@ struct AccountSnippet: View {
 
 struct AccountSnippet_Previews: PreviewProvider {
     static var previews: some View {
-        AccountSnippet(user: User.fakeUser)
+        AccountSnippet()
     }
 }

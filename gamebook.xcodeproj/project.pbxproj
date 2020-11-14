@@ -57,6 +57,7 @@
 		C9E0F753255695E1007144C3 /* FavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E0F752255695E1007144C3 /* FavoritePresenter.swift */; };
 		C9E0F75725569703007144C3 /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E0F75625569703007144C3 /* FavoriteRouter.swift */; };
 		C9F738CE25553B7E008A00CB /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F738CD25553B7E008A00CB /* FavoriteInteractor.swift */; };
+		C9FD68C825601D250047B912 /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD68C725601D250047B912 /* ShimmerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		C9E0F752255695E1007144C3 /* FavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePresenter.swift; sourceTree = "<group>"; };
 		C9E0F75625569703007144C3 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
 		C9F738CD25553B7E008A00CB /* FavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
+		C9FD68C725601D250047B912 /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -442,6 +444,7 @@
 				C961B03224ADD214008AF274 /* GameRow.swift */,
 				C961B04C24AE31A4008AF274 /* Chip.swift */,
 				C92BAB1124B8BAF60026567F /* LikeButton.swift */,
+				C9FD68C725601D250047B912 /* ShimmerView.swift */,
 			);
 			path = SharedView;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				C9E0F753255695E1007144C3 /* FavoritePresenter.swift in Sources */,
 				C906304024BCCA9400EB4F98 /* Fab.swift in Sources */,
 				C961B03724ADD257008AF274 /* AccountSnippet.swift in Sources */,
+				C9FD68C825601D250047B912 /* ShimmerView.swift in Sources */,
 				C90FC3572557A89000D17864 /* AboutPresenter.swift in Sources */,
 				C97669C125511D4A00325594 /* RemoteDataSource.swift in Sources */,
 				C97943382551A31E00189390 /* HomeInteractor.swift in Sources */,

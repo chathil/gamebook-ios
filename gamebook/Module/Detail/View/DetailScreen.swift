@@ -60,10 +60,9 @@ struct DetailScreen: View {
         }.edgesIgnoringSafeArea(.all)
         
     }
-    
 }
 
-struct GamePoster: View {
+private struct GamePoster: View {
     @State var url: URL
     var body: some View {
                 GeometryReader {geo in
@@ -77,6 +76,18 @@ struct GamePoster: View {
                         .scaledToFill()
                         .frame(width: geo.size.width, height: 316, alignment: .center)
                 }
+    }
+}
+
+private struct DescriptionLoading: View {
+    var body: some View {
+        Text("Loading")
+    }
+}
+
+private struct PublisherLoading: View {
+    var body: some View {
+        Text("")
     }
 }
 

@@ -51,6 +51,7 @@ extension GamebookRepository: GamebookRepositoryProtocol {
     }
     
     func searchGames(query: String) -> AnyPublisher<[GameModel], Error> {
+        
         return self.remote.searchGames(query: query).map { $0.toDomainModels()}.eraseToAnyPublisher()
     }
     

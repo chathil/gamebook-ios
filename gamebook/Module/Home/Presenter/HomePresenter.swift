@@ -17,6 +17,7 @@ class HomePresenter: ObservableObject {
     
     @State private var action: Int? = 0
     @State private var showingForm = false
+    @Published var query: String = ""
     @Published var games: [GameModel] = []
     @Published var likedIds: [GameModel] = []
     @Published var errorMessage: String = ""
@@ -25,11 +26,34 @@ class HomePresenter: ObservableObject {
     init(homeUseCase: HomeUseCase, homeRouter: HomeRouter) {
         self.homeUseCase = homeUseCase
         self.homeRouter = homeRouter
+        $query
+            .debounce(for: .milliseconds(400), scheduler: RunLoop.main)
+            .removeDuplicates()
+            .compactMap { $0 }
+            .sink { (_) in
+            } receiveValue: { [self] (searchField) in
+                if !searchField.isEmpty {
+                    searchGames(query: searchField)
+                }
+            }.store(in: &cancellables)
     }
     
     func getGames() {
         loadingState = true
         homeUseCase.getGames().receive(on: RunLoop.main)
+            .sink(receiveCompletion: { [self] completion in
+                switch completion {
+                case .failure: self.errorMessage = String(describing: completion)
+                case .finished: self.loadingState = false
+                }
+            }, receiveValue: { games in
+                self.games = games
+            }).store(in: &cancellables)
+    }
+    
+    func searchGames(query: String) {
+        loadingState = true
+        homeUseCase.searchGames(query: query).receive(on: RunLoop.main)
             .sink(receiveCompletion: { [self] completion in
                 switch completion {
                 case .failure: self.errorMessage = String(describing: completion)
@@ -60,14 +84,18 @@ class HomePresenter: ObservableObject {
         for game: GameModel,
         @ViewBuilder content: () -> Content
     ) -> some View {
-        NavigationLink(
-            destination: homeRouter.makeDetailView(for: game)) { content() }
+        ZStack {
+            NavigationLink(destination: homeRouter.makeDetailView(for: game)) {  }
+            content()
+        }
     }
     
     func favoriteLinkBuilder<Content: View>(
         @ViewBuilder content: () -> Content
     ) -> some View {
-        NavigationLink(destination: homeRouter.makeFavoriteView()) {
+        ZStack {
+            NavigationLink(destination: homeRouter.makeFavoriteView()) {
+            }
             content()
         }
     }
@@ -75,13 +103,14 @@ class HomePresenter: ObservableObject {
     func aboutLinkBuilder<Content: View> (
         @ViewBuilder content: () -> Content
     ) -> some View {
-        NavigationLink(destination: homeRouter.makeAboutView()) {
+        ZStack {
+            NavigationLink(destination: homeRouter.makeAboutView()) {}
             content()
         }
     }
     
 }
-    
+
 extension HomePresenter {
     struct Module: Cleanse.Module {
         static func configure(binder: Binder<Singleton>) {
