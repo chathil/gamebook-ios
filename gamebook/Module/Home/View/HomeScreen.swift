@@ -22,7 +22,6 @@ struct HomeScreen: View {
                 FavoriteRow()
             }
             FindRow(query: self.$presenter.query)
-            
             if self.presenter.loadingState {
                 ForEach(0...5, id: \.self) { _ in
                     GameRowLoading()
