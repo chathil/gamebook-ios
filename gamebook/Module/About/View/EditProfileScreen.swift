@@ -14,7 +14,7 @@ struct EditProfileScreen: View {
     @ObservedObject var presenter: AboutPresenter
     
     var body: some View {
-        ScrollView{
+        ScrollView {
             VStack {
                 HStack {
                     Text("Edit\nProfile").font(.largeTitle).fontWeight(.bold).lineLimit(2)
@@ -67,8 +67,10 @@ struct EditProfileScreen: View {
                                 self.showingForm = false
                             }
                         }
-                }.background(Color(presenter.isFormValid ? "primary" : "primary-black")).cornerRadius(16).frame(height: 56).padding([.leading, .trailing])
-                
+                }.background(Color(presenter.isFormValid ? "primary" : "primary-black"))
+                .cornerRadius(16)
+                .frame(height: 56)
+                .padding([.leading, .trailing])
                 GeometryReader { geo in
                     Text("Cancel")
                         .font(.body)
@@ -79,7 +81,10 @@ struct EditProfileScreen: View {
                         .onTapGesture {
                             self.showingForm = false
                         }
-                }.background(Color("primary")).cornerRadius(Dimens.cornerRadius).frame(height: 56).padding([.leading, .trailing])
+                }.background(Color("primary"))
+                .cornerRadius(Dimens.cornerRadius)
+                .frame(height: 56)
+                .padding([.leading, .trailing])
                 
             }
         }.onAppear {

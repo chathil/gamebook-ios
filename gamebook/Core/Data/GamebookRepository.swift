@@ -75,11 +75,15 @@ extension GamebookRepository: GamebookRepositoryProtocol {
     }
     
     func likeDislike(game: GameModel) -> AnyPublisher<[GameModel], Error> {
-        return self.local.likeDislike(game: game.toEntity()).map { GameEntities(entities: $0).toDomainModels() }.eraseToAnyPublisher()
+        return self.local.likeDislike(game: game.toEntity()).map {
+            GameEntities(entities: $0).toDomainModels()
+        }.eraseToAnyPublisher()
     }
     
     func likedGames() -> AnyPublisher<[GameModel], Error> {
-        return self.local.initialLiked().eraseToAnyPublisher().map { GameEntities(entities: $0).toDomainModels() }.eraseToAnyPublisher()
+        return self.local.initialLiked().eraseToAnyPublisher().map {
+            GameEntities(entities: $0).toDomainModels()
+        }.eraseToAnyPublisher()
     }
 }
 

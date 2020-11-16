@@ -24,7 +24,11 @@ struct AccountSnippet: View {
                     HStack {
                         Text("Account").font(.body).foregroundColor(.black)
                         Image(systemName: "chevron.right.2").foregroundColor(Color(.black))
-                    }.padding(EdgeInsets(top: Dimens.smallPadding, leading: Dimens.padding, bottom: Dimens.smallPadding, trailing: Dimens.padding))
+                    }.padding(EdgeInsets(
+                                top: Dimens.smallPadding,
+                                leading: Dimens.padding,
+                                bottom: Dimens.smallPadding,
+                                trailing: Dimens.padding))
                     .background(Color("primary"))
                     .clipShape(Capsule())
                 }

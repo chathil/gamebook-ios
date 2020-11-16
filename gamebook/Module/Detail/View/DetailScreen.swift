@@ -48,7 +48,10 @@ struct DetailScreen: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        Chip(text: presenter.game.released).lineLimit(1).padding(.leading).frame(minWidth: 126, alignment: .leading)
+                        Chip(text: presenter.game.released)
+                            .lineLimit(1)
+                            .padding(.leading)
+                            .frame(minWidth: 126, alignment: .leading)
                         Chip(text: presenter.game.esrbRating)
                         ForEach(presenter.game.genres, id: \.self) {
                             Chip(text: $0)

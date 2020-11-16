@@ -19,9 +19,9 @@ struct LikeButton: View {
             .foregroundColor(Color("primary"))
     }
 }
-//
-//struct LikeButton_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LikeButton(game: Game.fakeGame, likedGame: nil, context: CoreDataStack(containerName: "LikedGame").viewContext)
-//    }
-//}
+
+struct LikeButton_Previews: PreviewProvider {
+    static var previews: some View {
+        LikeButton(iconSystemName: "heart.fill")
+    }
+}

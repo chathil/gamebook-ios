@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Dimens {
     static let smallPadding: CGFloat = 8
-    static let padding:CGFloat = 16
+    static let padding: CGFloat = 16
     static let smallCornerRadius: CGFloat = 8
     static let cornerRadius: CGFloat = 16
 }

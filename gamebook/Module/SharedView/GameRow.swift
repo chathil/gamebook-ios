@@ -14,7 +14,8 @@ private struct GameRowDimens {
     static let imageWidth: CGFloat = 112
     static let imageHeight: CGFloat = 112
     static let imageEdgeInsets: EdgeInsets = EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: Dimens.smallPadding)
-    static let gameRowEdgeInsets: EdgeInsets = EdgeInsets(top: Dimens.smallPadding, leading: 0, bottom: Dimens.smallPadding, trailing: 0)
+    static let gameRowEdgeInsets: EdgeInsets =
+        EdgeInsets(top: Dimens.smallPadding, leading: 0, bottom: Dimens.smallPadding, trailing: 0)
 }
 
 struct GameRow: View {
@@ -69,7 +70,9 @@ struct GameRow: View {
 struct GameRowLoading: View {
     var body: some View {
         HStack {
-            ShimmerView().frame(width: GameRowDimens.imageWidth, height: GameRowDimens.imageHeight).cornerRadius(Dimens.smallCornerRadius)
+            ShimmerView()
+                .frame(width: GameRowDimens.imageWidth, height: GameRowDimens.imageHeight)
+                .cornerRadius(Dimens.smallCornerRadius)
             VStack(alignment: .leading) {
                 ShimmerView().frame(width: 216, height: 26)
                 HStack {
