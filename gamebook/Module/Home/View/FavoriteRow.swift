@@ -12,8 +12,7 @@ import CoreData
 struct FavoriteRow: View {
     var body: some View {
         HStack(alignment: .center) {
-                Image("like").resizable().scaledToFill().frame(height: 186)
-            
+            Image("like").resizable().scaledToFill().frame(width: 186, height: 186)
             Text("Your Favorite Game").font(.largeTitle).fontWeight(.bold)
         }.background(Color("primary-black")).cornerRadius(Dimens.cornerRadius)
     }
