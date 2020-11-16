@@ -11,10 +11,12 @@ import CoreData
 
 struct FavoriteRow: View {
     var body: some View {
-        HStack(alignment: .center) {
-            Image("like").resizable().scaledToFill().frame(width: 186, height: 186)
-            Text("Your Favorite Game").font(.largeTitle).fontWeight(.bold)
-        }.background(Color("primary-black")).cornerRadius(Dimens.cornerRadius)
+        GeometryReader { geo in
+            HStack(alignment: .center) {
+                Image("like").resizable().scaledToFill().frame(width: 186)
+                Text("Your Favorite Game").font(.largeTitle).fontWeight(.bold)
+            }.frame(width: geo.size.width)
+        }.background(Color("primary-black")).cornerRadius(Dimens.cornerRadius).frame(height: 186)
     }
 }
 
