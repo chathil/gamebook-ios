@@ -155,6 +155,16 @@
 			path = Theme;
 			sourceTree = "<group>";
 		};
+		C93A5A632562C1D200463CE6 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C961B01724ADD113008AF274 /* Assets.xcassets */,
+				C961B01C24ADD113008AF274 /* LaunchScreen.storyboard */,
+				C961B01F24ADD113008AF274 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		C961B00524ADD112008AF274 = {
 			isa = PBXGroup;
 			children = (
@@ -177,24 +187,22 @@
 		C961B01024ADD112008AF274 /* gamebook */ = {
 			isa = PBXGroup;
 			children = (
+				C93A5A632562C1D200463CE6 /* SupportingFiles */,
 				C901A98B25611D5F00180B24 /* Theme */,
 				C97943492551A7D700189390 /* Module */,
 				C97669B025511CC800325594 /* Core */,
 				C97669AC255117DA00325594 /* App */,
-				C961B01724ADD113008AF274 /* Assets.xcassets */,
-				C961B01C24ADD113008AF274 /* LaunchScreen.storyboard */,
-				C961B01F24ADD113008AF274 /* Info.plist */,
-				C961B01924ADD113008AF274 /* Preview Content */,
+				C961B01924ADD113008AF274 /* PreviewContent */,
 			);
 			path = gamebook;
 			sourceTree = "<group>";
 		};
-		C961B01924ADD113008AF274 /* Preview Content */ = {
+		C961B01924ADD113008AF274 /* PreviewContent */ = {
 			isa = PBXGroup;
 			children = (
 				C961B01A24ADD113008AF274 /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			path = PreviewContent;
 			sourceTree = "<group>";
 		};
 		C97669AC255117DA00325594 /* App */ = {
@@ -776,10 +784,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"gamebook/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "gamebook/PreviewContent/Preview\\ Assets.xcassets";
 				DEVELOPMENT_TEAM = DLJ5AWZAF9;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = gamebook/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/gamebook/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -800,10 +808,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"gamebook/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "gamebook/PreviewContent/Preview\\ Assets.xcassets";
 				DEVELOPMENT_TEAM = DLJ5AWZAF9;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = gamebook/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/gamebook/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
