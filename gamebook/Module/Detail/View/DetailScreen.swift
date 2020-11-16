@@ -12,7 +12,7 @@ import SDWebImageSwiftUI
 
 struct DetailScreen: View {
     @ObservedObject var presenter: DetailPresenter
-
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -21,9 +21,13 @@ struct DetailScreen: View {
                         .frame(height: 316)
                         .padding(.bottom)
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(presenter.game.publishers, id: \.self) {
-                                Chip(text: $0)
+                        if presenter.loadingState {
+                            PublisherLoading().padding(.leading, Dimens.padding)
+                        } else {
+                            HStack {
+                                ForEach(presenter.game.publishers, id: \.self) {
+                                    Chip(text: $0).padding(.leading, Dimens.padding)
+                                }
                             }
                         }
                     }
@@ -52,42 +56,55 @@ struct DetailScreen: View {
                     }
                 }
                 
-                Text(presenter.game.descriptionRaw).font(.body).padding()
+                if presenter.loadingState {
+                    DescriptionLoading()
+                } else {
+                    Text(presenter.game.descriptionRaw).font(.body).padding()
+                }
                 
             }
         }.onAppear {
             self.presenter.getGame()
         }.edgesIgnoringSafeArea(.all)
-        
     }
 }
 
 private struct GamePoster: View {
     @State var url: URL
     var body: some View {
-                GeometryReader {geo in
-                    WebImage(url: url)
-                        .resizable()
-                        .placeholder {
-                                Rectangle().foregroundColor(.gray)
-                            }
-                            .indicator(.activity)
-                        .transition(.fade(duration: 0.5)) // Fade Transition with duration
-                        .scaledToFill()
-                        .frame(width: geo.size.width, height: 316, alignment: .center)
+        GeometryReader {geo in
+            WebImage(url: url)
+                .resizable()
+                .placeholder {
+                    Rectangle().foregroundColor(.gray)
                 }
+                .indicator(.activity)
+                .transition(.fade(duration: 0.5))
+                .scaledToFill()
+                .frame(width: geo.size.width, height: 316, alignment: .center)
+        }
     }
 }
 
 private struct DescriptionLoading: View {
     var body: some View {
-        Text("Loading")
+        VStack(alignment: .leading) {
+            ShimmerView().frame(height: 24)
+            ShimmerView().frame(height: 24)
+            ShimmerView().frame(height: 24)
+            ShimmerView().frame(height: 24)
+            ShimmerView().frame(height: 24)
+            ShimmerView().frame(width: 156, height: 24)
+        }.padding()
     }
 }
 
 private struct PublisherLoading: View {
     var body: some View {
-        Text("")
+        HStack {
+            ShimmerView().frame(width: 86, height: 26).clipShape(Capsule())
+            ShimmerView().frame(width: 86, height: 26).clipShape(Capsule())
+        }
     }
 }
 

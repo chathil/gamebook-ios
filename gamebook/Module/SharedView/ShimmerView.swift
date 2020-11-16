@@ -9,17 +9,17 @@
 import SwiftUI
 
 struct ShimmerView: View {
-    
+    @State private var opacity: Double = Constants.minOpacity
+    let color: Color
     private struct Constants {
         static let duration: Double = 0.9
         static let minOpacity: Double = 0.5
         static let maxOpacity: Double = 0.9
     }
-    let color: Color
+    
     init(color: Color = Color("primary-black")) {
         self.color = color
     }
-    @State private var opacity: Double = Constants.minOpacity
     
     var body: some View {
         Rectangle()

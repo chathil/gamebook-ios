@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct AboutScreen: View {
+    @ObservedObject var presenter: AboutPresenter
     @EnvironmentObject var user: User
     @State var showingForm = false
     var body: some View {
@@ -36,20 +37,20 @@ struct AboutScreen: View {
                     Fab(systemImage: "pencil").onTapGesture {
                         self.showingForm = true
                     }.sheet(isPresented: $showingForm) {
-                        EditProfileScreen(showingForm: self.$showingForm)
+                        EditProfileScreen(showingForm: self.$showingForm, presenter: self.presenter)
                     }
                 }
                 
                 VStack(alignment: .leading) {
                     Text("About").font(.largeTitle).fontWeight(.bold)
-                    Text("Dicoding iOS Fundamental Submission 1 with rawg.io API").font(.body).fontWeight(.bold)
+                    Text("Dicoding iOS Expert Capstone 1 with rawg.io API").font(.body).fontWeight(.bold)
                 }.padding()
                 
                 VStack(alignment: .leading) {
                     Text("Credits").font(.largeTitle).fontWeight(.bold)
                     Text("rawg.io\nfor the awesome api").lineLimit(2).padding(.bottom).fixedSize()
                     Text("Freepik\nfor the illustrations @stories").lineLimit(2).padding(.bottom).fixedSize()
-                }.padding(.leading, 16)
+                }.padding(.leading, Dimens.padding)
                 Spacer()
                     .navigationBarTitle(Text("Account & About")).navigationBarHidden(false)
             }.edgesIgnoringSafeArea(.top)
@@ -57,8 +58,8 @@ struct AboutScreen: View {
     }
 }
 
-//struct AboutScreen_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AboutScreen(user: User.fakeUser)
-//    }
-//}
+struct AboutScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        AboutScreen(presenter: AboutPresenter())
+    }
+}

@@ -27,7 +27,7 @@ struct FindRow: View {
                 Spacer()
             }
             SearchBar(query: $query)
-        }.padding([.bottom, .leading]).background(Color("primary-black")).cornerRadius(16)
+        }.padding([.bottom, .leading]).background(Color("primary-black")).cornerRadius(Dimens.cornerRadius)
     }
 }
 

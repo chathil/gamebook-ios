@@ -31,7 +31,7 @@ public struct GameResponse: Codable, Identifiable {
     private let genres: [Genre]?
     public let descriptionRaw: String?
     private let esrbRating: EsrbRating?
-    private let publishers: [Publishers]?
+    private let publishers: [GamePublishers]?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -129,7 +129,7 @@ public struct EsrbRating: Codable {
     public let name: String
 }
 
-public struct Publishers: Codable {
+public struct GamePublishers: Codable {
     public let id: Int
     public let name: String
 }

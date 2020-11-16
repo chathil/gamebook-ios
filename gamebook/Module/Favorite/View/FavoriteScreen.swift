@@ -11,10 +11,8 @@ import CoreData
 
 struct FavoriteScreen: View {
     @ObservedObject var presenter: FavoritePresenter
-    @State var showingForm = false
-    
     var body: some View {
-        ZStack(alignment: .bottomTrailing) {
+        
             List {
                 ForEach(self.presenter.games, id: \.id) { game in
                     self.presenter.linkBuilder(for: game) {
@@ -26,18 +24,6 @@ struct FavoriteScreen: View {
             }.onAppear {
                 self.presenter.initialLiked()
             }
-            Fab(systemImage: "plus").onTapGesture {
-                self.showingForm.toggle()
-            }.sheet(isPresented: $showingForm) {
-                AddGameScreen(showingForm: self.$showingForm)
-            }
-            
-        }.phoneOnlyStackNavigationView().navigationBarTitle(Text("Favorites"))
+        .phoneOnlyStackNavigationView().navigationBarTitle(Text("Favorites"))
     }
 }
-
-//struct FavoriteScreen_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FavoriteScreen(showingForm: false)
-//    }
-//}

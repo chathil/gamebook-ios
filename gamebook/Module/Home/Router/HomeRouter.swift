@@ -31,7 +31,8 @@ class HomeRouter {
     }
     
     func makeAboutView() -> some View {
-        return AboutScreen()
+        let presenter = AboutPresenter()
+        return AboutScreen(presenter: presenter)
     }
 }
 

@@ -30,7 +30,7 @@ class HomePresenter: ObservableObject {
             .debounce(for: .milliseconds(400), scheduler: RunLoop.main)
             .removeDuplicates()
             .compactMap { $0 }
-            .sink { (_) in
+            .sink { _ in
             } receiveValue: { [self] (searchField) in
                 if !searchField.isEmpty {
                     searchGames(query: searchField)

@@ -15,7 +15,7 @@ struct Fab: View {
             .foregroundColor(.black)
             .padding(24)
             .background(Color("primary"))
-            .cornerRadius(16)
+            .cornerRadius(Dimens.cornerRadius)
             .padding()
             .shadow(color: Color("accent").opacity(0.6), radius: 16, x: 0, y: 0)
     }

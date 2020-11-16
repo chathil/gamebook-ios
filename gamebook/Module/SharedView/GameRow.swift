@@ -10,12 +10,11 @@ import SwiftUI
 import CoreData
 import SDWebImageSwiftUI
 
-private struct Constants {
+private struct GameRowDimens {
     static let imageWidth: CGFloat = 112
     static let imageHeight: CGFloat = 112
-    static let imageCornerRadius: CGFloat = 8
-    static let imageEdgeInsets: EdgeInsets = EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 12)
-    static let gameRowEdgeInsets: EdgeInsets = EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0)
+    static let imageEdgeInsets: EdgeInsets = EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: Dimens.smallPadding)
+    static let gameRowEdgeInsets: EdgeInsets = EdgeInsets(top: Dimens.smallPadding, leading: 0, bottom: Dimens.smallPadding, trailing: 0)
 }
 
 struct GameRow: View {
@@ -34,10 +33,10 @@ struct GameRow: View {
                 .indicator(.activity)
                 .transition(.fade(duration: 0.5))
                 .scaledToFill()
-                .frame(width: Constants.imageWidth, height: Constants.imageHeight, alignment: .center)
-                .cornerRadius(Constants.imageCornerRadius)
+                .frame(width: GameRowDimens.imageWidth, height: GameRowDimens.imageHeight, alignment: .center)
+                .cornerRadius(Dimens.smallCornerRadius)
                 .clipped()
-                .padding(Constants.imageEdgeInsets)
+                .padding(GameRowDimens.imageEdgeInsets)
             
             VStack(alignment: .leading) {
                 Text(game.name)
@@ -46,7 +45,7 @@ struct GameRow: View {
                 HStack {
                     Chip(text: game.released)
                     Chip(text: game.genres.isEmpty ? "No Genre" : game.genres[0])
-                }.padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
+                }.padding(EdgeInsets(top: Dimens.smallPadding, leading: 0, bottom: Dimens.smallPadding, trailing: 0))
                 HStack {
                     LikeButton(iconSystemName: isLiked ? "heart.fill" : "heart").onTapGesture {
                         like()
@@ -63,14 +62,14 @@ struct GameRow: View {
             }
             Spacer()
         }
-        .padding(Constants.gameRowEdgeInsets)
+        .padding(GameRowDimens.gameRowEdgeInsets)
     }
 }
 
 struct GameRowLoading: View {
     var body: some View {
         HStack {
-            ShimmerView().frame(width: Constants.imageWidth, height: Constants.imageHeight).cornerRadius(Constants.imageCornerRadius)
+            ShimmerView().frame(width: GameRowDimens.imageWidth, height: GameRowDimens.imageHeight).cornerRadius(Dimens.smallCornerRadius)
             VStack(alignment: .leading) {
                 ShimmerView().frame(width: 216, height: 26)
                 HStack {
@@ -79,7 +78,7 @@ struct GameRowLoading: View {
                 }
                 
             }
-        }.padding(Constants.gameRowEdgeInsets)
+        }.padding(GameRowDimens.gameRowEdgeInsets)
     }
 }
 

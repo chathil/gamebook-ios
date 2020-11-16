@@ -14,7 +14,7 @@
 		C900908A2550478300E90D75 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C90090892550478300E90D75 /* SDWebImage */; };
 		C900908E25504AD500E90D75 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C900908D25504AD500E90D75 /* SDWebImageSwiftUI */; };
 		C900909225505BC300E90D75 /* Cleanse in Frameworks */ = {isa = PBXBuildFile; productRef = C900909125505BC300E90D75 /* Cleanse */; };
-		C906303A24BC8A4500EB4F98 /* AddGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303924BC8A4500EB4F98 /* AddGameScreen.swift */; };
+		C901A98D25611D8700180B24 /* Dimens.swift in Sources */ = {isa = PBXBuildFile; fileRef = C901A98C25611D8700180B24 /* Dimens.swift */; };
 		C906303E24BCC87200EB4F98 /* EditProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303D24BCC87200EB4F98 /* EditProfileScreen.swift */; };
 		C906304024BCCA9400EB4F98 /* Fab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303F24BCCA9400EB4F98 /* Fab.swift */; };
 		C90FC3572557A89000D17864 /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90FC3562557A89000D17864 /* AboutPresenter.swift */; };
@@ -64,7 +64,7 @@
 		542B7409A2701E29009F2D5C /* Pods-gamebook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gamebook.debug.xcconfig"; path = "Target Support Files/Pods-gamebook/Pods-gamebook.debug.xcconfig"; sourceTree = "<group>"; };
 		A24D3D25F62125C7EBCBCB08 /* Pods_gamebook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gamebook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C15B06681E4BBF703D97C9 /* Pods-gamebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gamebook.release.xcconfig"; path = "Target Support Files/Pods-gamebook/Pods-gamebook.release.xcconfig"; sourceTree = "<group>"; };
-		C906303924BC8A4500EB4F98 /* AddGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameScreen.swift; sourceTree = "<group>"; };
+		C901A98C25611D8700180B24 /* Dimens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimens.swift; sourceTree = "<group>"; };
 		C906303D24BCC87200EB4F98 /* EditProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileScreen.swift; sourceTree = "<group>"; };
 		C906303F24BCCA9400EB4F98 /* Fab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fab.swift; sourceTree = "<group>"; };
 		C90FC3562557A89000D17864 /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
@@ -147,6 +147,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C901A98B25611D5F00180B24 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				C901A98C25611D8700180B24 /* Dimens.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		C961B00524ADD112008AF274 = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +177,7 @@
 		C961B01024ADD112008AF274 /* gamebook */ = {
 			isa = PBXGroup;
 			children = (
+				C901A98B25611D5F00180B24 /* Theme */,
 				C97943492551A7D700189390 /* Module */,
 				C97669B025511CC800325594 /* Core */,
 				C97669AC255117DA00325594 /* App */,
@@ -425,7 +434,6 @@
 			isa = PBXGroup;
 			children = (
 				C92BAB0D24B8A79B0026567F /* FavoriteScreen.swift */,
-				C906303924BC8A4500EB4F98 /* AddGameScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -605,6 +613,7 @@
 				C97669C125511D4A00325594 /* RemoteDataSource.swift in Sources */,
 				C97943382551A31E00189390 /* HomeInteractor.swift in Sources */,
 				C97669AE2551180D00325594 /* ContentView.swift in Sources */,
+				C901A98D25611D8700180B24 /* Dimens.swift in Sources */,
 				C9F738CE25553B7E008A00CB /* FavoriteInteractor.swift in Sources */,
 				C9E0F75725569703007144C3 /* FavoriteRouter.swift in Sources */,
 				C961B03524ADD221008AF274 /* ProgressBar.swift in Sources */,
@@ -615,7 +624,6 @@
 				C979432D2551495B00189390 /* GameModel.swift in Sources */,
 				C92BAB0E24B8A79B0026567F /* FavoriteScreen.swift in Sources */,
 				C97943642551AE7600189390 /* HomePresenter.swift in Sources */,
-				C906303A24BC8A4500EB4F98 /* AddGameScreen.swift in Sources */,
 				C979433C2551A33100189390 /* DetailInteractor.swift in Sources */,
 				C9B8DD2924AF27EC0058299A /* SearchBar.swift in Sources */,
 				C97943682551AEA800189390 /* HomeRouter.swift in Sources */,

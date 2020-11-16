@@ -17,16 +17,16 @@ struct SearchBar: View {
                 .padding(7)
                 .padding(.horizontal, 25)
                 .background(Color(.systemGray6))
-                .cornerRadius(8).overlay(
+                .cornerRadius(Dimens.smallCornerRadius).overlay(
                     HStack {
                         Image(systemName: "magnifyingglass")
                             .foregroundColor(.gray)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading, 8)
+                            .padding(.leading, Dimens.smallPadding)
                         if isEditing {
                             Image(systemName: "multiply.circle.fill")
                                 .foregroundColor(.gray)
-                                .padding(.trailing, 8).onTapGesture {
+                                .padding(.trailing, Dimens.smallPadding).onTapGesture {
                                     self.query = ""
                                 }
                         }

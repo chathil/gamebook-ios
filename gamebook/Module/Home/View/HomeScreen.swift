@@ -36,8 +36,6 @@ struct HomeScreen: View {
                     }
                 }
             }
-            
-            
         }
         .onAppear {
             self.presenter.getGames()

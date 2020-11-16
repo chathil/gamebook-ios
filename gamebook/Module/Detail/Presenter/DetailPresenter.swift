@@ -24,6 +24,7 @@ class DetailPresenter: ObservableObject {
     }
     
     func getGame() {
+        loadingState = true
         detailUseCase.getGame().receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 switch completion {
