@@ -17,7 +17,7 @@ struct AboutScreen: View {
             VStack(alignment: .leading) {
                 ZStack(alignment: .topLeading) {
                     Circle().frame(width: 90, height: 90).padding(.top, 90).foregroundColor(Color("primary"))
-                    Image(user.photo)
+                    user.photo
                         .resizable()
                         .scaledToFill()
                         .clipShape(Circle())

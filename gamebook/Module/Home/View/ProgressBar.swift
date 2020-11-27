@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ProgressBar: View {
-    let progress = 0.7
+    let progress: Double
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
@@ -27,6 +27,6 @@ struct ProgressBar: View {
 
 struct ProgressBar_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressBar()
+        ProgressBar(progress: 0.7)
     }
 }

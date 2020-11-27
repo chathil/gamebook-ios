@@ -14,26 +14,37 @@ struct HomeScreen: View {
     @EnvironmentObject private var user: User
     @State private var navBarHidden: Bool = true
     var body: some View {
-        List {
-            self.presenter.aboutLinkBuilder {
-                AccountSnippet().padding(EdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 0))
-            }
-            self.presenter.favoriteLinkBuilder {
-                FavoriteRow()
-            }
-            FindRow(query: self.$presenter.query)
-            if self.presenter.loadingState {
-                ForEach(0...5, id: \.self) { _ in
-                    GameRowLoading()
+        ZStack(alignment: .bottom) {
+            List {
+                self.presenter.aboutLinkBuilder {
+                    AccountSnippet().padding(EdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 0))
                 }
-            } else {
-                ForEach(self.presenter.games, id: \.id) { game in
-                    self.presenter.detailLinkBuilder(for: game) {
-                        GameRow(game: game, isLiked: presenter.likedIds.contains(game)) {
-                            presenter.likeDislike(game: game)
+                self.presenter.favoriteLinkBuilder {
+                    FavoriteRow()
+                }
+                FindRow(query: self.$presenter.query)
+                if self.presenter.loadingState {
+                    ForEach(0...5, id: \.self) { _ in
+                        GameRowLoading()
+                    }
+                } else {
+                    ForEach(self.presenter.games, id: \.id) { game in
+                        self.presenter.detailLinkBuilder(for: game) {
+                            GameRow(game: game, isLiked: presenter.likedIds.contains(game)) {
+                                presenter.likeDislike(game: game)
+                            }
                         }
                     }
                 }
+            }
+            if !presenter.errorMessage.isEmpty {
+                GeometryReader { geo in
+                    Text("Oh snap. Retry?").foregroundColor(Color("primary")).padding([.bottom, .top]).frame(width: geo.size.width).onTapGesture {
+                        self.presenter.getGames()
+                        self.presenter.initialLiked()
+                        self.presenter.errorMessage = ""
+                    }
+                }.background(Color("primary-black")).cornerRadius(Dimens.smallCornerRadius).frame(height: 56).padding([.leading, .trailing])
             }
         }
         .onAppear {

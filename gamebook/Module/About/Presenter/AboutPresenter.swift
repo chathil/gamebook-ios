@@ -15,11 +15,10 @@ class AboutPresenter: ObservableObject {
     @Published var fName: String = ""
     @Published var lName: String = ""
     @Published var email: String = ""
-    
+    @Published var phoneNumber: String = ""
     @Published var fNameMessage: String = ""
     @Published var lNameMessage: String = ""
     @Published var emailMessage: String = ""
-    
     @Published var isFormValid: Bool = false
     
     private var isFnameValidPublisher: AnyPublisher<Bool, Never> {

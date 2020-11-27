@@ -19,26 +19,36 @@ private struct GameRowDimens {
 }
 
 struct GameRow: View {
-    
     let game: GameModel
     let isLiked: Bool
     let like: () -> Void
-    
+    @State var imageFailure = false
     var body: some View {
         HStack {
-            WebImage(url: URL(string: game.backgroundImage))
-                .resizable()
-                .placeholder {
-                    Rectangle().foregroundColor(.gray)
-                }
-                .indicator(.activity)
-                .transition(.fade(duration: 0.5))
-                .scaledToFill()
-                .frame(width: GameRowDimens.imageWidth, height: GameRowDimens.imageHeight, alignment: .center)
-                .cornerRadius(Dimens.smallCornerRadius)
-                .clipped()
-                .padding(GameRowDimens.imageEdgeInsets)
-            
+            if imageFailure {
+                Image(systemName: "xmark.octagon").frame(width: GameRowDimens.imageWidth, height: GameRowDimens.imageHeight, alignment: .center)
+                    .cornerRadius(Dimens.smallCornerRadius)
+                    .clipped()
+                    .background(Color("primary-black"))
+                    .padding(GameRowDimens.imageEdgeInsets)
+            } else {
+                WebImage(url: URL(string: game.backgroundImage))
+                    .resizable()
+                    .placeholder {
+                        Rectangle().foregroundColor(.gray)
+                    }
+                    .onFailure { _ in
+                        imageFailure = true
+                    }
+                    .indicator(.activity)
+                    .transition(.fade(duration: 0.5))
+                    .scaledToFill()
+                    .frame(width: GameRowDimens.imageWidth, height: GameRowDimens.imageHeight, alignment: .center)
+                    .cornerRadius(Dimens.smallCornerRadius)
+                    .clipped()
+                    .padding(GameRowDimens.imageEdgeInsets)
+                
+            }
             VStack(alignment: .leading) {
                 Text(game.name)
                     .font(.headline)

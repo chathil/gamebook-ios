@@ -13,6 +13,10 @@ struct EditProfileScreen: View {
     @EnvironmentObject var user: User
     @ObservedObject var presenter: AboutPresenter
     
+    @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    @State private var selectedImage: UIImage?
+    @State private var isImagePickerDisplay = false
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -21,25 +25,46 @@ struct EditProfileScreen: View {
                     Spacer()
                     Image("profile").resizable().scaledToFill().frame(width: 186, height: 186)
                 }.padding()
-                Section(footer: Text(presenter.fNameMessage).foregroundColor(.red)) {
-                    TextField("First Name...", text: $presenter.fName)
-                        .font(.body)
-                        .padding(24)
-                        .clipShape(Rectangle())
-                        .frame(height: 56)
-                        .background(Color("primary-black"))
-                        .cornerRadius(Dimens.cornerRadius)
-                        .padding([.leading, .trailing])
-                }
-                Section(footer: Text(presenter.lNameMessage).foregroundColor(.red)) {
-                    TextField("Last Name...", text: $presenter.lName)
-                        .font(.body)
-                        .padding(24)
-                        .clipShape(Rectangle())
-                        .frame(height: 56)
-                        .background(Color("primary-black"))
-                        .cornerRadius(Dimens.cornerRadius)
-                        .padding([.leading, .trailing])
+                HStack {
+                    VStack {
+                        Section(footer: Text(presenter.fNameMessage).foregroundColor(.red)) {
+                            TextField("First Name...", text: $presenter.fName)
+                                .font(.body)
+                                .padding(24)
+                                .clipShape(Rectangle())
+                                .frame(height: 56)
+                                .background(Color("primary-black"))
+                                .cornerRadius(Dimens.cornerRadius)
+                                .padding([.leading, .trailing])
+                        }
+                        Section(footer: Text(presenter.lNameMessage).foregroundColor(.red)) {
+                            TextField("Last Name...", text: $presenter.lName)
+                                .font(.body)
+                                .padding(24)
+                                .clipShape(Rectangle())
+                                .frame(height: 56)
+                                .background(Color("primary-black"))
+                                .cornerRadius(Dimens.cornerRadius)
+                                .padding([.leading, .trailing])
+                        }
+                    }
+                    ZStack(alignment: .bottom) {
+                        if let selectedImage = selectedImage {
+                            Image(uiImage: selectedImage).resizable().clipShape(Circle()).frame(width: 120, height: 120)
+                        } else {
+                            user.photo.resizable().scaledToFill().clipShape(Circle()).frame(width: 120, height: 120)
+                        }
+                        Image(systemName: "camera").resizable()
+                            .scaledToFit()
+                            .frame(width: 24, height: 24, alignment: .center)
+                            .foregroundColor(.white)
+                            .padding(Dimens.smallPadding)
+                            .background(Color("primary-black"))
+                            .clipShape(Circle()).clipped().offset(x: 32, y: 16)
+                    }.onTapGesture {
+                        self.sourceType = .photoLibrary
+                        self.isImagePickerDisplay.toggle()
+                    }
                 }
                 Section(footer: Text(presenter.emailMessage).foregroundColor(.red)) {
                     TextField("Email...", text: $presenter.email)
@@ -51,6 +76,16 @@ struct EditProfileScreen: View {
                         .cornerRadius(Dimens.cornerRadius)
                         .padding([.leading, .trailing])
                 }
+                
+                TextField("Phone Number...", text: $presenter.phoneNumber)
+                    .font(.body)
+                    .padding(24)
+                    .clipShape(Rectangle())
+                    .frame(height: 56)
+                    .background(Color("primary-black"))
+                    .cornerRadius(Dimens.cornerRadius)
+                    .padding([.leading, .trailing, .bottom])
+                
                 Spacer()
                 GeometryReader { geo in
                     Text("Save")
@@ -64,6 +99,11 @@ struct EditProfileScreen: View {
                                 self.user.firstName = self.presenter.fName
                                 self.user.lastName = self.presenter.lName
                                 self.user.email = self.presenter.email
+                                self.user.phoneNumber = self.presenter.phoneNumber
+                                if let img = self.selectedImage {
+                                    self.user.updatePhoto = img // notify changes to re-draw view
+                                    self.user.photo = Image(uiImage: img)
+                                }
                                 self.showingForm = false
                             }
                         }
@@ -91,6 +131,9 @@ struct EditProfileScreen: View {
             self.presenter.fName = self.user.firstName
             self.presenter.lName = self.user.lastName
             self.presenter.email = self.user.email
+            self.presenter.phoneNumber = self.user.phoneNumber
+        }.sheet(isPresented: self.$isImagePickerDisplay) {
+            ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)
         }
     }
 }

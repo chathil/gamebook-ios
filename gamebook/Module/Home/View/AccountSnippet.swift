@@ -33,10 +33,10 @@ struct AccountSnippet: View {
                     .clipShape(Capsule())
                 }
                 Spacer()
-                Image(user.photo).resizable().frame(width: 120, height: 120).clipShape(Circle())
+                user.photo.resizable().scaledToFill().clipShape(Circle()).frame(width: 120, height: 120).clipShape(Circle())
             }
             Text("Complete Your Profile").font(.headline)
-            ProgressBar().frame(width: 216)
+            ProgressBar(progress: user.profileCompletion).frame(width: 216)
             Spacer()
         }
     }

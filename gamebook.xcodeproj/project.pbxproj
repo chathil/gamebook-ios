@@ -58,6 +58,9 @@
 		C9E0F75725569703007144C3 /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E0F75625569703007144C3 /* FavoriteRouter.swift */; };
 		C9F738CE25553B7E008A00CB /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F738CD25553B7E008A00CB /* FavoriteInteractor.swift */; };
 		C9FD68C825601D250047B912 /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD68C725601D250047B912 /* ShimmerView.swift */; };
+		C9FD7C68256A46090070CE9E /* ImagePickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD7C67256A46090070CE9E /* ImagePickerScreen.swift */; };
+		C9FD7C6C256A46280070CE9E /* ImagePickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD7C6B256A46280070CE9E /* ImagePickerPresenter.swift */; };
+		C9FD7C70256A46700070CE9E /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD7C6F256A46700070CE9E /* ImagePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +113,9 @@
 		C9E0F75625569703007144C3 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
 		C9F738CD25553B7E008A00CB /* FavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
 		C9FD68C725601D250047B912 /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
+		C9FD7C67256A46090070CE9E /* ImagePickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerScreen.swift; sourceTree = "<group>"; };
+		C9FD7C6B256A46280070CE9E /* ImagePickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerPresenter.swift; sourceTree = "<group>"; };
+		C9FD7C6F256A46700070CE9E /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +334,7 @@
 		C97943492551A7D700189390 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				C9FD7C65256A45E40070CE9E /* ImagePicker */,
 				C9E0F74F2556921C007144C3 /* SharedView */,
 				C97943572551A87A00189390 /* Favorite */,
 				C97943542551A85200189390 /* About */,
@@ -473,6 +480,32 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		C9FD7C65256A45E40070CE9E /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				C9FD7C6A256A46130070CE9E /* Presenter */,
+				C9FD7C66256A45F00070CE9E /* View */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		C9FD7C66256A45F00070CE9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9FD7C67256A46090070CE9E /* ImagePickerScreen.swift */,
+				C9FD7C6F256A46700070CE9E /* ImagePickerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9FD7C6A256A46130070CE9E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C9FD7C6B256A46280070CE9E /* ImagePickerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -616,6 +649,7 @@
 				C9E0F753255695E1007144C3 /* FavoritePresenter.swift in Sources */,
 				C906304024BCCA9400EB4F98 /* Fab.swift in Sources */,
 				C961B03724ADD257008AF274 /* AccountSnippet.swift in Sources */,
+				C9FD7C70256A46700070CE9E /* ImagePickerView.swift in Sources */,
 				C9FD68C825601D250047B912 /* ShimmerView.swift in Sources */,
 				C90FC3572557A89000D17864 /* AboutPresenter.swift in Sources */,
 				C97669C125511D4A00325594 /* RemoteDataSource.swift in Sources */,
@@ -623,7 +657,9 @@
 				C97669AE2551180D00325594 /* ContentView.swift in Sources */,
 				C901A98D25611D8700180B24 /* Dimens.swift in Sources */,
 				C9F738CE25553B7E008A00CB /* FavoriteInteractor.swift in Sources */,
+				C9FD7C68256A46090070CE9E /* ImagePickerScreen.swift in Sources */,
 				C9E0F75725569703007144C3 /* FavoriteRouter.swift in Sources */,
+				C9FD7C6C256A46280070CE9E /* ImagePickerPresenter.swift in Sources */,
 				C961B03524ADD221008AF274 /* ProgressBar.swift in Sources */,
 				C97669C625511DC100325594 /* GameEntity.swift in Sources */,
 				C92BAB1024B8B2220026567F /* FavoriteRow.swift in Sources */,
