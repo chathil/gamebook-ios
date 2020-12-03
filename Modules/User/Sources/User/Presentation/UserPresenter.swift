@@ -1,25 +1,24 @@
 //
-//  AboutPresenter.swift
-//  gamebook
+//  File.swift
+//  
 //
-//  Created by Abdul Chathil on 11/8/20.
-//  Copyright © 2020 Abdul Chathil. All rights reserved.
+//  Created by Abdul Chathil on 12/3/20.
 //
 
 import SwiftUI
 import Combine
 import Foundation
 
-class AboutPresenter: ObservableObject {
+public class UserPresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
-    @Published var fName: String = ""
-    @Published var lName: String = ""
-    @Published var email: String = ""
-    @Published var phoneNumber: String = ""
-    @Published var fNameMessage: String = ""
-    @Published var lNameMessage: String = ""
-    @Published var emailMessage: String = ""
-    @Published var isFormValid: Bool = false
+    @Published public var fName: String = ""
+    @Published public var lName: String = ""
+    @Published public var email: String = ""
+    @Published public var phoneNumber: String = ""
+    @Published public var fNameMessage: String = ""
+    @Published public var lNameMessage: String = ""
+    @Published public var emailMessage: String = ""
+    @Published public var isFormValid: Bool = false
     
     private var isFnameValidPublisher: AnyPublisher<Bool, Never> {
         $fName
@@ -56,7 +55,7 @@ class AboutPresenter: ObservableObject {
             .eraseToAnyPublisher()
     }
     
-    init() {
+    public init() {
         isFnameValidPublisher
             .receive(on: RunLoop.main)
             .map { valid in

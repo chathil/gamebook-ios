@@ -10,6 +10,7 @@ import SwiftUI
 import Cleanse
 import Game
 import Core
+import User
 
 class HomeRouter {
     let gamePresenter: Factory<GamePresenter.AssistedSeed>
@@ -31,7 +32,7 @@ class HomeRouter {
     }
     
     func makeAboutView() -> some View {
-        let presenter = AboutPresenter()
+        let presenter = UserPresenter()
         return AboutScreen(presenter: presenter)
     }
 }

@@ -11,6 +11,7 @@ import Cleanse
 import SwiftUI
 import Core
 import Game
+import User
 
 struct FoundationCommonModule: Module {
     static func configure(binder: Binder<Singleton>) {

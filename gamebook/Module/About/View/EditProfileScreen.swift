@@ -7,11 +7,12 @@
 //
 
 import SwiftUI
+import User
 
 struct EditProfileScreen: View {
     @Binding var showingForm: Bool
     @EnvironmentObject var user: User
-    @ObservedObject var presenter: AboutPresenter
+    @ObservedObject var presenter: UserPresenter
     
     @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
     @State private var selectedImage: UIImage?
@@ -140,6 +141,6 @@ struct EditProfileScreen: View {
 
 struct EditProfileScreen_Previews: PreviewProvider {
     static var previews: some View {
-        EditProfileScreen(showingForm: .constant(false), presenter: AboutPresenter())
+        EditProfileScreen(showingForm: .constant(false), presenter: UserPresenter())
     }
 }

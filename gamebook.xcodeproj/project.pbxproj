@@ -17,7 +17,6 @@
 		C90685A32572710900EE35E1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C90685A22572710900EE35E1 /* Alamofire */; };
 		C90A4FF525726FCF001FBB8C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C90A4FF425726FCF001FBB8C /* Realm */; };
 		C90A4FF725726FCF001FBB8C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C90A4FF625726FCF001FBB8C /* RealmSwift */; };
-		C90FC3572557A89000D17864 /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90FC3562557A89000D17864 /* AboutPresenter.swift */; };
 		C915433D257216D7005D61FC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = C915433C257216D7005D61FC /* Core */; };
 		C915433F257216DC005D61FC /* Game in Frameworks */ = {isa = PBXBuildFile; productRef = C915433E257216DC005D61FC /* Game */; };
 		C918458625722347006DCBE9 /* User in Frameworks */ = {isa = PBXBuildFile; productRef = C918458525722347006DCBE9 /* User */; };
@@ -42,13 +41,11 @@
 		C97943442551A60700189390 /* CommonModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97943432551A60700189390 /* CommonModules.swift */; };
 		C97943472551A61600189390 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97943462551A61600189390 /* AppComponent.swift */; };
 		C97943682551AEA800189390 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97943672551AEA800189390 /* HomeRouter.swift */; };
-		C9B8DD1C24AEEE3E0058299A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B8DD1B24AEEE3E0058299A /* UserModel.swift */; };
 		C9B8DD2924AF27EC0058299A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B8DD2824AF27EC0058299A /* SearchBar.swift */; };
 		C9E0F75725569703007144C3 /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E0F75625569703007144C3 /* FavoriteRouter.swift */; };
 		C9FD68C825601D250047B912 /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD68C725601D250047B912 /* ShimmerView.swift */; };
-		C9FD7C68256A46090070CE9E /* ImagePickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD7C67256A46090070CE9E /* ImagePickerScreen.swift */; };
-		C9FD7C6C256A46280070CE9E /* ImagePickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD7C6B256A46280070CE9E /* ImagePickerPresenter.swift */; };
 		C9FD7C70256A46700070CE9E /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD7C6F256A46700070CE9E /* ImagePickerView.swift */; };
+		C9FEF8D625792157003DEE48 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = C9FEF8D525792157003DEE48 /* Common */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +55,6 @@
 		C901A98C25611D8700180B24 /* Dimens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimens.swift; sourceTree = "<group>"; };
 		C906303D24BCC87200EB4F98 /* EditProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileScreen.swift; sourceTree = "<group>"; };
 		C906303F24BCCA9400EB4F98 /* Fab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fab.swift; sourceTree = "<group>"; };
-		C90FC3562557A89000D17864 /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
 		C918458325722335006DCBE9 /* User */ = {isa = PBXFileReference; lastKnownFileType = folder; name = User; path = Modules/User; sourceTree = "<group>"; };
 		C92A34412546C686001271EB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C92BAB0D24B8A79B0026567F /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
@@ -84,14 +80,13 @@
 		C97943432551A60700189390 /* CommonModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModules.swift; sourceTree = "<group>"; };
 		C97943462551A61600189390 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		C97943672551AEA800189390 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
-		C9B8DD1B24AEEE3E0058299A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		C979BCCC25793A1900DC0244 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C9B8DD2824AF27EC0058299A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C9E0F75625569703007144C3 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
 		C9EACC1D2570EBD600C2C596 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Core; path = Modules/Core; sourceTree = "<group>"; };
 		C9FD68C725601D250047B912 /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
-		C9FD7C67256A46090070CE9E /* ImagePickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerScreen.swift; sourceTree = "<group>"; };
-		C9FD7C6B256A46280070CE9E /* ImagePickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerPresenter.swift; sourceTree = "<group>"; };
 		C9FD7C6F256A46700070CE9E /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		C9FEF8D12579213B003DEE48 /* Common */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Common; path = Modules/Common; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +104,7 @@
 				C918458625722347006DCBE9 /* User in Frameworks */,
 				C90A4FF725726FCF001FBB8C /* RealmSwift in Frameworks */,
 				95B6724B085EA0EB17D956F1 /* Pods_gamebook.framework in Frameworks */,
+				C9FEF8D625792157003DEE48 /* Common in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +149,7 @@
 		C961B00524ADD112008AF274 = {
 			isa = PBXGroup;
 			children = (
+				C9FEF8D12579213B003DEE48 /* Common */,
 				C918458325722335006DCBE9 /* User */,
 				C949113F25715DFD00237046 /* Game */,
 				C9EACC1D2570EBD600C2C596 /* Core */,
@@ -176,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				C93A5A632562C1D200463CE6 /* SupportingFiles */,
-				C901A98B25611D5F00180B24 /* Theme */,
 				C97943492551A7D700189390 /* Module */,
 				C97669B025511CC800325594 /* Core */,
 				C97669AC255117DA00325594 /* App */,
@@ -206,7 +202,7 @@
 		C97669B025511CC800325594 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				C97669B325511CDC00325594 /* Domain */,
+				C9FEF8CB25791BDD003DEE48 /* Utils */,
 				C97669B225511CD600325594 /* DI */,
 			);
 			path = Core;
@@ -221,27 +217,10 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
-		C97669B325511CDC00325594 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				C97669C325511D7E00325594 /* Model */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		C97669C325511D7E00325594 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C9B8DD1B24AEEE3E0058299A /* UserModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		C97943492551A7D700189390 /* Module */ = {
 			isa = PBXGroup;
 			children = (
 				C9FD7C65256A45E40070CE9E /* ImagePicker */,
-				C9E0F74F2556921C007144C3 /* SharedView */,
 				C97943572551A87A00189390 /* Favorite */,
 				C97943542551A85200189390 /* About */,
 				C979434B2551A7E700189390 /* Detail */,
@@ -299,7 +278,6 @@
 		C97943542551A85200189390 /* About */ = {
 			isa = PBXGroup;
 			children = (
-				C97943562551A86000189390 /* Presenter */,
 				C97943552551A85700189390 /* View */,
 			);
 			path = About;
@@ -313,14 +291,6 @@
 				C906303F24BCCA9400EB4F98 /* Fab.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		C97943562551A86000189390 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				C90FC3562557A89000D17864 /* AboutPresenter.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		C97943572551A87A00189390 /* Favorite */ = {
@@ -362,7 +332,6 @@
 		C9FD7C65256A45E40070CE9E /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				C9FD7C6A256A46130070CE9E /* Presenter */,
 				C9FD7C66256A45F00070CE9E /* View */,
 			);
 			path = ImagePicker;
@@ -371,18 +340,18 @@
 		C9FD7C66256A45F00070CE9E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C9FD7C67256A46090070CE9E /* ImagePickerScreen.swift */,
 				C9FD7C6F256A46700070CE9E /* ImagePickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		C9FD7C6A256A46130070CE9E /* Presenter */ = {
+		C9FEF8CB25791BDD003DEE48 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C9FD7C6B256A46280070CE9E /* ImagePickerPresenter.swift */,
+				C901A98B25611D5F00180B24 /* Theme */,
+				C9E0F74F2556921C007144C3 /* SharedView */,
 			);
-			path = Presenter;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +382,7 @@
 				C90A4FF425726FCF001FBB8C /* Realm */,
 				C90A4FF625726FCF001FBB8C /* RealmSwift */,
 				C90685A22572710900EE35E1 /* Alamofire */,
+				C9FEF8D525792157003DEE48 /* Common */,
 			);
 			productName = "fundamental-sub-one";
 			productReference = C961B00E24ADD112008AF274 /* gamebook.app */;
@@ -440,6 +410,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = C961B00524ADD112008AF274;
 			packageReferences = (
@@ -530,12 +501,9 @@
 				C961B03724ADD257008AF274 /* AccountSnippet.swift in Sources */,
 				C9FD7C70256A46700070CE9E /* ImagePickerView.swift in Sources */,
 				C9FD68C825601D250047B912 /* ShimmerView.swift in Sources */,
-				C90FC3572557A89000D17864 /* AboutPresenter.swift in Sources */,
 				C97669AE2551180D00325594 /* ContentView.swift in Sources */,
 				C901A98D25611D8700180B24 /* Dimens.swift in Sources */,
-				C9FD7C68256A46090070CE9E /* ImagePickerScreen.swift in Sources */,
 				C9E0F75725569703007144C3 /* FavoriteRouter.swift in Sources */,
-				C9FD7C6C256A46280070CE9E /* ImagePickerPresenter.swift in Sources */,
 				C961B03524ADD221008AF274 /* ProgressBar.swift in Sources */,
 				C92BAB1024B8B2220026567F /* FavoriteRow.swift in Sources */,
 				C961B01424ADD112008AF274 /* SceneDelegate.swift in Sources */,
@@ -546,7 +514,6 @@
 				C961B03124ADD208008AF274 /* DetailScreen.swift in Sources */,
 				C97943442551A60700189390 /* CommonModules.swift in Sources */,
 				C961B02F24ADD1FB008AF274 /* AboutScreen.swift in Sources */,
-				C9B8DD1C24AEEE3E0058299A /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +524,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C961B01D24ADD113008AF274 /* Base */,
+				C979BCCC25793A1900DC0244 /* id */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -568,6 +536,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -629,6 +598,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -836,6 +806,10 @@
 		C918458525722347006DCBE9 /* User */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = User;
+		};
+		C9FEF8D525792157003DEE48 /* Common */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Common;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

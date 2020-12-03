@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import User
 
 struct AccountSnippet: View {
     @EnvironmentObject private var user: User
@@ -35,7 +36,7 @@ struct AccountSnippet: View {
                 Spacer()
                 user.photo.resizable().scaledToFill().clipShape(Circle()).frame(width: 120, height: 120).clipShape(Circle())
             }
-            Text("Complete Your Profile").font(.headline)
+            Text(user.profileCompletion < 1 ? "Complete Your Profile" : "Profile Completed").font(.headline)
             ProgressBar(progress: user.profileCompletion).frame(width: 216)
             Spacer()
         }

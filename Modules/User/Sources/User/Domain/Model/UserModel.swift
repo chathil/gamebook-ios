@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import SwiftUI
 
-class User: ObservableObject {
+public class User: ObservableObject {
     private let firstNameKey = "models.user.fname"
     private let lastNameKey = "models.user.lname"
     private let emailKey = "models.user.email"
@@ -38,41 +38,41 @@ class User: ObservableObject {
     }
     
     
-    var fullName: String {
+    public var fullName: String {
         "\(String(describing: firstName)) \(String(describing: lastName))"
     }
     
-    @Published var firstName: String {
+    @Published public var firstName: String {
         didSet {
             UserDefaults.standard.set(firstName, forKey: firstNameKey)
             calculateCompletion()
         }
     }
     
-    @Published var lastName: String {
+    @Published public var lastName: String {
         didSet {
             UserDefaults.standard.set(lastName, forKey: lastNameKey)
             calculateCompletion()
         }
     }
     
-    @Published var email: String {
+    @Published public var email: String {
         didSet {
             UserDefaults.standard.set(email, forKey: emailKey)
             calculateCompletion()
         }
     }
     
-    @Published var phoneNumber: String {
+    @Published public var phoneNumber: String {
         didSet {
             UserDefaults.standard.set(phoneNumber, forKey: phoneNumberKey)
             calculateCompletion()
         }
     }
     
-    @Published var updatePhoto: UIImage?
+    @Published public var updatePhoto: UIImage?
     
-    @Published var photo: Image {
+    @Published public var photo: Image {
         didSet {
             saveImage(image: updatePhoto)
             calculateCompletion()
@@ -80,7 +80,7 @@ class User: ObservableObject {
     }
     
     
-    @Published var profileCompletion: Double = 0.0
+    @Published public var profileCompletion: Double = 0.0
     
     // dummy profile completion calculation. everything except
     // phoneNumber can't be empty/ nil but i check it anyway
@@ -127,6 +127,6 @@ class User: ObservableObject {
     }
 }
 
-extension User {
+public extension User {
     static let fakeUser = User()
 }

@@ -7,9 +7,10 @@
 //
 
 import SwiftUI
+import User
 
 struct AboutScreen: View {
-    @ObservedObject var presenter: AboutPresenter
+    @ObservedObject var presenter: UserPresenter
     @EnvironmentObject var user: User
     @State var showingForm = false
     var body: some View {
@@ -60,6 +61,6 @@ struct AboutScreen: View {
 
 struct AboutScreen_Previews: PreviewProvider {
     static var previews: some View {
-        AboutScreen(presenter: AboutPresenter())
+        AboutScreen(presenter: UserPresenter())
     }
 }
