@@ -15,7 +15,7 @@ struct FavoriteRow: View {
         GeometryReader { geo in
             HStack(alignment: .center) {
                 Image("like").resizable().scaledToFill().frame(width: 186)
-                Text(LocalizedStrings.favorites).font(.largeTitle).fontWeight(.bold)
+                Text(LocalizedStrings.yourFavoriteGames).font(.largeTitle).fontWeight(.bold)
             }.frame(width: geo.size.width)
         }.background(Color("primary-black")).cornerRadius(Dimens.cornerRadius).frame(height: 186)
     }

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Common
 
 struct FindRow: View {
     @Binding var query: String
@@ -14,8 +15,8 @@ struct FindRow: View {
         VStack {
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Find").font(.largeTitle).fontWeight(.bold)
-                    Text("Type the name of the game below to find it")
+                    Text(LocalizedStrings.find).font(.largeTitle).fontWeight(.bold)
+                    Text(LocalizedStrings.findDescription)
                         .font(.caption)
                         .fontWeight(.medium)
                         .foregroundColor(.gray)

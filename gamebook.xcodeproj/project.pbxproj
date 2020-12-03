@@ -27,7 +27,6 @@
 		C961B01224ADD112008AF274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B01124ADD112008AF274 /* AppDelegate.swift */; };
 		C961B01424ADD112008AF274 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B01324ADD112008AF274 /* SceneDelegate.swift */; };
 		C961B01824ADD113008AF274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C961B01724ADD113008AF274 /* Assets.xcassets */; };
-		C961B01B24ADD113008AF274 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C961B01A24ADD113008AF274 /* Preview Assets.xcassets */; };
 		C961B01E24ADD113008AF274 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C961B01C24ADD113008AF274 /* LaunchScreen.storyboard */; };
 		C961B02D24ADD1EF008AF274 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B02C24ADD1EF008AF274 /* HomeScreen.swift */; };
 		C961B02F24ADD1FB008AF274 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B02E24ADD1FB008AF274 /* AboutScreen.swift */; };
@@ -65,7 +64,6 @@
 		C961B01124ADD112008AF274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C961B01324ADD112008AF274 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C961B01724ADD113008AF274 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C961B01A24ADD113008AF274 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C961B01D24ADD113008AF274 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C961B01F24ADD113008AF274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C961B02C24ADD1EF008AF274 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -80,7 +78,7 @@
 		C97943432551A60700189390 /* CommonModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModules.swift; sourceTree = "<group>"; };
 		C97943462551A61600189390 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		C97943672551AEA800189390 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
-		C979BCCC25793A1900DC0244 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C979BCD225794E8D00DC0244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C9B8DD2824AF27EC0058299A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C9E0F75625569703007144C3 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
 		C9EACC1D2570EBD600C2C596 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Core; path = Modules/Core; sourceTree = "<group>"; };
@@ -176,17 +174,8 @@
 				C97943492551A7D700189390 /* Module */,
 				C97669B025511CC800325594 /* Core */,
 				C97669AC255117DA00325594 /* App */,
-				C961B01924ADD113008AF274 /* PreviewContent */,
 			);
 			path = gamebook;
-			sourceTree = "<group>";
-		};
-		C961B01924ADD113008AF274 /* PreviewContent */ = {
-			isa = PBXGroup;
-			children = (
-				C961B01A24ADD113008AF274 /* Preview Assets.xcassets */,
-			);
-			path = PreviewContent;
 			sourceTree = "<group>";
 		};
 		C97669AC255117DA00325594 /* App */ = {
@@ -436,7 +425,6 @@
 			files = (
 				C92A34422546C686001271EB /* .swiftlint.yml in Resources */,
 				C961B01E24ADD113008AF274 /* LaunchScreen.storyboard in Resources */,
-				C961B01B24ADD113008AF274 /* Preview Assets.xcassets in Resources */,
 				C961B01824ADD113008AF274 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,7 +512,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C961B01D24ADD113008AF274 /* Base */,
-				C979BCCC25793A1900DC0244 /* id */,
+				C979BCD225794E8D00DC0244 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -657,7 +645,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "gamebook/PreviewContent/Preview\\ Assets.xcassets";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = DLJ5AWZAF9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/gamebook/SupportingFiles/Info.plist";
@@ -681,7 +669,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "gamebook/PreviewContent/Preview\\ Assets.xcassets";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = DLJ5AWZAF9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/gamebook/SupportingFiles/Info.plist";

@@ -8,6 +8,7 @@
 
 import SwiftUI
 import User
+import Common
 
 struct AccountSnippet: View {
     @EnvironmentObject private var user: User
@@ -23,7 +24,7 @@ struct AccountSnippet: View {
                         .fixedSize(horizontal: false, vertical: true)
                         .foregroundColor(.gray)
                     HStack {
-                        Text("Account").font(.body).foregroundColor(.black)
+                        Text(LocalizedStrings.account).font(.body).foregroundColor(.black)
                         Image(systemName: "chevron.right.2").foregroundColor(Color(.black))
                     }.padding(EdgeInsets(
                                 top: Dimens.smallPadding,
@@ -36,7 +37,7 @@ struct AccountSnippet: View {
                 Spacer()
                 user.photo.resizable().scaledToFill().clipShape(Circle()).frame(width: 120, height: 120).clipShape(Circle())
             }
-            Text(user.profileCompletion < 1 ? "Complete Your Profile" : "Profile Completed").font(.headline)
+            Text(user.profileCompletion < 1 ? LocalizedStrings.completeProfile : LocalizedStrings.completedProfile).font(.headline)
             ProgressBar(progress: user.profileCompletion).frame(width: 216)
             Spacer()
         }

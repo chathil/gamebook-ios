@@ -10,6 +10,7 @@ import SwiftUI
 import Core
 import CoreData
 import Game
+import Common
 
 struct FavoriteScreen: View {
     var favoriteRouter: FavoriteRouter
@@ -28,7 +29,7 @@ struct FavoriteScreen: View {
             }.onAppear {
                 self.favoriteGamesPresenter.getList(request: nil)
             }
-        .phoneOnlyStackNavigationView().navigationBarTitle(Text("Favorites"))
+            .phoneOnlyStackNavigationView().navigationBarTitle(Text(LocalizedStrings.favorites))
     }
 }
 

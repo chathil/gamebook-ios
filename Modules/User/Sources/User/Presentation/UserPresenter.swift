@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import Foundation
+import Common
 
 public class UserPresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
@@ -59,21 +60,21 @@ public class UserPresenter: ObservableObject {
         isFnameValidPublisher
             .receive(on: RunLoop.main)
             .map { valid in
-                valid ? "" : "Firstname must at least have 3 characters"
+                valid ? "" : LocalizedStrings.firstNameError
             }
             .assign(to: \.fNameMessage, on: self)
             .store(in: &cancellables)
         isLnameValidPublisher
             .receive(on: RunLoop.main)
             .map { valid in
-                valid ? "" : "Lastname must at least have 3 characters"
+                valid ? "" : LocalizedStrings.lastNameError
             }
             .assign(to: \.fNameMessage, on: self)
             .store(in: &cancellables)
         isEmailValidPublisher
             .receive(on: RunLoop.main)
             .map { valid in
-                valid ? "" : "Ain't never seen an email like that."
+                valid ? "" : LocalizedStrings.emailError
             }.assign(to: \.emailMessage, on: self)
             .store(in: &cancellables)
         

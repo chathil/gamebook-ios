@@ -8,6 +8,7 @@
 
 import SwiftUI
 import User
+import Common
 
 struct AboutScreen: View {
     @ObservedObject var presenter: UserPresenter
@@ -43,17 +44,17 @@ struct AboutScreen: View {
                 }
                 
                 VStack(alignment: .leading) {
-                    Text("About").font(.largeTitle).fontWeight(.bold)
-                    Text("Dicoding iOS Expert Capstone 1 with rawg.io API").font(.body).fontWeight(.bold)
+                    Text(LocalizedStrings.about).font(.largeTitle).fontWeight(.bold)
+                    Text("Dicoding iOS Expert Capstone Final with rawg.io API").font(.body).fontWeight(.bold)
                 }.padding()
                 
                 VStack(alignment: .leading) {
-                    Text("Credits").font(.largeTitle).fontWeight(.bold)
+                    Text(LocalizedStrings.credits).font(.largeTitle).fontWeight(.bold)
                     Text("rawg.io\nfor the awesome api").lineLimit(2).padding(.bottom).fixedSize()
                     Text("Freepik\nfor the illustrations @stories").lineLimit(2).padding(.bottom).fixedSize()
                 }.padding(.leading, Dimens.padding)
                 Spacer()
-                    .navigationBarTitle(Text("Account & About")).navigationBarHidden(false)
+                    .navigationBarTitle(Text(LocalizedStrings.accountAbout)).navigationBarHidden(false)
             }.edgesIgnoringSafeArea(.top)
         }
     }

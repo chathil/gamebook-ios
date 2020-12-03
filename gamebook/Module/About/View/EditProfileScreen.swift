@@ -8,6 +8,7 @@
 
 import SwiftUI
 import User
+import Common
 
 struct EditProfileScreen: View {
     @Binding var showingForm: Bool
@@ -22,14 +23,14 @@ struct EditProfileScreen: View {
         ScrollView {
             VStack {
                 HStack {
-                    Text("Edit\nProfile").font(.largeTitle).fontWeight(.bold).lineLimit(2)
+                    Text(LocalizedStrings.editProfile).font(.largeTitle).fontWeight(.bold).lineLimit(2)
                     Spacer()
                     Image("profile").resizable().scaledToFill().frame(width: 186, height: 186)
                 }.padding()
                 HStack {
                     VStack {
                         Section(footer: Text(presenter.fNameMessage).foregroundColor(.red)) {
-                            TextField("First Name...", text: $presenter.fName)
+                            TextField("\(LocalizedStrings.firstName)...", text: $presenter.fName)
                                 .font(.body)
                                 .padding(24)
                                 .clipShape(Rectangle())
@@ -39,7 +40,7 @@ struct EditProfileScreen: View {
                                 .padding([.leading, .trailing])
                         }
                         Section(footer: Text(presenter.lNameMessage).foregroundColor(.red)) {
-                            TextField("Last Name...", text: $presenter.lName)
+                            TextField("\(LocalizedStrings.lastName)...", text: $presenter.lName)
                                 .font(.body)
                                 .padding(24)
                                 .clipShape(Rectangle())
@@ -78,7 +79,7 @@ struct EditProfileScreen: View {
                         .padding([.leading, .trailing])
                 }
                 
-                TextField("Phone Number...", text: $presenter.phoneNumber)
+                TextField("\(LocalizedStrings.phoneNumber)...", text: $presenter.phoneNumber)
                     .font(.body)
                     .padding(24)
                     .clipShape(Rectangle())
@@ -89,7 +90,7 @@ struct EditProfileScreen: View {
                 
                 Spacer()
                 GeometryReader { geo in
-                    Text("Save")
+                    Text(LocalizedStrings.save)
                         .font(.body)
                         .fontWeight(.medium)
                         .foregroundColor(.black)
@@ -113,7 +114,7 @@ struct EditProfileScreen: View {
                 .frame(height: 56)
                 .padding([.leading, .trailing])
                 GeometryReader { geo in
-                    Text("Cancel")
+                    Text(LocalizedStrings.cancel)
                         .font(.body)
                         .fontWeight(.medium)
                         .foregroundColor(.black)
