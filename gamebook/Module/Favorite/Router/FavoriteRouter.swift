@@ -8,22 +8,23 @@
 
 import SwiftUI
 import Cleanse
+import Game
 
 class FavoriteRouter {
-    let detailUseCase: Factory<DetailInteractor.AssistedSeed>
-    init(detailUseCase: Factory<DetailInteractor.AssistedSeed>) {
-        self.detailUseCase = detailUseCase
+    let gamePresenter: Factory<GamePresenter.AssistedSeed>
+    
+    init(gamePresenter: Factory<GamePresenter.AssistedSeed>) {
+        self.gamePresenter = gamePresenter
     }
+    
     func makeDetailView(for game: GameModel) -> some View {
-        let presenter = DetailPresenter(detailUseCase: detailUseCase.build(game))
-        return DetailScreen(presenter: presenter)
+        return DetailScreen(gamePresenter: gamePresenter.build(game))
     }
 }
 
 extension FavoriteRouter {
     struct Module: Cleanse.Module {
         static func configure(binder: Binder<Unscoped>) {
-            binder.include(module: DetailInteractor.Module.self)
             binder.bind(FavoriteRouter.self).to(factory: FavoriteRouter.init)
         }
     }

@@ -9,6 +9,8 @@
 import Foundation
 import Cleanse
 import SwiftUI
+import Core
+import Game
 
 struct FoundationCommonModule: Module {
     static func configure(binder: Binder<Singleton>) {
@@ -20,7 +22,11 @@ struct FoundationCommonModule: Module {
 
 struct RootWindowModule: Cleanse.Module {
     static func configure(binder: Binder<Singleton>) {
-        binder.include(module: HomeInteractor.Module.self)
+        
+        binder.include(module: GamesPresenter.Module.self)
+//        binder.include(module: FavoriteGamesPresenter.Module.self)
+        
+        binder.include(module: HomeRouter.Module.self)
         binder
             .bind(UIWindow.self)
             .to { (rootViewController: TaggedProvider<UIViewController.Root>, scene: UIScene) -> UIWindow in
@@ -35,15 +41,17 @@ struct RootWindowModule: Cleanse.Module {
         binder
             .bind()
             .tagged(with: UIViewController.Root.self)
-            .to { (homeInteractor: Provider<HomeInteractor>, homeRouter: Provider<HomeRouter>) -> UIViewController in
-                let contentView = ContentView(homePresenter: HomePresenter(
-                    homeUseCase: homeInteractor.get(),
-                    homeRouter: homeRouter.get()
-                ))
+            .to { (gamesPresenter: Provider<GamesPresenter>, favoriteGamesPresenter: Provider<FavoriteGamesPresenter>, updateFavoriteGamesPresenter: Provider<UpdateFavoriteGamesPresenter>, homeRouter: Provider<HomeRouter>) -> UIViewController in
+                print("Content View Binder")
+                let contentView = ContentView(
+                    gamesPresenter: gamesPresenter.get(),
+                    favoriteGamesPresenter: favoriteGamesPresenter.get(), updateFavoriteGamesPresenter: updateFavoriteGamesPresenter.get(), homeRouter: homeRouter.get()
+                )
                     .environmentObject(User.fakeUser)
                 return UIHostingController(rootView: contentView)
             }
     }
+    
 }
 
 extension UIViewController {
@@ -51,3 +59,4 @@ extension UIViewController {
         public typealias Element = UIViewController
     }
 }
+

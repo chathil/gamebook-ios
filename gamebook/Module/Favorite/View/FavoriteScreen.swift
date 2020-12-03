@@ -7,23 +7,39 @@
 //
 
 import SwiftUI
+import Core
 import CoreData
+import Game
 
 struct FavoriteScreen: View {
-    @ObservedObject var presenter: FavoritePresenter
+    var favoriteRouter: FavoriteRouter
+    @ObservedObject var favoriteGamesPresenter: FavoriteGamesPresenter
+    @ObservedObject var updateFavoriteGamesPresenter: UpdateFavoriteGamesPresenter
     var body: some View {
-        
             List {
-                ForEach(self.presenter.games, id: \.id) { game in
-                    self.presenter.linkBuilder(for: game) {
+                ForEach(favoriteGamesPresenter.list, id: \.id) { game in
+                    self.detailLinkBuilder(for: game) {
                         GameRow(game: game, isLiked: true) {
-                            presenter.likeDislikeGame(game: game)
+                            updateFavoriteGamesPresenter.getList(request: game)
+                            favoriteGamesPresenter.getList(request: nil)
                         }
                     }
                 }
             }.onAppear {
-                self.presenter.initialLiked()
+                self.favoriteGamesPresenter.getList(request: nil)
             }
         .phoneOnlyStackNavigationView().navigationBarTitle(Text("Favorites"))
     }
+}
+
+extension FavoriteScreen {
+    func detailLinkBuilder<Content: View>(
+            for game: GameModel,
+            @ViewBuilder content: () -> Content
+        ) -> some View {
+            ZStack {
+                NavigationLink(destination: favoriteRouter.makeDetailView(for: game)) {  }
+                content()
+            }
+        }
 }

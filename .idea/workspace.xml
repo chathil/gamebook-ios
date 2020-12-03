@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8d0bdbda-9e29-4b7b-a114-b040e775f8ac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/gamebook/Models/GameEntity+Extension.swift" beforeDir="false" afterPath="$PROJECT_DIR$/gamebook/Models/GameEntity+Extension.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamebook/Views/Screens/AboutScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/gamebook/Views/Screens/AboutScreen.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/.swiftpm/xcode/package.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/Package.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/Sources/Core/Data/DataSource.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/Sources/Core/Data/LocalDataSource.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/Sources/Core/Data/Repository/Repository.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/Sources/Core/Domain/UseCase/Interactor.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/Sources/Core/Domain/UseCase/UseSwift.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/Sources/Core/Extensions/Result+Ext.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/Sources/Core/Mapper.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/Sources/Core/Presentation/GetListPresenter.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/Tests/CoreTests/CoreTests.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/Tests/CoreTests/XCTestManifests.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Core/Tests/LinuxMain.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/.swiftpm/xcode/package.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Package.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Data/GetFavoriteGamesRepository.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Data/GetGameRepository.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Data/GetGamesRepository.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Data/Local/GetFavoriteGamesLocalDataSource.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Data/Local/GetGameLocalDataSource.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Data/Local/GetGamesLocalDataSource.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Data/Remote/GetGameRemoteDataSource.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Data/Remote/GetGamesRemoteDataSource.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Data/Remote/SearchGamesRemoteDataSource.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Data/SearchGamesRepository.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Data/UpdateFavoriteRepository.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Domain/Model/GameModel.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Game.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Tests/GameTests/GameTests.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Tests/GameTests/XCTestManifests.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Game/Tests/LinuxMain.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/User/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/User/.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/User/.swiftpm/xcode/package.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/User/Package.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/User/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/User/Sources/User/User.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/User/Tests/LinuxMain.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/User/Tests/UserTests/UserTests.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/User/Tests/UserTests/XCTestManifests.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/xcode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/xcode.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamebook.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/gamebook.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamebook.xcworkspace/xcshareddata/swiftpm/Package.resolved" beforeDir="false" afterPath="$PROJECT_DIR$/gamebook.xcworkspace/xcshareddata/swiftpm/Package.resolved" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamebook/App/ContentView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/gamebook/App/ContentView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamebook/Core/Data/GamebookRepository.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamebook/Core/Data/Local/Entity/GameEntity.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Data/Local/Entity/GameEntity.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamebook/Core/Data/Local/Entity/LikedGameIdEntity.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Data/Local/Entity/LikedGameIdEntity.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamebook/Core/Data/Local/LocalDataSource.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamebook/Core/Data/Remote/RemoteDataSource.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamebook/Core/Data/Remote/Response/GamesReponse.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Game/Sources/Game/Data/Remote/Response/GamesResponse.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamebook/Core/Domain/Model/GameModel.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamebook/Core/Utils/Extensions/CustomError+Ext.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Core/Sources/Core/Extensions/CustomError+Ext.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamebook/Core/Utils/Extensions/View+Ext.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Core/Sources/Core/Extensions/View+Ext.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamebook/Module/Favorite/View/FavoriteScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/gamebook/Module/Favorite/View/FavoriteScreen.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamebook/Module/Home/View/HomeScreen.swift" beforeDir="false" afterPath="$PROJECT_DIR$/gamebook/Module/Home/View/HomeScreen.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601888570191</updated>
       <workItem from="1601888573880" duration="629000" />
+      <workItem from="1606564393069" duration="231000" />
     </task>
     <servers />
   </component>

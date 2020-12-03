@@ -8,26 +8,26 @@
 
 import SwiftUI
 import Cleanse
+import Game
+import Core
 
 class HomeRouter {
-    let detailUseCase: Factory<DetailInteractor.AssistedSeed>
-    let favoriteUseCase: FavoriteInteractor
+    let gamePresenter: Factory<GamePresenter.AssistedSeed>
+    let favoriteGamesPresenter: FavoriteGamesPresenter
+    let updateFavoriteGamesPresenter: UpdateFavoriteGamesPresenter
     
-    init(detailUseCase: Factory<DetailInteractor.AssistedSeed>, favoriteUseCase: FavoriteInteractor) {
-        self.detailUseCase = detailUseCase
-        self.favoriteUseCase = favoriteUseCase
+    init(gamePresenter: Factory<GamePresenter.AssistedSeed>, favoriteGamesPresenter: FavoriteGamesPresenter, updateFavoriteGamesPresenter: UpdateFavoriteGamesPresenter) {
+        self.gamePresenter = gamePresenter
+        self.favoriteGamesPresenter = favoriteGamesPresenter
+        self.updateFavoriteGamesPresenter = updateFavoriteGamesPresenter
     }
     
     func makeDetailView(for game: GameModel) -> some View {
-        let presenter = DetailPresenter(detailUseCase: detailUseCase.build(game))
-        return DetailScreen(presenter: presenter)
+        return DetailScreen(gamePresenter: gamePresenter.build(game))
     }
     
     func makeFavoriteView() -> some View {
-        let presenter = FavoritePresenter(
-            favoriteUseCase: favoriteUseCase,
-            favoriteRouter: FavoriteRouter(detailUseCase: detailUseCase))
-        return FavoriteScreen(presenter: presenter)
+        return FavoriteScreen(favoriteRouter: FavoriteRouter(gamePresenter: gamePresenter), favoriteGamesPresenter: favoriteGamesPresenter, updateFavoriteGamesPresenter: updateFavoriteGamesPresenter)
     }
     
     func makeAboutView() -> some View {
@@ -39,8 +39,7 @@ class HomeRouter {
 extension HomeRouter {
     struct Module: Cleanse.Module {
         static func configure(binder: Binder<Singleton>) {
-            binder.include(module: DetailInteractor.Module.self)
-            binder.include(module: FavoriteInteractor.Module.self)
+            binder.include(module: GamePresenter.Module.self)
             binder.bind(HomeRouter.self).to(factory: HomeRouter.init)
         }
     }

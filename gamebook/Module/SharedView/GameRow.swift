@@ -9,6 +9,7 @@
 import SwiftUI
 import CoreData
 import SDWebImageSwiftUI
+import Game
 
 private struct GameRowDimens {
     static let imageWidth: CGFloat = 112
@@ -95,8 +96,8 @@ struct GameRowLoading: View {
     }
 }
 
-struct GameRow_Previews: PreviewProvider {
-    static var previews: some View {
-        GameRow(game: GameResponse.fakeGame.toDomainModel(), isLiked: false, like: {})
-    }
-}
+//struct GameRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GameRow(game: GameResponse.fakeGame.toDomainModel(), isLiked: false, like: {})
+//    }
+//}

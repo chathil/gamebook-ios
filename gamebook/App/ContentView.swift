@@ -7,14 +7,17 @@
 //
 
 import SwiftUI
-import Cleanse
+import Core
+import Game
 
 struct ContentView: View {
-    let homePresenter: HomePresenter
-    
+    let gamesPresenter: GamesPresenter
+    let favoriteGamesPresenter: FavoriteGamesPresenter
+    let updateFavoriteGamesPresenter: UpdateFavoriteGamesPresenter
+    let homeRouter: HomeRouter
     var body: some View {
         NavigationView {
-            HomeScreen(presenter: homePresenter)
+            HomeScreen(homeRouter: homeRouter, gamesPresenter: gamesPresenter, favoriteGamesPresenter: favoriteGamesPresenter, updateFavoriteGamesPresenter: updateFavoriteGamesPresenter, search: Search(gamesPresenter: gamesPresenter))
         }.phoneOnlyStackNavigationView()
     }
 }

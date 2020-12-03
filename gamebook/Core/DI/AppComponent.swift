@@ -8,6 +8,7 @@
 
 import Cleanse
 import UIKit
+import Game
 
 struct AppComponent: Cleanse.RootComponent {
     typealias Root = PropertyInjector<SceneDelegate>
@@ -16,14 +17,17 @@ struct AppComponent: Cleanse.RootComponent {
     static func configure(binder: Binder<Singleton>) {
         binder.include(module: CoreAppModule.self)
         binder.include(module: RootWindowModule.self)
-        binder.include(module: HomePresenter.Module.self)
+        binder.include(module: GamesPresenter.Module.self)
+//        binder.include(module: FavoriteGamesPresenter.Module.self)
     }
 
     static func configureRoot(
         binder bind: ReceiptBinder<PropertyInjector<SceneDelegate>>
     ) -> BindingReceipt<PropertyInjector<SceneDelegate>> {
-        bind.propertyInjector { (bind) -> BindingReceipt<PropertyInjector<SceneDelegate>> in
-            bind.to(injector: SceneDelegate.injectProperties)
+        print("Root Configuration")
+        return bind.propertyInjector { (bind) -> BindingReceipt<PropertyInjector<SceneDelegate>> in
+            print("Root Configuration Inject")
+            return bind.to(injector: SceneDelegate.injectProperties)
         }
     }
 }
