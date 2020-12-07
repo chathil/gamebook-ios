@@ -69,7 +69,7 @@ public class UserPresenter: ObservableObject {
             .map { valid in
                 valid ? "" : LocalizedStrings.lastNameError
             }
-            .assign(to: \.fNameMessage, on: self)
+            .assign(to: \.lNameMessage, on: self)
             .store(in: &cancellables)
         isEmailValidPublisher
             .receive(on: RunLoop.main)

@@ -18,7 +18,8 @@ let package = Package(
         .package(name: "Realm", url: "https://github.com/realm/realm-cocoa.git", from: "10.2.0"),
         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.4.0")),
         .package(url: "https://github.com/square/Cleanse.git", .upToNextMajor(from: "4.2.6")),
-        .package(path: "../Core")
+        .package(path: "../Core"),
+        .package(path: "../Nimble")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -33,6 +34,6 @@ let package = Package(
             ]),
         .testTarget(
             name: "GameTests",
-            dependencies: ["Game"])
+            dependencies: ["Game", "Nimble"])
     ]
 )
