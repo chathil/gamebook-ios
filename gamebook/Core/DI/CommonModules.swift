@@ -25,7 +25,6 @@ struct RootWindowModule: Cleanse.Module {
     static func configure(binder: Binder<Singleton>) {
         
         binder.include(module: GamesPresenter.Module.self)
-//        binder.include(module: FavoriteGamesPresenter.Module.self)
         
         binder.include(module: HomeRouter.Module.self)
         binder

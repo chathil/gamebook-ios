@@ -10,12 +10,12 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Game",
-            targets: ["Game"]),
+            targets: ["Game"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(name: "Realm", url: "https://github.com/realm/realm-cocoa.git", from: "10.1.1"),
+        .package(name: "Realm", url: "https://github.com/realm/realm-cocoa.git", from: "10.2.0"),
         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.4.0")),
         .package(url: "https://github.com/square/Cleanse.git", .upToNextMajor(from: "4.2.6")),
         .package(path: "../Core")
@@ -33,6 +33,6 @@ let package = Package(
             ]),
         .testTarget(
             name: "GameTests",
-            dependencies: ["Game"]),
+            dependencies: ["Game"])
     ]
 )

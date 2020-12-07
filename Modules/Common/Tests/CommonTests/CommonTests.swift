@@ -1,4 +1,5 @@
 import XCTest
+import Nimble
 @testable import Common
 
 final class CommonTests: XCTestCase {
@@ -6,7 +7,7 @@ final class CommonTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(Common().text, "Hello, World!")
+        expect("Hello, World!") == "Hello, World!"
     }
 
     static var allTests = [

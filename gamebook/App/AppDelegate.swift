@@ -16,10 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         realm = try? Realm()
-//        this is how to grab it.
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        appDelegate.realm
-        
         return true
     }
     
