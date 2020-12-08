@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire",
         "state": {
           "branch": null,
-          "revision": "097e1f03166d49b31f824507fb85ad843b14fc13",
-          "version": "5.3.0"
+          "revision": "9e0328127dfb801cefe8ac53a13c0c90a7770448",
+          "version": "5.4.0"
         }
       },
       {
@@ -20,21 +20,30 @@
         }
       },
       {
-        "package": "Realm",
-        "repositoryURL": "https://github.com/realm/realm-cocoa",
+        "package": "CwlCatchException",
+        "repositoryURL": "https://github.com/mattgallagher/CwlCatchException.git",
         "state": {
           "branch": null,
-          "revision": "e7f7c51ed111939884d7493eb56fe5dac4019c38",
-          "version": "10.1.1"
+          "revision": "f809deb30dc5c9d9b78c872e553261a61177721a",
+          "version": "2.0.0"
         }
       },
       {
-        "package": "RealmCore",
-        "repositoryURL": "https://github.com/realm/realm-core",
+        "package": "CwlPreconditionTesting",
+        "repositoryURL": "https://github.com/mattgallagher/CwlPreconditionTesting.git",
         "state": {
           "branch": null,
-          "revision": "c29f4347aff5d1f61f7672c05ebf1bfbc1d44d25",
-          "version": "10.0.0"
+          "revision": "02b7a39a99c4da27abe03cab2053a9034379639f",
+          "version": "2.0.0"
+        }
+      },
+      {
+        "package": "Mockingbird",
+        "repositoryURL": "https://github.com/birdrides/mockingbird",
+        "state": {
+          "branch": null,
+          "revision": "37a8c220ef172ef261c436c1bc55a8b25dceab13",
+          "version": "0.16.0"
         }
       },
       {

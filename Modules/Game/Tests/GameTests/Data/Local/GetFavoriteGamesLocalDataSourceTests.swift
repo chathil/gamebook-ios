@@ -10,53 +10,70 @@ import Nimble
 import Cleanse
 import RealmSwift
 import Combine
+import Core
 @testable import Game
 
 final class GetFavoriteGamesLocalDataSourceTests: XCTestCase {
+    
+    private var cancellables: Set<AnyCancellable> = []
     
     var favoriteDataSource: GetFavoriteGamesLocalDataSource?
     var gamesDataSource: GetGamesLocalDataSource?
     var games: [GameEntity] = []
     
     override func setUp() {
+        cancellables = []
         let propertyInjector = try? ComponentFactory.of(GetFavoriteGamesLocalDataSourceTests.Component.self).build(())
         propertyInjector?.injectProperties(into: self)
         precondition(favoriteDataSource != nil)
+        precondition(gamesDataSource != nil)
         games = GamesTransformer(gameMapper: GameTransformer()).transformResponseToEntity(response: GameResponse.fakeGames)
     }
     
     func testList() {
         gamesDataSource?.add(entities: games)
-            .receive(on: RunLoop.main)
-            .sink(receiveCompletion: { _ in },
-                  receiveValue: { expect($0) == true })
+            .sink(receiveCompletion: { _ in
+            }, receiveValue: {
+                expect($0) == true
+            })
+            .store(in: &cancellables)
+        favoriteDataSource?.update(id: 1, entity: games[0])
+            .sink(receiveCompletion: { _ in
+            }, receiveValue: { [self] in
+                expect($0) == games
+            })
+            .store(in: &cancellables)
         
-        //        expect(result).toEventually(equal(true))
-        //        let results = favoriteDataSource?.list(request: nil).collect()
-        //        expect(results).toEventually(equal(results))
+        favoriteDataSource?.list(request: nil).sink(receiveCompletion: { _ in
+        }, receiveValue: { [self] in
+            expect($0) == games
+        })
+        .store(in: &cancellables)
     }
     
     func testAdd() {
-        
+        expect {
+            self.favoriteDataSource?.add(entities: self.games)
+        }.to(throwAssertion())
     }
     
     func testGet() {
-        
-    }
-    
-    func testUpdate() {
-        
+        expect {
+            self.favoriteDataSource?.get(id: 1)
+        }.to(throwAssertion())
     }
     
     static var allTests = [
-        ("testList", testList)
+        ("testList", testList),
+        ("testAdd", testAdd),
+        ("testGet", testGet)
     ]
-    
 }
 
 extension GetFavoriteGamesLocalDataSourceTests {
-    func injectProperties(_ localDataSource: GetFavoriteGamesLocalDataSource) {
+    func injectProperties(_ localDataSource: GetFavoriteGamesLocalDataSource, _ gamesDataSource: GetGamesLocalDataSource) {
         self.favoriteDataSource = localDataSource
+        self.gamesDataSource = gamesDataSource
     }
     struct Component: Cleanse.RootComponent {
         typealias Root = PropertyInjector<GetFavoriteGamesLocalDataSourceTests>

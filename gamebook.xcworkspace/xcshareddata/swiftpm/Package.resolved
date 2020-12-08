@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "Mockingbird",
+        "repositoryURL": "https://github.com/birdrides/mockingbird",
+        "state": {
+          "branch": null,
+          "revision": "37a8c220ef172ef261c436c1bc55a8b25dceab13",
+          "version": "0.16.0"
+        }
+      },
+      {
         "package": "Realm",
         "repositoryURL": "https://github.com/realm/realm-cocoa",
         "state": {

@@ -127,7 +127,7 @@ public struct GamePublishers: Codable {
 
 extension GameResponse {
     static var fakeGames: [GameResponse] {
-        return [GameResponse.fakeGame, GameResponse.fakeGame, GameResponse.fakeGame, GameResponse.fakeGame]
+        return [GameResponse.fakeGame]
     }
     
     public static var fakeGame: GameResponse {
