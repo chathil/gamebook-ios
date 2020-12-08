@@ -12,4 +12,4 @@ git:
  submodules: false
 before_install:
  - sed -i -e 's|git@github.com:|https://github.com/|' .gitmodules
- - git submodule update --init --recursive
+ - git submodule update --force --init --recursive --remote
