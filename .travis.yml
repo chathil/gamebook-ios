@@ -1,13 +1,8 @@
 language: swift
 osx_image: xcode12.2
 xcode_project: gamebook.xcodeproj
-xcode_scheme:
- - gamebook
- - Common
- - Core
- - User
- - Game
-xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone 11 Pro
+xcode_scheme: gamebook
+xcode_destination: platform=iOS Simulator,OS=14.2,name=iPhone 11 Pro
 git:
  submodules: false
 before_install:

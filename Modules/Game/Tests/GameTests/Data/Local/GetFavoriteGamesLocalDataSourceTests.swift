@@ -35,20 +35,23 @@ final class GetFavoriteGamesLocalDataSourceTests: XCTestCase {
             .sink(receiveCompletion: { _ in
             }, receiveValue: {
                 expect($0) == true
+                
+                self.favoriteDataSource?.update(id: 1, entity: self.games[0])
+                    .sink(receiveCompletion: { _ in
+                    }, receiveValue: { [self] in
+                        expect($0) == games
+                        
+                        self.favoriteDataSource?.list(request: nil).sink(receiveCompletion: { _ in
+                        }, receiveValue: { [self] in
+                            expect($0) == games
+                        })
+                        .store(in: &self.cancellables)
+                        
+                    })
+                    .store(in: &self.cancellables)
+                
             })
             .store(in: &cancellables)
-        favoriteDataSource?.update(id: 1, entity: games[0])
-            .sink(receiveCompletion: { _ in
-            }, receiveValue: { [self] in
-                expect($0) == games
-            })
-            .store(in: &cancellables)
-        
-        favoriteDataSource?.list(request: nil).sink(receiveCompletion: { _ in
-        }, receiveValue: { [self] in
-            expect($0) == games
-        })
-        .store(in: &cancellables)
     }
     
     func testAdd() {
