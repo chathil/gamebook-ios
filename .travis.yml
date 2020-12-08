@@ -8,3 +8,8 @@ xcode_scheme:
  - User
  - Game
 xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone 11 Pro
+git:
+ submodules: false
+before_install:
+ - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+ - git submodule update --init --recursive
