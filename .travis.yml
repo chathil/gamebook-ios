@@ -1,6 +1,6 @@
 language: swift
 osx_image: xcode12.2
-xcode_project: gamebook.xcodeproj
+xcode_workspace: gamebook.xcworkspace
 xcode_scheme:
  - gamebook
  - CommonTests
