@@ -1,12 +1,9 @@
 language: swift
 osx_image: xcode12.2
-install: swift package update
-script:
- - swift build
- - swift test
 xcode_project: gamebook.xcodeproj
 xcode_scheme: gamebook
 xcode_destination: platform=iOS Simulator,OS=14.2,name=iPhone 11 Pro
+script: xcodebuild -resolvePackageDependencies
 git:
  submodules: false
 before_install:
