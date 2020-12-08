@@ -1,9 +1,7 @@
 language: swift
 osx_image: xcode12.2
 xcode_workspace: gamebook.xcworkspace
-xcode_scheme:
- - gamebook
- - CommonTests
+xcode_scheme: gamebook
 xcode_destination: platform=iOS Simulator,OS=14.2,name=iPhone 11 Pro
 script:
  - xcodebuild -resolvePackageDependencies
