@@ -3,6 +3,4 @@ osx_image: xcode12.2
 xcode_workspace: gamebook.xcworkspace
 xcode_scheme: gamebook
 xcode_destination: platform=iOS Simulator,OS=14.2,name=iPhone 11 Pro
-script:
- - xcodebuild -resolvePackageDependencies -workspace gamebook.xcworkspace -scheme gamebook
- - xcodebuild -workspace gamebook.xcworkspace -scheme gamebook -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=14.2' test | xcpretty
+
