@@ -17,6 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: fetch dependencies
-    - run: xcodebuild -resolvePackageDependencies
+      run: xcodebuild -resolvePackageDependencies
     - name: iOS - ${{ matrix.destination }}
       run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild -workspace "gamebook.xcodeworkspace" -scheme "gamebook" -destination "${{ matrix.destination }}" clean test | xcpretty
