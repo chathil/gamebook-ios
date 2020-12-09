@@ -4,6 +4,8 @@ disabled_rules: # rule identifiers to exclude from running
 - line_length
 - type_name
 - identifier_name
+- trailing_comma
+- generic_type_name
 
 identifier_name:
   excluded: # excluded via string array

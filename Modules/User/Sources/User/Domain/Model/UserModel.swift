@@ -37,7 +37,6 @@ public class User: ObservableObject {
         calculateCompletion()
     }
     
-    
     public var fullName: String {
         "\(String(describing: firstName)) \(String(describing: lastName))"
     }
@@ -78,7 +77,6 @@ public class User: ObservableObject {
             calculateCompletion()
         }
     }
-    
     
     @Published public var profileCompletion: Double = 0.0
     

@@ -40,7 +40,7 @@ struct ImagePickerView: UIViewControllerRepresentable {
             self.parent = parent
         }
         
-        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
             guard let selectedImage = info[.originalImage] as? UIImage else { return }
             self.parent.selectedImage = selectedImage
             picker.dismiss(animated: true, completion: nil)

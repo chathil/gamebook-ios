@@ -9,6 +9,11 @@ import Foundation
 
 public struct GamesResponse: Codable {
     public let results: [GameResponse]
+    
+    public init(results: [GameResponse]) {
+        self.results = results
+    }
+   
 }
 
 public struct GameResponse: Codable, Identifiable {
@@ -126,7 +131,7 @@ public struct GamePublishers: Codable {
 }
 
 extension GameResponse {
-    static var fakeGames: [GameResponse] {
+    public static var fakeGames: [GameResponse] {
         return [GameResponse.fakeGame]
     }
     

@@ -14,7 +14,9 @@ public struct GameTransformer: Mapper {
     public typealias Response = GameResponse
     public typealias Entity = GameEntity
     public typealias Domain = GameModel
-    
+    public init() {
+        
+    }
     public func transformResponseToEntity(response: Response) -> GameEntity {
         GameEntity(id: response.id,
                    name: response.name,

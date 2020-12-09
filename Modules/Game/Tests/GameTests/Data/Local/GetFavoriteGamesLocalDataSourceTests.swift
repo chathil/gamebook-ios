@@ -17,9 +17,9 @@ final class GetFavoriteGamesLocalDataSourceTests: XCTestCase {
     
     private var cancellables: Set<AnyCancellable> = []
     
-    var favoriteDataSource: GetFavoriteGamesLocalDataSource?
-    var gamesDataSource: GetGamesLocalDataSource?
-    var games: [GameEntity] = []
+    private var favoriteDataSource: GetFavoriteGamesLocalDataSource?
+    private var gamesDataSource: GetGamesLocalDataSource?
+    private var games: [GameEntity] = []
     
     override func setUp() {
         cancellables = []
@@ -74,8 +74,8 @@ final class GetFavoriteGamesLocalDataSourceTests: XCTestCase {
 }
 
 extension GetFavoriteGamesLocalDataSourceTests {
-    func injectProperties(_ localDataSource: GetFavoriteGamesLocalDataSource, _ gamesDataSource: GetGamesLocalDataSource) {
-        self.favoriteDataSource = localDataSource
+    func injectProperties(_ favoriteDataSource: GetFavoriteGamesLocalDataSource, _ gamesDataSource: GetGamesLocalDataSource) {
+        self.favoriteDataSource = favoriteDataSource
         self.gamesDataSource = gamesDataSource
     }
     struct Component: Cleanse.RootComponent {
