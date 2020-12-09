@@ -6,8 +6,3 @@ xcode_destination: platform=iOS Simulator,OS=14.2,name=iPhone 11 Pro
 script:
  - xcodebuild -resolvePackageDependencies
  - xcodebuild -workspace gamebook.xcworkspace -scheme gamebook -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=14.2' test | xcpretty
-git:
- submodules: false
-before_install:
- - sed -i -e 's|git@github.com:|https://github.com/|' .gitmodules
- - git submodule update --force --init --recursive --remote

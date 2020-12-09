@@ -411,8 +411,9 @@
 				C900908C25504AD500E90D75 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				C900909025505BC300E90D75 /* XCRemoteSwiftPackageReference "Cleanse" */,
 				C90685A12572710900EE35E1 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				C979F7DA257E91BE0030BFA0 /* XCRemoteSwiftPackageReference "mockingbird" */,
 				C979F7DE257E98420030BFA0 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				C98B0F862580986F0026EF50 /* XCRemoteSwiftPackageReference "Nimble" */,
+				C98B0F8A25809EED0026EF50 /* XCRemoteSwiftPackageReference "Quick" */,
 			);
 			productRefGroup = C961B00F24ADD112008AF274 /* Products */;
 			projectDirPath = "";
@@ -747,20 +748,28 @@
 				minimumVersion = 5.4.0;
 			};
 		};
-		C979F7DA257E91BE0030BFA0 /* XCRemoteSwiftPackageReference "mockingbird" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/birdrides/mockingbird";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.16.0;
-			};
-		};
 		C979F7DE257E98420030BFA0 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 10.2.0;
+			};
+		};
+		C98B0F862580986F0026EF50 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		C98B0F8A25809EED0026EF50 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Modules/Nimble/Nimble.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Modules/Quick/Quick.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:gamebook.xcodeproj">
    </FileRef>
    <FileRef

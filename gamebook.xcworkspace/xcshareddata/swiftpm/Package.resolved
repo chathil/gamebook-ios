@@ -38,12 +38,21 @@
         }
       },
       {
-        "package": "Mockingbird",
-        "repositoryURL": "https://github.com/birdrides/mockingbird",
+        "package": "Nimble",
+        "repositoryURL": "https://github.com/Quick/Nimble",
         "state": {
           "branch": null,
-          "revision": "37a8c220ef172ef261c436c1bc55a8b25dceab13",
-          "version": "0.16.0"
+          "revision": "e491a6731307bb23783bf664d003be9b2fa59ab5",
+          "version": "9.0.0"
+        }
+      },
+      {
+        "package": "Quick",
+        "repositoryURL": "https://github.com/Quick/Quick",
+        "state": {
+          "branch": null,
+          "revision": "0038bcbab4292f3b028632556507c124e5ba69f3",
+          "version": "3.0.0"
         }
       },
       {
@@ -51,8 +60,8 @@
         "repositoryURL": "https://github.com/realm/realm-cocoa",
         "state": {
           "branch": null,
-          "revision": "7094961907423ae3f0050c21b91d871393cb3f1f",
-          "version": "10.2.0"
+          "revision": "bf390867cbf4ff4d1692e28af84db39255a0eccc",
+          "version": "10.3.0"
         }
       },
       {

@@ -30,28 +30,28 @@ final class GetFavoriteGamesLocalDataSourceTests: XCTestCase {
         games = GamesTransformer(gameMapper: GameTransformer()).transformResponseToEntity(response: GameResponse.fakeGames)
     }
     
-    func testList() {
-        gamesDataSource?.add(entities: games)
-            .sink(receiveCompletion: { _ in
-            }, receiveValue: {
-                expect($0) == true
-                
+    func testLikeAndList() {
+        
                 self.favoriteDataSource?.update(id: 1, entity: self.games[0])
                     .sink(receiveCompletion: { _ in
-                    }, receiveValue: { [self] in
-                        expect($0) == games
+                    }, receiveValue: {
+                        expect($0[0].id) == self.games[0].id
                         
                         self.favoriteDataSource?.list(request: nil).sink(receiveCompletion: { _ in
-                        }, receiveValue: { [self] in
-                            expect($0) == games
+                        }, receiveValue: { games in
+                            expect(games[0].id) == self.games[0].id
+                            
+                            self.favoriteDataSource?.update(id: 1, entity: self.games[0])
+                                .sink(receiveCompletion: { _ in
+                                }, receiveValue: {
+                                    expect($0.count) == 0                                })
+                                .store(in: &self.cancellables)
                         })
                         .store(in: &self.cancellables)
                         
                     })
                     .store(in: &self.cancellables)
-                
-            })
-            .store(in: &cancellables)
+            
     }
     
     func testAdd() {
@@ -67,7 +67,7 @@ final class GetFavoriteGamesLocalDataSourceTests: XCTestCase {
     }
     
     static var allTests = [
-        ("testList", testList),
+        ("testLikeAndList", testLikeAndList),
         ("testAdd", testAdd),
         ("testGet", testGet)
     ]
