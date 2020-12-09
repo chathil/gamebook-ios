@@ -17,6 +17,8 @@ jobs:
     steps:
     - name: Checkout project
       uses: actions/checkout@v1
+    - name: Fetch Pods
+      run: pod install
     - name: Build application
       run: |
         set -o pipefail && xcodebuild clean -scheme $SCHEME -destination "platform=iOS Simulator,name=$DEVICE" -derivedDataPath $DERIVED_DATA_PATH build-for-testing | xcpretty --color --simple
