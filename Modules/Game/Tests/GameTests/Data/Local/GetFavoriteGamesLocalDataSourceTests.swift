@@ -30,29 +30,29 @@ final class GetFavoriteGamesLocalDataSourceTests: XCTestCase {
         games = GamesTransformer(gameMapper: GameTransformer()).transformResponseToEntity(response: GameResponse.fakeGames)
     }
     
-//    func testLikeAndList() {
-//
-//                self.favoriteDataSource?.update(id: 1, entity: self.games[0])
-//                    .sink(receiveCompletion: { _ in
-//                    }, receiveValue: {
-//                        expect($0[0].id) == self.games[0].id
-//
-//                        self.favoriteDataSource?.list(request: nil).sink(receiveCompletion: { _ in
-//                        }, receiveValue: { games in
-//                            expect(games[0].id) == self.games[0].id
-//
-//                            self.favoriteDataSource?.update(id: 1, entity: self.games[0])
-//                                .sink(receiveCompletion: { _ in
-//                                }, receiveValue: {
-//                                    expect($0.count) == 0                                })
-//                                .store(in: &self.cancellables)
-//                        })
-//                        .store(in: &self.cancellables)
-//
-//                    })
-//                    .store(in: &self.cancellables)
-//
-//    }
+    func testLikeAndList() {
+
+                self.favoriteDataSource?.update(id: 1, entity: self.games[0])
+                    .sink(receiveCompletion: { _ in
+                    }, receiveValue: {
+                        expect($0[0].id) == self.games[0].id
+
+                        self.favoriteDataSource?.list(request: nil).sink(receiveCompletion: { _ in
+                        }, receiveValue: { games in
+                            expect(games[0].id) == self.games[0].id
+
+                            self.favoriteDataSource?.update(id: 1, entity: self.games[0])
+                                .sink(receiveCompletion: { _ in
+                                }, receiveValue: {
+                                    expect($0.count) == 0                                })
+                                .store(in: &self.cancellables)
+                        })
+                        .store(in: &self.cancellables)
+
+                    })
+                    .store(in: &self.cancellables)
+
+    }
     
     func testAdd() {
         expect {
@@ -67,7 +67,7 @@ final class GetFavoriteGamesLocalDataSourceTests: XCTestCase {
     }
     
     static var allTests = [
-//        ("testLikeAndList", testLikeAndList),
+        ("testLikeAndList", testLikeAndList),
         ("testAdd", testAdd),
         ("testGet", testGet)
     ]

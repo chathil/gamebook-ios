@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "Common",
+        "repositoryURL": "https://github.com/chathil/gamebook-common.git",
+        "state": {
+          "branch": null,
+          "revision": "89839c04edbb62bf2412fe5917f34c85d4628704",
+          "version": "0.1.0"
+        }
+      },
+      {
         "package": "Nimble",
         "repositoryURL": "https://github.com/Quick/Nimble",
         "state": {
@@ -57,7 +66,7 @@
       },
       {
         "package": "Realm",
-        "repositoryURL": "https://github.com/realm/realm-cocoa",
+        "repositoryURL": "https://github.com/realm/realm-cocoa.git",
         "state": {
           "branch": null,
           "revision": "bf390867cbf4ff4d1692e28af84db39255a0eccc",
