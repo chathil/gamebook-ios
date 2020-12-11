@@ -37,6 +37,11 @@ final class GetGamesRepositoryTests: XCTestCase {
                 expect($0[0].id) == GameResponse.fakeGame.id
             }).store(in: &cancellables)
     }
+    
+    static var allTests = [
+        ("testExecute", testExecute),
+        ("testExecuteWithRequest", testExecuteWithRequest)
+    ]
 }
 
 extension GetGamesRepositoryTests {

@@ -36,6 +36,10 @@ final class GetGameRepositoryTests: XCTestCase {
         }.toEventually(throwAssertion())
     }
     
+    static var allTests = [
+        ("testExecute", testExecute),
+        ("testExecuteWithoutIdError", testExecuteWithoutIdError)
+    ]
 }
 
 extension GetGameRepositoryTests {

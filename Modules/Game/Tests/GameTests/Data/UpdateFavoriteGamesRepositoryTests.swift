@@ -32,6 +32,11 @@ final class UpdateFavoriteGamesRepositoryTests: XCTestCase {
         repository?.execute(request: GameTransformer().transformResponseToDomain(response: GameResponse.fakeGame)).sink(receiveCompletion: { _ in }, receiveValue: { expect($0[0].id) == GameResponse.fakeGame.id }).store(in: &cancellables)
     }
     
+    static var allTests = [
+        ("testExecute", testExecute),
+        ("testExecuteWithoutIdError", testExecuteWithoutIdError)
+    ]
+    
 }
 
 extension UpdateFavoriteGamesRepositoryTests {

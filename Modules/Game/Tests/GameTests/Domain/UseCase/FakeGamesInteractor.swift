@@ -8,4 +8,4 @@
 import Core
 import Game
 
-typealias FakeGamesInteractor = Interactor<String, [GameModel], GetGamesRepository<GetGamesLocalDataSource, FakeGetGamesRemoteDataSource, GamesTransformer<GameTransformer>>>
+typealias FakeGamesInteractor = Interactor<String, [GameModel], GetGamesRepository<FakeGetGamesLocalDataSource, FakeGetGamesRemoteDataSource, GamesTransformer<GameTransformer>>>

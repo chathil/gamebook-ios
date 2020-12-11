@@ -8,4 +8,4 @@
 import Core
 import Game
 
-typealias FakeGameInteractor = Interactor<Int32, GameModel, GetGameRepository<GetGameLocalDataSource, FakeGetGameRemoteDataSource, GameTransformer>>
+typealias FakeGameInteractor = Interactor<Int32, GameModel, GetGameRepository<FakeGetGameLocalDataSource, FakeGetGameRemoteDataSource, GameTransformer>>

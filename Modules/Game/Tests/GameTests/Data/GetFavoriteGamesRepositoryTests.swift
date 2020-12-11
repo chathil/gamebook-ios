@@ -26,6 +26,10 @@ final class GetFavoriteGamesRepositoryTests: XCTestCase {
         repository?.execute(request: nil).sink(receiveCompletion: { _ in }, receiveValue: { expect($0[0].id) == GameResponse.fakeGame.id }).store(in: &cancellables)
     }
     
+    static var allTests = [
+        ("testExecute", testExecute)
+    ]
+    
 }
 
 extension GetFavoriteGamesRepositoryTests {

@@ -32,7 +32,7 @@ struct FakeGetFavoriteGamesLocalDataSource: LocalDataSource {
     
     public func update(id: Int32, entity: GameEntity) -> AnyPublisher<[GameEntity], Error> {
         return Future<[GameEntity], Error> { completion in
-                completion(.success(GamesTransformer(gameMapper: GameTransformer()).transformResponseToEntity(response: GameResponse.fakeGames)))
+                completion(.success([entity]))
             
         }.eraseToAnyPublisher()
     }

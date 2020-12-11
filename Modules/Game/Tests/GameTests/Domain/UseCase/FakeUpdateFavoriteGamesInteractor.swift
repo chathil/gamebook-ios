@@ -8,4 +8,4 @@
 import Core
 import Game
 
-typealias UpdateFavoriteGamesInteractor = Interactor<GameModel, [GameModel], UpdateFavoriteGamesRepository<GetFavoriteGamesLocalDataSource, GamesTransformer<GameTransformer>>>
+typealias FakeUpdateFavoriteGamesInteractor = Interactor<GameModel, [GameModel], UpdateFavoriteGamesRepository<FakeGetFavoriteGamesLocalDataSource, GamesTransformer<GameTransformer>>>
