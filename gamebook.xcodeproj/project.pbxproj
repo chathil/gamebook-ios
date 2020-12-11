@@ -15,9 +15,9 @@
 		C906303E24BCC87200EB4F98 /* EditProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303D24BCC87200EB4F98 /* EditProfileScreen.swift */; };
 		C906304024BCCA9400EB4F98 /* Fab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303F24BCCA9400EB4F98 /* Fab.swift */; };
 		C90685A32572710900EE35E1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C90685A22572710900EE35E1 /* Alamofire */; };
+		C90F99D225828DDB009E08AC /* User in Frameworks */ = {isa = PBXBuildFile; productRef = C90F99D125828DDB009E08AC /* User */; };
 		C915433D257216D7005D61FC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = C915433C257216D7005D61FC /* Core */; };
 		C915433F257216DC005D61FC /* Game in Frameworks */ = {isa = PBXBuildFile; productRef = C915433E257216DC005D61FC /* Game */; };
-		C918458625722347006DCBE9 /* User in Frameworks */ = {isa = PBXBuildFile; productRef = C918458525722347006DCBE9 /* User */; };
 		C92A34422546C686001271EB /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C92A34412546C686001271EB /* .swiftlint.yml */; };
 		C92BAB0E24B8A79B0026567F /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BAB0D24B8A79B0026567F /* FavoriteScreen.swift */; };
 		C92BAB1024B8B2220026567F /* FavoriteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BAB0F24B8B2220026567F /* FavoriteRow.swift */; };
@@ -54,7 +54,6 @@
 		C901A98C25611D8700180B24 /* Dimens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimens.swift; sourceTree = "<group>"; };
 		C906303D24BCC87200EB4F98 /* EditProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileScreen.swift; sourceTree = "<group>"; };
 		C906303F24BCCA9400EB4F98 /* Fab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fab.swift; sourceTree = "<group>"; };
-		C918458325722335006DCBE9 /* User */ = {isa = PBXFileReference; lastKnownFileType = folder; name = User; path = Modules/User; sourceTree = "<group>"; };
 		C9213FBA257E5E31009C958D /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9213FBC257E5E4F009C958D /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92A34412546C686001271EB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -96,12 +95,12 @@
 				C9C6A737258274CF00A4F15A /* Realm in Frameworks */,
 				C900909225505BC300E90D75 /* Cleanse in Frameworks */,
 				C900908E25504AD500E90D75 /* SDWebImageSwiftUI in Frameworks */,
+				C90F99D225828DDB009E08AC /* User in Frameworks */,
 				C900908A2550478300E90D75 /* SDWebImage in Frameworks */,
 				C915433D257216D7005D61FC /* Core in Frameworks */,
 				C915433F257216DC005D61FC /* Game in Frameworks */,
 				C9C6A7312582668100A4F15A /* Common in Frameworks */,
 				C90685A32572710900EE35E1 /* Alamofire in Frameworks */,
-				C918458625722347006DCBE9 /* User in Frameworks */,
 				C9C6A735258274CF00A4F15A /* RealmSwift in Frameworks */,
 				95B6724B085EA0EB17D956F1 /* Pods_gamebook.framework in Frameworks */,
 			);
@@ -150,7 +149,6 @@
 		C961B00524ADD112008AF274 = {
 			isa = PBXGroup;
 			children = (
-				C918458325722335006DCBE9 /* User */,
 				C949113F25715DFD00237046 /* Game */,
 				C9EACC1D2570EBD600C2C596 /* Core */,
 				C92A34412546C686001271EB /* .swiftlint.yml */,
@@ -369,11 +367,11 @@
 				C900909125505BC300E90D75 /* Cleanse */,
 				C915433C257216D7005D61FC /* Core */,
 				C915433E257216DC005D61FC /* Game */,
-				C918458525722347006DCBE9 /* User */,
 				C90685A22572710900EE35E1 /* Alamofire */,
 				C9C6A7302582668100A4F15A /* Common */,
 				C9C6A734258274CF00A4F15A /* RealmSwift */,
 				C9C6A736258274CF00A4F15A /* Realm */,
+				C90F99D125828DDB009E08AC /* User */,
 			);
 			productName = "fundamental-sub-one";
 			productReference = C961B00E24ADD112008AF274 /* gamebook.app */;
@@ -413,6 +411,7 @@
 				C98B0F8A25809EED0026EF50 /* XCRemoteSwiftPackageReference "Quick" */,
 				C9C6A72F2582668100A4F15A /* XCRemoteSwiftPackageReference "gamebook-common" */,
 				C9C6A733258274CF00A4F15A /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				C90F99D025828DDB009E08AC /* XCRemoteSwiftPackageReference "gamebook-user" */,
 			);
 			productRefGroup = C961B00F24ADD112008AF274 /* Products */;
 			projectDirPath = "";
@@ -747,6 +746,14 @@
 				minimumVersion = 5.4.0;
 			};
 		};
+		C90F99D025828DDB009E08AC /* XCRemoteSwiftPackageReference "gamebook-user" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/chathil/gamebook-user.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
 		C98B0F862580986F0026EF50 /* XCRemoteSwiftPackageReference "Nimble" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Nimble";
@@ -802,6 +809,11 @@
 			package = C90685A12572710900EE35E1 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
+		C90F99D125828DDB009E08AC /* User */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C90F99D025828DDB009E08AC /* XCRemoteSwiftPackageReference "gamebook-user" */;
+			productName = User;
+		};
 		C915433C257216D7005D61FC /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Core;
@@ -809,10 +821,6 @@
 		C915433E257216DC005D61FC /* Game */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Game;
-		};
-		C918458525722347006DCBE9 /* User */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = User;
 		};
 		C9C6A7302582668100A4F15A /* Common */ = {
 			isa = XCSwiftPackageProductDependency;

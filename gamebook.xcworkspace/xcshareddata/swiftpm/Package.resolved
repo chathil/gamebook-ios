@@ -42,8 +42,17 @@
         "repositoryURL": "https://github.com/chathil/gamebook-common.git",
         "state": {
           "branch": null,
-          "revision": "89839c04edbb62bf2412fe5917f34c85d4628704",
-          "version": "0.1.0"
+          "revision": "b5ee3c0c45f9340d091862cde622b5200ea7ea12",
+          "version": "0.1.1"
+        }
+      },
+      {
+        "package": "User",
+        "repositoryURL": "https://github.com/chathil/gamebook-user.git",
+        "state": {
+          "branch": null,
+          "revision": "2a56f4c99bcd78759e78998a4346fb6f25a996dd",
+          "version": "0.1.1"
         }
       },
       {
