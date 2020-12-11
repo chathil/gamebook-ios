@@ -1,5 +1,5 @@
 lane :tests do
   run_tests(workspace: "gamebook.xcworkspace",
             devices: ["iPhone 11 Pro"],
-            target: "gamebook")
+            scheme: "gamebook")
 end
