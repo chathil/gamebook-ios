@@ -1,6 +1,6 @@
-
 language: swift
 osx_image: xcode12.2
+install:
+  - bundle install
 script:
- - set -o pipefail && xcodebuild -alltargets clean
- - set -o pipefail && env NSUnbufferedIO=YES xcodebuild -workspace "gamebook.xcworkspace" -scheme "gamebook" -destination "platform=iOS Simulator,OS=14.2,name=iPhone 11 Pro" clean test | xcpretty
+  - fastlane beta
