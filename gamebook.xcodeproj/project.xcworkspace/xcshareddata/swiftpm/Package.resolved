@@ -38,6 +38,24 @@
         }
       },
       {
+        "package": "Common",
+        "repositoryURL": "https://github.com/chathil/gamebook-common.git",
+        "state": {
+          "branch": null,
+          "revision": "b5ee3c0c45f9340d091862cde622b5200ea7ea12",
+          "version": "0.1.1"
+        }
+      },
+      {
+        "package": "User",
+        "repositoryURL": "https://github.com/chathil/gamebook-user.git",
+        "state": {
+          "branch": null,
+          "revision": "2a56f4c99bcd78759e78998a4346fb6f25a996dd",
+          "version": "0.1.1"
+        }
+      },
+      {
         "package": "Nimble",
         "repositoryURL": "https://github.com/Quick/Nimble",
         "state": {
@@ -56,12 +74,30 @@
         }
       },
       {
+        "package": "Realm",
+        "repositoryURL": "https://github.com/realm/realm-cocoa.git",
+        "state": {
+          "branch": null,
+          "revision": "580bb8043a607d8669e185ed33ed77de45c0cdfb",
+          "version": "10.4.0"
+        }
+      },
+      {
+        "package": "RealmCore",
+        "repositoryURL": "https://github.com/realm/realm-core",
+        "state": {
+          "branch": null,
+          "revision": "9b2eb9020f97f0930a3f351be95ac320bdf44cf8",
+          "version": "10.1.4"
+        }
+      },
+      {
         "package": "SDWebImage",
         "repositoryURL": "https://github.com/SDWebImage/SDWebImage",
         "state": {
           "branch": null,
-          "revision": "88b3ba211c0d604e60eab204c1baf8229c513399",
-          "version": "5.9.4"
+          "revision": "e857b78ca4c8afe616b794aeb090d40f4e348072",
+          "version": "5.10.0"
         }
       },
       {
