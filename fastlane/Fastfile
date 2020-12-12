@@ -1,5 +1,6 @@
 lane :tests do
   run_tests(project: "gamebook.xcodeproj",
             devices: ["iPhone 11 Pro"],
-            scheme: "gamebook")
+            scheme: "gamebook",
+	    clean: true)
 end
