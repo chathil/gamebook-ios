@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Clear previous data
-      run: rm -rf /Users/administrator/Library/Developer/Xcode/DerivedData/*
+    - name: Clear previous data 
+      run: rm -rf /Users/runner/Library/Developer/Xcode/DerivedData/*
     - name: Run lanes
       run: fastlane tests
