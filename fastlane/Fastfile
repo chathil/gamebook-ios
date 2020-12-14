@@ -14,7 +14,7 @@ lane :tests do
           proj: "./gamebook.xcodeproj",
           output_directory: "test_output/code_coverage/.", 
           cobertura_xml: true,
-          travis: true,
+          html: true,
           coveralls: true,
           ignore: ["Pods/*", "ThirdParty/*", “Frameworks/*"])
 end
