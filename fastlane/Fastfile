@@ -7,9 +7,9 @@ lane :tests do
   run_tests(project: "gamebook.xcodeproj",
             devices: ["iPhone 11 Pro"],
             scheme: "gamebook",
-	          clean: true,
+	          clean: false,
 	          code_coverage: true,
-            skip_build: true)
+            skip_build: false)
   slather(scheme: "gamebook",
           proj: "./gamebook.xcodeproj",
           output_directory: "test_output/code_coverage/.", 
