@@ -71,9 +71,9 @@ public struct GameTransformer: Mapper {
     
 }
 
-extension GameTransformer {
+public extension GameTransformer {
     struct Module: Cleanse.Module {
-        static func configure(binder: Binder<Singleton>) {
+        public static func configure(binder: Binder<Singleton>) {
             binder.bind(GameTransformer.self).to(factory: GameTransformer.init)
         }
     }

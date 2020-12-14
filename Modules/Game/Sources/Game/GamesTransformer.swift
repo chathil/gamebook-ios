@@ -51,9 +51,9 @@ where
     
 }
 
-extension GamesTransformer {
+public extension GamesTransformer {
     struct Module: Cleanse.Module {
-        static func configure(binder: Binder<Singleton>) {
+        public static func configure(binder: Binder<Singleton>) {
             binder.include(module: GameTransformer.Module.self)
             binder.bind(GamesTransformer.self).to(factory: GamesTransformer.init)
         }

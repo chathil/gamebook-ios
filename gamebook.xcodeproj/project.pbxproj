@@ -33,11 +33,18 @@
 		C961B03724ADD257008AF274 /* AccountSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B03624ADD257008AF274 /* AccountSnippet.swift */; };
 		C961B03924ADD276008AF274 /* FindRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B03824ADD276008AF274 /* FindRow.swift */; };
 		C961B04D24AE31A4008AF274 /* Chip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B04C24AE31A4008AF274 /* Chip.swift */; };
+		C96F5E0F258669AD00BA9816 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = C96F5E0E258669AD00BA9816 /* Nimble */; };
+		C96F5E1325866AC100BA9816 /* AboutSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F5E1225866AC100BA9816 /* AboutSpec.swift */; };
+		C96F5E1B2586731F00BA9816 /* EditProfileSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F5E1A2586731F00BA9816 /* EditProfileSpec.swift */; };
 		C97669AE2551180D00325594 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97669AD2551180D00325594 /* ContentView.swift */; };
 		C97943442551A60700189390 /* CommonModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97943432551A60700189390 /* CommonModules.swift */; };
 		C97943472551A61600189390 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97943462551A61600189390 /* AppComponent.swift */; };
 		C97943682551AEA800189390 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97943672551AEA800189390 /* HomeRouter.swift */; };
+		C98AF81B25851BC200CC8456 /* Common in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = C98AF81A25851BC200CC8456 /* Common */; };
+		C98AF83825851DEA00CC8456 /* HomeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AF83725851DEA00CC8456 /* HomeSpec.swift */; };
+		C98AF8412585213100CC8456 /* Quick in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = C98AF8402585213100CC8456 /* Quick */; };
 		C9B8DD2924AF27EC0058299A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B8DD2824AF27EC0058299A /* SearchBar.swift */; };
+		C9C5164F2587451100130378 /* FavoriteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5164E2587451100130378 /* FavoriteSpec.swift */; };
 		C9C6A7312582668100A4F15A /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = C9C6A7302582668100A4F15A /* Common */; };
 		C9C6A735258274CF00A4F15A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C9C6A734258274CF00A4F15A /* RealmSwift */; };
 		C9C6A737258274CF00A4F15A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C9C6A736258274CF00A4F15A /* Realm */; };
@@ -45,6 +52,16 @@
 		C9FD68C825601D250047B912 /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD68C725601D250047B912 /* ShimmerView.swift */; };
 		C9FD7C70256A46700070CE9E /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD7C6F256A46700070CE9E /* ImagePickerView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C94AD93625849E37002BA210 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C961B00624ADD112008AF274 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C961B00D24ADD112008AF274;
+			remoteInfo = gamebook;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C901A98C25611D8700180B24 /* Dimens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimens.swift; sourceTree = "<group>"; };
@@ -57,6 +74,8 @@
 		C92BAB0F24B8B2220026567F /* FavoriteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRow.swift; sourceTree = "<group>"; };
 		C92BAB1124B8BAF60026567F /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		C949113F25715DFD00237046 /* Game */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Game; path = Modules/Game; sourceTree = "<group>"; };
+		C94AD93125849E37002BA210 /* gamebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gamebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C94AD93525849E37002BA210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C961B00E24ADD112008AF274 /* gamebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gamebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C961B01124ADD112008AF274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C961B01324ADD112008AF274 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,12 +90,16 @@
 		C961B03624ADD257008AF274 /* AccountSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSnippet.swift; sourceTree = "<group>"; };
 		C961B03824ADD276008AF274 /* FindRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindRow.swift; sourceTree = "<group>"; };
 		C961B04C24AE31A4008AF274 /* Chip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chip.swift; sourceTree = "<group>"; };
+		C96F5E1225866AC100BA9816 /* AboutSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSpec.swift; sourceTree = "<group>"; };
+		C96F5E1A2586731F00BA9816 /* EditProfileSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileSpec.swift; sourceTree = "<group>"; };
 		C97669AD2551180D00325594 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C97943432551A60700189390 /* CommonModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModules.swift; sourceTree = "<group>"; };
 		C97943462551A61600189390 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		C97943672551AEA800189390 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		C979BCD225794E8D00DC0244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C98AF83725851DEA00CC8456 /* HomeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSpec.swift; sourceTree = "<group>"; };
 		C9B8DD2824AF27EC0058299A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		C9C5164E2587451100130378 /* FavoriteSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSpec.swift; sourceTree = "<group>"; };
 		C9E0F75625569703007144C3 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
 		C9EACC1D2570EBD600C2C596 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Core; path = Modules/Core; sourceTree = "<group>"; };
 		C9FD68C725601D250047B912 /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
@@ -84,6 +107,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C94AD92E25849E37002BA210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96F5E0F258669AD00BA9816 /* Nimble in Frameworks */,
+				C98AF8412585213100CC8456 /* Quick in Frameworks */,
+				C98AF81B25851BC200CC8456 /* Common in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C961B00B24ADD112008AF274 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,6 +164,18 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		C94AD93225849E37002BA210 /* gamebookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C94AD93525849E37002BA210 /* Info.plist */,
+				C98AF83725851DEA00CC8456 /* HomeSpec.swift */,
+				C96F5E1225866AC100BA9816 /* AboutSpec.swift */,
+				C96F5E1A2586731F00BA9816 /* EditProfileSpec.swift */,
+				C9C5164E2587451100130378 /* FavoriteSpec.swift */,
+			);
+			path = gamebookUITests;
+			sourceTree = "<group>";
+		};
 		C961B00524ADD112008AF274 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +183,7 @@
 				C9EACC1D2570EBD600C2C596 /* Core */,
 				C92A34412546C686001271EB /* .swiftlint.yml */,
 				C961B01024ADD112008AF274 /* gamebook */,
+				C94AD93225849E37002BA210 /* gamebookUITests */,
 				C961B00F24ADD112008AF274 /* Products */,
 				2B3BA406F6BD2FC74CA9D50D /* Frameworks */,
 			);
@@ -147,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				C961B00E24ADD112008AF274 /* gamebook.app */,
+				C94AD93125849E37002BA210 /* gamebookUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -330,6 +377,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C94AD93025849E37002BA210 /* gamebookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C94AD93825849E37002BA210 /* Build configuration list for PBXNativeTarget "gamebookUITests" */;
+			buildPhases = (
+				C94AD92D25849E37002BA210 /* Sources */,
+				C94AD92E25849E37002BA210 /* Frameworks */,
+				C94AD92F25849E37002BA210 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C94AD93725849E37002BA210 /* PBXTargetDependency */,
+			);
+			name = gamebookUITests;
+			packageProductDependencies = (
+				C98AF81A25851BC200CC8456 /* Common */,
+				C98AF8402585213100CC8456 /* Quick */,
+				C96F5E0E258669AD00BA9816 /* Nimble */,
+			);
+			productName = gamebookUITests;
+			productReference = C94AD93125849E37002BA210 /* gamebookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C961B00D24ADD112008AF274 /* gamebook */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C961B02224ADD113008AF274 /* Build configuration list for PBXNativeTarget "gamebook" */;
@@ -366,10 +436,14 @@
 		C961B00624ADD112008AF274 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Abdul Chathil";
 				TargetAttributes = {
+					C94AD93025849E37002BA210 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = C961B00D24ADD112008AF274;
+					};
 					C961B00D24ADD112008AF274 = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -390,22 +464,31 @@
 				C900908C25504AD500E90D75 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				C900909025505BC300E90D75 /* XCRemoteSwiftPackageReference "Cleanse" */,
 				C90685A12572710900EE35E1 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				C98B0F862580986F0026EF50 /* XCRemoteSwiftPackageReference "Nimble" */,
-				C98B0F8A25809EED0026EF50 /* XCRemoteSwiftPackageReference "Quick" */,
 				C9C6A72F2582668100A4F15A /* XCRemoteSwiftPackageReference "gamebook-common" */,
 				C9C6A733258274CF00A4F15A /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				C90F99D025828DDB009E08AC /* XCRemoteSwiftPackageReference "gamebook-user" */,
+				C98AF83B2585212500CC8456 /* XCRemoteSwiftPackageReference "Quick" */,
+				C9E4013F258618B000548454 /* XCRemoteSwiftPackageReference "Nimble" */,
+				C9FC228D25861A5C000163A6 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 			);
 			productRefGroup = C961B00F24ADD112008AF274 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C961B00D24ADD112008AF274 /* gamebook */,
+				C94AD93025849E37002BA210 /* gamebookUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C94AD92F25849E37002BA210 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C961B00C24ADD112008AF274 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -440,6 +523,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C94AD92D25849E37002BA210 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96F5E1325866AC100BA9816 /* AboutSpec.swift in Sources */,
+				C9C5164F2587451100130378 /* FavoriteSpec.swift in Sources */,
+				C96F5E1B2586731F00BA9816 /* EditProfileSpec.swift in Sources */,
+				C98AF83825851DEA00CC8456 /* HomeSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C961B00A24ADD112008AF274 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -473,6 +567,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C94AD93725849E37002BA210 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C961B00D24ADD112008AF274 /* gamebook */;
+			targetProxy = C94AD93625849E37002BA210 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		C961B01C24ADD113008AF274 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -486,6 +588,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C94AD93925849E37002BA210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = gamebookUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.gamebookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = gamebook;
+			};
+			name = Debug;
+		};
+		C94AD93A25849E37002BA210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = gamebookUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.gamebookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = gamebook;
+			};
+			name = Release;
+		};
 		C961B02024ADD113008AF274 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -653,6 +793,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C94AD93825849E37002BA210 /* Build configuration list for PBXNativeTarget "gamebookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C94AD93925849E37002BA210 /* Debug */,
+				C94AD93A25849E37002BA210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C961B00924ADD112008AF274 /* Build configuration list for PBXProject "gamebook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -714,17 +863,9 @@
 				minimumVersion = 0.1.1;
 			};
 		};
-		C98B0F862580986F0026EF50 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+		C98AF83B2585212500CC8456 /* XCRemoteSwiftPackageReference "Quick" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Nimble";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
-		C98B0F8A25809EED0026EF50 /* XCRemoteSwiftPackageReference "Quick" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Quick";
+			repositoryURL = "https://github.com/Quick/Quick.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 3.0.0;
@@ -744,6 +885,22 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 10.3.0;
+			};
+		};
+		C9E4013F258618B000548454 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		C9FC228D25861A5C000163A6 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -781,6 +938,21 @@
 		C915433E257216DC005D61FC /* Game */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Game;
+		};
+		C96F5E0E258669AD00BA9816 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9E4013F258618B000548454 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		C98AF81A25851BC200CC8456 /* Common */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9C6A72F2582668100A4F15A /* XCRemoteSwiftPackageReference "gamebook-common" */;
+			productName = Common;
+		};
+		C98AF8402585213100CC8456 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C98AF83B2585212500CC8456 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
 		};
 		C9C6A7302582668100A4F15A /* Common */ = {
 			isa = XCSwiftPackageProductDependency;

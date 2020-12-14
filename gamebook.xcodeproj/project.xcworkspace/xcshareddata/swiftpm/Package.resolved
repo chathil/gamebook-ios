@@ -66,7 +66,7 @@
       },
       {
         "package": "Quick",
-        "repositoryURL": "https://github.com/Quick/Quick",
+        "repositoryURL": "https://github.com/Quick/Quick.git",
         "state": {
           "branch": null,
           "revision": "0038bcbab4292f3b028632556507c124e5ba69f3",
@@ -107,6 +107,15 @@
           "branch": null,
           "revision": "4c7f169e39bc35d6b80d42b8eb8301bee9cd0907",
           "version": "1.5.0"
+        }
+      },
+      {
+        "package": "ViewInspector",
+        "repositoryURL": "https://github.com/nalexn/ViewInspector.git",
+        "state": {
+          "branch": null,
+          "revision": "b3676955888f75332f3f594674b97e7224fd58b8",
+          "version": "0.5.5"
         }
       }
     ]

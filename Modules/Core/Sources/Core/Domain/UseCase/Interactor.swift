@@ -7,7 +7,7 @@
 
 import Foundation
 import Combine
- 
+
 public struct Interactor<Request, Response, R: Repository>: UseCase
 where R.Request == Request, R.Response == Response {
     

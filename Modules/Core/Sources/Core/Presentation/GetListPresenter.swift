@@ -41,9 +41,4 @@ public class GetListPresenter<Request, Response, Interactor: UseCase>: Observabl
             })
             .store(in: &cancellables)
     }
-    
-//    public func updateList(request: Request?) {
-//        isLoading = true
-//
-//    }
 }

@@ -22,15 +22,18 @@ struct ShimmerView: View {
     }
     
     var body: some View {
-        Rectangle()
-            .fill(color)
-            .opacity(opacity)
-            .transition(.opacity)
-            .onAppear {
-                let baseAnimation = Animation.easeInOut(duration: Constants.duration)
-                let repeated = baseAnimation.repeatForever(autoreverses: true)
-                withAnimation(repeated) {
-                    self.opacity = Constants.maxOpacity
+        ZStack {
+            Text("Loading Indicator").frame(width: 0, height: 0) // to identify this view in test. i know it's weird.
+            Rectangle()
+                .fill(color)
+                .opacity(opacity)
+                .transition(.opacity)
+                .onAppear {
+                    let baseAnimation = Animation.easeInOut(duration: Constants.duration)
+                    let repeated = baseAnimation.repeatForever(autoreverses: true)
+                    withAnimation(repeated) {
+                        self.opacity = Constants.maxOpacity
+                    }
                 }
         }
     }

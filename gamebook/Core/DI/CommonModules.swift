@@ -42,7 +42,6 @@ struct RootWindowModule: Cleanse.Module {
             .bind()
             .tagged(with: UIViewController.Root.self)
             .to { (gamesPresenter: Provider<GamesPresenter>, favoriteGamesPresenter: Provider<FavoriteGamesPresenter>, updateFavoriteGamesPresenter: Provider<UpdateFavoriteGamesPresenter>, homeRouter: Provider<HomeRouter>) -> UIViewController in
-                print("Content View Binder")
                 let contentView = ContentView(
                     gamesPresenter: gamesPresenter.get(),
                     favoriteGamesPresenter: favoriteGamesPresenter.get(), updateFavoriteGamesPresenter: updateFavoriteGamesPresenter.get(), homeRouter: homeRouter.get()
