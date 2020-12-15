@@ -129,4 +129,3 @@ class Search: ObservableObject {
             }.store(in: &cancellables)
     }
 }
-

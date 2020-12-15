@@ -469,7 +469,6 @@
 				C90F99D025828DDB009E08AC /* XCRemoteSwiftPackageReference "gamebook-user" */,
 				C98AF83B2585212500CC8456 /* XCRemoteSwiftPackageReference "Quick" */,
 				C9E4013F258618B000548454 /* XCRemoteSwiftPackageReference "Nimble" */,
-				C9FC228D25861A5C000163A6 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 			);
 			productRefGroup = C961B00F24ADD112008AF274 /* Products */;
 			projectDirPath = "";
@@ -517,8 +516,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "if which swiftlint >/dev/null; then \n    swiftlint \nelse \n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" \nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -893,14 +891,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 9.0.0;
-			};
-		};
-		C9FC228D25861A5C000163A6 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nalexn/ViewInspector.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.5.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
