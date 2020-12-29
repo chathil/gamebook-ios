@@ -25,7 +25,6 @@
 		C961B01224ADD112008AF274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B01124ADD112008AF274 /* AppDelegate.swift */; };
 		C961B01424ADD112008AF274 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B01324ADD112008AF274 /* SceneDelegate.swift */; };
 		C961B01824ADD113008AF274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C961B01724ADD113008AF274 /* Assets.xcassets */; };
-		C961B01E24ADD113008AF274 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C961B01C24ADD113008AF274 /* LaunchScreen.storyboard */; };
 		C961B02D24ADD1EF008AF274 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B02C24ADD1EF008AF274 /* HomeScreen.swift */; };
 		C961B02F24ADD1FB008AF274 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B02E24ADD1FB008AF274 /* AboutScreen.swift */; };
 		C961B03124ADD208008AF274 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B03024ADD208008AF274 /* DetailScreen.swift */; };
@@ -34,6 +33,7 @@
 		C961B03724ADD257008AF274 /* AccountSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B03624ADD257008AF274 /* AccountSnippet.swift */; };
 		C961B03924ADD276008AF274 /* FindRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B03824ADD276008AF274 /* FindRow.swift */; };
 		C961B04D24AE31A4008AF274 /* Chip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B04C24AE31A4008AF274 /* Chip.swift */; };
+		C9735B4E259B8D48009606B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C961B01C24ADD113008AF274 /* LaunchScreen.storyboard */; };
 		C975317D259A3D020080AC59 /* Nimble in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = C975317C259A3D020080AC59 /* Nimble */; };
 		C9753181259A3D390080AC59 /* Common in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = C9753180259A3D390080AC59 /* Common */; };
 		C97669AE2551180D00325594 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97669AD2551180D00325594 /* ContentView.swift */; };
@@ -71,9 +71,9 @@
 		C92BAB0F24B8B2220026567F /* FavoriteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRow.swift; sourceTree = "<group>"; };
 		C92BAB1124B8BAF60026567F /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		C949113F25715DFD00237046 /* Game */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Game; path = Modules/Game; sourceTree = "<group>"; };
-		C94AD93125849E37002BA210 /* gamebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gamebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C94AD93125849E37002BA210 /* GamebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GamebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94AD93525849E37002BA210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C961B00E24ADD112008AF274 /* gamebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gamebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C961B00E24ADD112008AF274 /* Gamebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gamebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C961B01124ADD112008AF274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C961B01324ADD112008AF274 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C961B01724ADD113008AF274 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,13 +160,13 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		C94AD93225849E37002BA210 /* gamebookUITests */ = {
+		C94AD93225849E37002BA210 /* GamebookUITests */ = {
 			isa = PBXGroup;
 			children = (
 				C94AD93525849E37002BA210 /* Info.plist */,
 				C97D86FB259B7C35002DD3AF /* SampleUITests.swift */,
 			);
-			path = gamebookUITests;
+			path = GamebookUITests;
 			sourceTree = "<group>";
 		};
 		C961B00524ADD112008AF274 = {
@@ -177,8 +177,8 @@
 				C9B9D3502598AC0C00190DC0 /* Common */,
 				C949113F25715DFD00237046 /* Game */,
 				C92A34412546C686001271EB /* .swiftlint.yml */,
-				C961B01024ADD112008AF274 /* gamebook */,
-				C94AD93225849E37002BA210 /* gamebookUITests */,
+				C961B01024ADD112008AF274 /* Gamebook */,
+				C94AD93225849E37002BA210 /* GamebookUITests */,
 				C961B00F24ADD112008AF274 /* Products */,
 				2B3BA406F6BD2FC74CA9D50D /* Frameworks */,
 			);
@@ -187,13 +187,13 @@
 		C961B00F24ADD112008AF274 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C961B00E24ADD112008AF274 /* gamebook.app */,
-				C94AD93125849E37002BA210 /* gamebookUITests.xctest */,
+				C961B00E24ADD112008AF274 /* Gamebook.app */,
+				C94AD93125849E37002BA210 /* GamebookUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C961B01024ADD112008AF274 /* gamebook */ = {
+		C961B01024ADD112008AF274 /* Gamebook */ = {
 			isa = PBXGroup;
 			children = (
 				C93A5A632562C1D200463CE6 /* SupportingFiles */,
@@ -201,7 +201,7 @@
 				C97669B025511CC800325594 /* Core */,
 				C97669AC255117DA00325594 /* App */,
 			);
-			path = gamebook;
+			path = Gamebook;
 			sourceTree = "<group>";
 		};
 		C97669AC255117DA00325594 /* App */ = {
@@ -372,9 +372,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C94AD93025849E37002BA210 /* gamebookUITests */ = {
+		C94AD93025849E37002BA210 /* GamebookUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C94AD93825849E37002BA210 /* Build configuration list for PBXNativeTarget "gamebookUITests" */;
+			buildConfigurationList = C94AD93825849E37002BA210 /* Build configuration list for PBXNativeTarget "GamebookUITests" */;
 			buildPhases = (
 				C94AD92D25849E37002BA210 /* Sources */,
 				C94AD92E25849E37002BA210 /* Frameworks */,
@@ -385,19 +385,19 @@
 			dependencies = (
 				C94AD93725849E37002BA210 /* PBXTargetDependency */,
 			);
-			name = gamebookUITests;
+			name = GamebookUITests;
 			packageProductDependencies = (
 				C98AF8402585213100CC8456 /* Quick */,
 				C975317C259A3D020080AC59 /* Nimble */,
 				C9753180259A3D390080AC59 /* Common */,
 			);
 			productName = gamebookUITests;
-			productReference = C94AD93125849E37002BA210 /* gamebookUITests.xctest */;
+			productReference = C94AD93125849E37002BA210 /* GamebookUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		C961B00D24ADD112008AF274 /* gamebook */ = {
+		C961B00D24ADD112008AF274 /* Gamebook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C961B02224ADD113008AF274 /* Build configuration list for PBXNativeTarget "gamebook" */;
+			buildConfigurationList = C961B02224ADD113008AF274 /* Build configuration list for PBXNativeTarget "Gamebook" */;
 			buildPhases = (
 				C961B00A24ADD112008AF274 /* Sources */,
 				C961B00B24ADD112008AF274 /* Frameworks */,
@@ -408,7 +408,7 @@
 			);
 			dependencies = (
 			);
-			name = gamebook;
+			name = Gamebook;
 			packageProductDependencies = (
 				C90090892550478300E90D75 /* SDWebImage */,
 				C900908D25504AD500E90D75 /* SDWebImageSwiftUI */,
@@ -422,7 +422,7 @@
 				C94DBFE62598CF71004F0CCA /* Core */,
 			);
 			productName = "fundamental-sub-one";
-			productReference = C961B00E24ADD112008AF274 /* gamebook.app */;
+			productReference = C961B00E24ADD112008AF274 /* Gamebook.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -444,7 +444,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C961B00924ADD112008AF274 /* Build configuration list for PBXProject "gamebook" */;
+			buildConfigurationList = C961B00924ADD112008AF274 /* Build configuration list for PBXProject "Gamebook" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -467,8 +467,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C961B00D24ADD112008AF274 /* gamebook */,
-				C94AD93025849E37002BA210 /* gamebookUITests */,
+				C961B00D24ADD112008AF274 /* Gamebook */,
+				C94AD93025849E37002BA210 /* GamebookUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -486,7 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C92A34422546C686001271EB /* .swiftlint.yml in Resources */,
-				C961B01E24ADD113008AF274 /* LaunchScreen.storyboard in Resources */,
+				C9735B4E259B8D48009606B4 /* LaunchScreen.storyboard in Resources */,
 				C961B01824ADD113008AF274 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,7 +558,7 @@
 /* Begin PBXTargetDependency section */
 		C94AD93725849E37002BA210 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C961B00D24ADD112008AF274 /* gamebook */;
+			target = C961B00D24ADD112008AF274 /* Gamebook */;
 			targetProxy = C94AD93625849E37002BA210 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -580,18 +580,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = gamebookUITests/Info.plist;
+				INFOPLIST_FILE = GamebookUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.gamebookUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.GamebookUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = gamebook;
+				TEST_TARGET_NAME = Gamebook;
 			};
 			name = Debug;
 		};
@@ -599,18 +599,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = gamebookUITests/Info.plist;
+				INFOPLIST_FILE = GamebookUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.gamebookUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.GamebookUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = gamebook;
+				TEST_TARGET_NAME = Gamebook;
 			};
 			name = Release;
 		};
@@ -739,19 +739,19 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = DLJ5AWZAF9;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/gamebook/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Gamebook/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.gamebook;
-				PRODUCT_NAME = gamebook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.Gamebook;
+				PRODUCT_NAME = Gamebook;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -762,26 +762,26 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = DLJ5AWZAF9;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/gamebook/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Gamebook/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.gamebook;
-				PRODUCT_NAME = gamebook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.Gamebook;
+				PRODUCT_NAME = Gamebook;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C94AD93825849E37002BA210 /* Build configuration list for PBXNativeTarget "gamebookUITests" */ = {
+		C94AD93825849E37002BA210 /* Build configuration list for PBXNativeTarget "GamebookUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C94AD93925849E37002BA210 /* Debug */,
@@ -790,7 +790,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C961B00924ADD112008AF274 /* Build configuration list for PBXProject "gamebook" */ = {
+		C961B00924ADD112008AF274 /* Build configuration list for PBXProject "Gamebook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C961B02024ADD113008AF274 /* Debug */,
@@ -799,7 +799,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C961B02224ADD113008AF274 /* Build configuration list for PBXNativeTarget "gamebook" */ = {
+		C961B02224ADD113008AF274 /* Build configuration list for PBXNativeTarget "Gamebook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C961B02324ADD113008AF274 /* Debug */,
