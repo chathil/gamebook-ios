@@ -1,4 +1,4 @@
-name: Swift
+name: Gamebook-CI
 
 on:
   push:
@@ -13,5 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Install bundle
+      run: sudo bundle install
     - name: Run lanes
-      run: fastlane tests
+      run: exec fastlane tests

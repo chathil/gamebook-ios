@@ -4,9 +4,9 @@ lane :tests do
     raise_if_swiftlint_error: true,
     ignore_exit_status: true
   )
-  run_tests(project: "gamebook.xcodeproj",
+  run_tests(project: "Gamebook.xcodeproj",
             devices: ["iPhone 11 Pro"],
-            scheme: "gamebook",
+            scheme: "Gamebook",
 	          clean: false,
 	          code_coverage: true,
             skip_build: false)
