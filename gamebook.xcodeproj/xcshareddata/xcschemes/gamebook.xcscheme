@@ -33,6 +33,26 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C94AD93025849E37002BA210"
+               BuildableName = "gamebookUITests.xctest"
+               BlueprintName = "gamebookUITests"
+               ReferencedContainer = "container:gamebook.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CommonTests"
+               BuildableName = "CommonTests"
+               BlueprintName = "CommonTests"
+               ReferencedContainer = "container:Modules/Common">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "CoreTests"
                BuildableName = "CoreTests"
                BlueprintName = "CoreTests"
@@ -53,10 +73,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C94AD93025849E37002BA210"
-               BuildableName = "gamebookUITests.xctest"
-               BlueprintName = "gamebookUITests"
-               ReferencedContainer = "container:gamebook.xcodeproj">
+               BlueprintIdentifier = "UserTests"
+               BuildableName = "UserTests"
+               BlueprintName = "UserTests"
+               ReferencedContainer = "container:Modules/User">
             </BuildableReference>
          </TestableReference>
       </Testables>

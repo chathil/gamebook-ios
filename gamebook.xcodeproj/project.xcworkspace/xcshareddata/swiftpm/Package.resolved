@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire",
         "state": {
           "branch": null,
-          "revision": "9e0328127dfb801cefe8ac53a13c0c90a7770448",
-          "version": "5.4.0"
+          "revision": "eaf6e622dd41b07b251d8f01752eab31bc811493",
+          "version": "5.4.1"
         }
       },
       {
@@ -38,24 +38,6 @@
         }
       },
       {
-        "package": "Common",
-        "repositoryURL": "https://github.com/chathil/gamebook-common.git",
-        "state": {
-          "branch": null,
-          "revision": "b5ee3c0c45f9340d091862cde622b5200ea7ea12",
-          "version": "0.1.1"
-        }
-      },
-      {
-        "package": "User",
-        "repositoryURL": "https://github.com/chathil/gamebook-user.git",
-        "state": {
-          "branch": null,
-          "revision": "2a56f4c99bcd78759e78998a4346fb6f25a996dd",
-          "version": "0.1.1"
-        }
-      },
-      {
         "package": "Nimble",
         "repositoryURL": "https://github.com/Quick/Nimble",
         "state": {
@@ -78,17 +60,17 @@
         "repositoryURL": "https://github.com/realm/realm-cocoa.git",
         "state": {
           "branch": null,
-          "revision": "580bb8043a607d8669e185ed33ed77de45c0cdfb",
-          "version": "10.4.0"
+          "revision": "c236b2c1270fe41ba7c101a1d17ef56494987cb9",
+          "version": "10.5.0"
         }
       },
       {
-        "package": "RealmCore",
+        "package": "RealmDatabase",
         "repositoryURL": "https://github.com/realm/realm-core",
         "state": {
           "branch": null,
-          "revision": "9b2eb9020f97f0930a3f351be95ac320bdf44cf8",
-          "version": "10.1.4"
+          "revision": "7390723ae39b432bd00f093ea84e3b79534a202c",
+          "version": "10.3.2"
         }
       },
       {
@@ -96,8 +78,8 @@
         "repositoryURL": "https://github.com/SDWebImage/SDWebImage",
         "state": {
           "branch": null,
-          "revision": "e857b78ca4c8afe616b794aeb090d40f4e348072",
-          "version": "5.10.0"
+          "revision": "f5fd53b2d23a60f52e8aaf206cbc0751f79a6a02",
+          "version": "5.10.1"
         }
       },
       {

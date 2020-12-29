@@ -14,13 +14,14 @@
 		C906303E24BCC87200EB4F98 /* EditProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303D24BCC87200EB4F98 /* EditProfileScreen.swift */; };
 		C906304024BCCA9400EB4F98 /* Fab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906303F24BCCA9400EB4F98 /* Fab.swift */; };
 		C90685A32572710900EE35E1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C90685A22572710900EE35E1 /* Alamofire */; };
-		C90F99D225828DDB009E08AC /* User in Frameworks */ = {isa = PBXBuildFile; productRef = C90F99D125828DDB009E08AC /* User */; };
-		C915433D257216D7005D61FC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = C915433C257216D7005D61FC /* Core */; };
 		C915433F257216DC005D61FC /* Game in Frameworks */ = {isa = PBXBuildFile; productRef = C915433E257216DC005D61FC /* Game */; };
 		C92A34422546C686001271EB /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C92A34412546C686001271EB /* .swiftlint.yml */; };
 		C92BAB0E24B8A79B0026567F /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BAB0D24B8A79B0026567F /* FavoriteScreen.swift */; };
 		C92BAB1024B8B2220026567F /* FavoriteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BAB0F24B8B2220026567F /* FavoriteRow.swift */; };
 		C92BAB1224B8BAF60026567F /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BAB1124B8BAF60026567F /* LikeButton.swift */; };
+		C94DBFE32598CF65004F0CCA /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = C94DBFE22598CF65004F0CCA /* Common */; };
+		C94DBFE52598CF69004F0CCA /* User in Frameworks */ = {isa = PBXBuildFile; productRef = C94DBFE42598CF69004F0CCA /* User */; };
+		C94DBFE72598CF71004F0CCA /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = C94DBFE62598CF71004F0CCA /* Core */; };
 		C961B01224ADD112008AF274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B01124ADD112008AF274 /* AppDelegate.swift */; };
 		C961B01424ADD112008AF274 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B01324ADD112008AF274 /* SceneDelegate.swift */; };
 		C961B01824ADD113008AF274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C961B01724ADD113008AF274 /* Assets.xcassets */; };
@@ -33,19 +34,15 @@
 		C961B03724ADD257008AF274 /* AccountSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B03624ADD257008AF274 /* AccountSnippet.swift */; };
 		C961B03924ADD276008AF274 /* FindRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B03824ADD276008AF274 /* FindRow.swift */; };
 		C961B04D24AE31A4008AF274 /* Chip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961B04C24AE31A4008AF274 /* Chip.swift */; };
-		C96F5E0F258669AD00BA9816 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = C96F5E0E258669AD00BA9816 /* Nimble */; };
-		C96F5E1325866AC100BA9816 /* AboutSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F5E1225866AC100BA9816 /* AboutSpec.swift */; };
-		C96F5E1B2586731F00BA9816 /* EditProfileSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F5E1A2586731F00BA9816 /* EditProfileSpec.swift */; };
+		C975317D259A3D020080AC59 /* Nimble in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = C975317C259A3D020080AC59 /* Nimble */; };
+		C9753181259A3D390080AC59 /* Common in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = C9753180259A3D390080AC59 /* Common */; };
 		C97669AE2551180D00325594 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97669AD2551180D00325594 /* ContentView.swift */; };
 		C97943442551A60700189390 /* CommonModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97943432551A60700189390 /* CommonModules.swift */; };
 		C97943472551A61600189390 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97943462551A61600189390 /* AppComponent.swift */; };
 		C97943682551AEA800189390 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97943672551AEA800189390 /* HomeRouter.swift */; };
-		C98AF81B25851BC200CC8456 /* Common in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = C98AF81A25851BC200CC8456 /* Common */; };
-		C98AF83825851DEA00CC8456 /* HomeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98AF83725851DEA00CC8456 /* HomeSpec.swift */; };
+		C97D86FC259B7C35002DD3AF /* SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D86FB259B7C35002DD3AF /* SampleUITests.swift */; };
 		C98AF8412585213100CC8456 /* Quick in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = C98AF8402585213100CC8456 /* Quick */; };
 		C9B8DD2924AF27EC0058299A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B8DD2824AF27EC0058299A /* SearchBar.swift */; };
-		C9C5164F2587451100130378 /* FavoriteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5164E2587451100130378 /* FavoriteSpec.swift */; };
-		C9C6A7312582668100A4F15A /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = C9C6A7302582668100A4F15A /* Common */; };
 		C9C6A735258274CF00A4F15A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C9C6A734258274CF00A4F15A /* RealmSwift */; };
 		C9C6A737258274CF00A4F15A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C9C6A736258274CF00A4F15A /* Realm */; };
 		C9E0F75725569703007144C3 /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E0F75625569703007144C3 /* FavoriteRouter.swift */; };
@@ -90,18 +87,17 @@
 		C961B03624ADD257008AF274 /* AccountSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSnippet.swift; sourceTree = "<group>"; };
 		C961B03824ADD276008AF274 /* FindRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindRow.swift; sourceTree = "<group>"; };
 		C961B04C24AE31A4008AF274 /* Chip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chip.swift; sourceTree = "<group>"; };
-		C96F5E1225866AC100BA9816 /* AboutSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSpec.swift; sourceTree = "<group>"; };
-		C96F5E1A2586731F00BA9816 /* EditProfileSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileSpec.swift; sourceTree = "<group>"; };
 		C97669AD2551180D00325594 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C97943432551A60700189390 /* CommonModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModules.swift; sourceTree = "<group>"; };
 		C97943462551A61600189390 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		C97943672551AEA800189390 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		C979BCD225794E8D00DC0244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		C98AF83725851DEA00CC8456 /* HomeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSpec.swift; sourceTree = "<group>"; };
+		C97D86FB259B7C35002DD3AF /* SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUITests.swift; sourceTree = "<group>"; };
 		C9B8DD2824AF27EC0058299A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		C9C5164E2587451100130378 /* FavoriteSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSpec.swift; sourceTree = "<group>"; };
+		C9B9D3502598AC0C00190DC0 /* Common */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Common; path = Modules/Common; sourceTree = "<group>"; };
+		C9B9D3532598AC1100190DC0 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Core; path = Modules/Core; sourceTree = "<group>"; };
+		C9B9D3562598AC1400190DC0 /* User */ = {isa = PBXFileReference; lastKnownFileType = folder; name = User; path = Modules/User; sourceTree = "<group>"; };
 		C9E0F75625569703007144C3 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
-		C9EACC1D2570EBD600C2C596 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Core; path = Modules/Core; sourceTree = "<group>"; };
 		C9FD68C725601D250047B912 /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
 		C9FD7C6F256A46700070CE9E /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,9 +107,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C96F5E0F258669AD00BA9816 /* Nimble in Frameworks */,
 				C98AF8412585213100CC8456 /* Quick in Frameworks */,
-				C98AF81B25851BC200CC8456 /* Common in Frameworks */,
+				C975317D259A3D020080AC59 /* Nimble in Frameworks */,
+				C9753181259A3D390080AC59 /* Common in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,14 +119,14 @@
 			files = (
 				C9C6A737258274CF00A4F15A /* Realm in Frameworks */,
 				C900909225505BC300E90D75 /* Cleanse in Frameworks */,
+				C94DBFE52598CF69004F0CCA /* User in Frameworks */,
+				C94DBFE72598CF71004F0CCA /* Core in Frameworks */,
 				C900908E25504AD500E90D75 /* SDWebImageSwiftUI in Frameworks */,
-				C90F99D225828DDB009E08AC /* User in Frameworks */,
 				C900908A2550478300E90D75 /* SDWebImage in Frameworks */,
-				C915433D257216D7005D61FC /* Core in Frameworks */,
 				C915433F257216DC005D61FC /* Game in Frameworks */,
-				C9C6A7312582668100A4F15A /* Common in Frameworks */,
 				C90685A32572710900EE35E1 /* Alamofire in Frameworks */,
 				C9C6A735258274CF00A4F15A /* RealmSwift in Frameworks */,
+				C94DBFE32598CF65004F0CCA /* Common in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,10 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				C94AD93525849E37002BA210 /* Info.plist */,
-				C98AF83725851DEA00CC8456 /* HomeSpec.swift */,
-				C96F5E1225866AC100BA9816 /* AboutSpec.swift */,
-				C96F5E1A2586731F00BA9816 /* EditProfileSpec.swift */,
-				C9C5164E2587451100130378 /* FavoriteSpec.swift */,
+				C97D86FB259B7C35002DD3AF /* SampleUITests.swift */,
 			);
 			path = gamebookUITests;
 			sourceTree = "<group>";
@@ -179,8 +172,10 @@
 		C961B00524ADD112008AF274 = {
 			isa = PBXGroup;
 			children = (
+				C9B9D3562598AC1400190DC0 /* User */,
+				C9B9D3532598AC1100190DC0 /* Core */,
+				C9B9D3502598AC0C00190DC0 /* Common */,
 				C949113F25715DFD00237046 /* Game */,
-				C9EACC1D2570EBD600C2C596 /* Core */,
 				C92A34412546C686001271EB /* .swiftlint.yml */,
 				C961B01024ADD112008AF274 /* gamebook */,
 				C94AD93225849E37002BA210 /* gamebookUITests */,
@@ -392,9 +387,9 @@
 			);
 			name = gamebookUITests;
 			packageProductDependencies = (
-				C98AF81A25851BC200CC8456 /* Common */,
 				C98AF8402585213100CC8456 /* Quick */,
-				C96F5E0E258669AD00BA9816 /* Nimble */,
+				C975317C259A3D020080AC59 /* Nimble */,
+				C9753180259A3D390080AC59 /* Common */,
 			);
 			productName = gamebookUITests;
 			productReference = C94AD93125849E37002BA210 /* gamebookUITests.xctest */;
@@ -418,13 +413,13 @@
 				C90090892550478300E90D75 /* SDWebImage */,
 				C900908D25504AD500E90D75 /* SDWebImageSwiftUI */,
 				C900909125505BC300E90D75 /* Cleanse */,
-				C915433C257216D7005D61FC /* Core */,
 				C915433E257216DC005D61FC /* Game */,
 				C90685A22572710900EE35E1 /* Alamofire */,
-				C9C6A7302582668100A4F15A /* Common */,
 				C9C6A734258274CF00A4F15A /* RealmSwift */,
 				C9C6A736258274CF00A4F15A /* Realm */,
-				C90F99D125828DDB009E08AC /* User */,
+				C94DBFE22598CF65004F0CCA /* Common */,
+				C94DBFE42598CF69004F0CCA /* User */,
+				C94DBFE62598CF71004F0CCA /* Core */,
 			);
 			productName = "fundamental-sub-one";
 			productReference = C961B00E24ADD112008AF274 /* gamebook.app */;
@@ -464,11 +459,9 @@
 				C900908C25504AD500E90D75 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				C900909025505BC300E90D75 /* XCRemoteSwiftPackageReference "Cleanse" */,
 				C90685A12572710900EE35E1 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				C9C6A72F2582668100A4F15A /* XCRemoteSwiftPackageReference "gamebook-common" */,
 				C9C6A733258274CF00A4F15A /* XCRemoteSwiftPackageReference "realm-cocoa" */,
-				C90F99D025828DDB009E08AC /* XCRemoteSwiftPackageReference "gamebook-user" */,
 				C98AF83B2585212500CC8456 /* XCRemoteSwiftPackageReference "Quick" */,
-				C9E4013F258618B000548454 /* XCRemoteSwiftPackageReference "Nimble" */,
+				C9DE60B2259A369F00582780 /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = C961B00F24ADD112008AF274 /* Products */;
 			projectDirPath = "";
@@ -525,10 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C96F5E1325866AC100BA9816 /* AboutSpec.swift in Sources */,
-				C9C5164F2587451100130378 /* FavoriteSpec.swift in Sources */,
-				C96F5E1B2586731F00BA9816 /* EditProfileSpec.swift in Sources */,
-				C98AF83825851DEA00CC8456 /* HomeSpec.swift in Sources */,
+				C97D86FC259B7C35002DD3AF /* SampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -853,28 +843,12 @@
 				minimumVersion = 5.4.0;
 			};
 		};
-		C90F99D025828DDB009E08AC /* XCRemoteSwiftPackageReference "gamebook-user" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/chathil/gamebook-user.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.1;
-			};
-		};
 		C98AF83B2585212500CC8456 /* XCRemoteSwiftPackageReference "Quick" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Quick.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 3.0.0;
-			};
-		};
-		C9C6A72F2582668100A4F15A /* XCRemoteSwiftPackageReference "gamebook-common" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/chathil/gamebook-common.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
 			};
 		};
 		C9C6A733258274CF00A4F15A /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
@@ -885,7 +859,7 @@
 				minimumVersion = 10.3.0;
 			};
 		};
-		C9E4013F258618B000548454 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+		C9DE60B2259A369F00582780 /* XCRemoteSwiftPackageReference "Nimble" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Nimble";
 			requirement = {
@@ -916,38 +890,35 @@
 			package = C90685A12572710900EE35E1 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		C90F99D125828DDB009E08AC /* User */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C90F99D025828DDB009E08AC /* XCRemoteSwiftPackageReference "gamebook-user" */;
-			productName = User;
-		};
-		C915433C257216D7005D61FC /* Core */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Core;
-		};
 		C915433E257216DC005D61FC /* Game */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Game;
 		};
-		C96F5E0E258669AD00BA9816 /* Nimble */ = {
+		C94DBFE22598CF65004F0CCA /* Common */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C9E4013F258618B000548454 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Common;
+		};
+		C94DBFE42598CF69004F0CCA /* User */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = User;
+		};
+		C94DBFE62598CF71004F0CCA /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+		C975317C259A3D020080AC59 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9DE60B2259A369F00582780 /* XCRemoteSwiftPackageReference "Nimble" */;
 			productName = Nimble;
 		};
-		C98AF81A25851BC200CC8456 /* Common */ = {
+		C9753180259A3D390080AC59 /* Common */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C9C6A72F2582668100A4F15A /* XCRemoteSwiftPackageReference "gamebook-common" */;
 			productName = Common;
 		};
 		C98AF8402585213100CC8456 /* Quick */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C98AF83B2585212500CC8456 /* XCRemoteSwiftPackageReference "Quick" */;
 			productName = Quick;
-		};
-		C9C6A7302582668100A4F15A /* Common */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C9C6A72F2582668100A4F15A /* XCRemoteSwiftPackageReference "gamebook-common" */;
-			productName = Common;
 		};
 		C9C6A734258274CF00A4F15A /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
