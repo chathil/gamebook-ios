@@ -46,6 +46,7 @@
 		C9C6A735258274CF00A4F15A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C9C6A734258274CF00A4F15A /* RealmSwift */; };
 		C9C6A737258274CF00A4F15A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C9C6A736258274CF00A4F15A /* Realm */; };
 		C9E0F75725569703007144C3 /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E0F75625569703007144C3 /* FavoriteRouter.swift */; };
+		C9F30DFE259CF0EF0008E5FC /* FluentIcons in Frameworks */ = {isa = PBXBuildFile; productRef = C9F30DFD259CF0EF0008E5FC /* FluentIcons */; };
 		C9FD68C825601D250047B912 /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD68C725601D250047B912 /* ShimmerView.swift */; };
 		C9FD7C70256A46700070CE9E /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD7C6F256A46700070CE9E /* ImagePickerView.swift */; };
 /* End PBXBuildFile section */
@@ -122,6 +123,7 @@
 				C94DBFE52598CF69004F0CCA /* User in Frameworks */,
 				C94DBFE72598CF71004F0CCA /* Core in Frameworks */,
 				C900908E25504AD500E90D75 /* SDWebImageSwiftUI in Frameworks */,
+				C9F30DFE259CF0EF0008E5FC /* FluentIcons in Frameworks */,
 				C900908A2550478300E90D75 /* SDWebImage in Frameworks */,
 				C915433F257216DC005D61FC /* Game in Frameworks */,
 				C90685A32572710900EE35E1 /* Alamofire in Frameworks */,
@@ -420,6 +422,7 @@
 				C94DBFE22598CF65004F0CCA /* Common */,
 				C94DBFE42598CF69004F0CCA /* User */,
 				C94DBFE62598CF71004F0CCA /* Core */,
+				C9F30DFD259CF0EF0008E5FC /* FluentIcons */,
 			);
 			productName = "fundamental-sub-one";
 			productReference = C961B00E24ADD112008AF274 /* Gamebook.app */;
@@ -462,6 +465,7 @@
 				C9C6A733258274CF00A4F15A /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				C98AF83B2585212500CC8456 /* XCRemoteSwiftPackageReference "Quick" */,
 				C9DE60B2259A369F00582780 /* XCRemoteSwiftPackageReference "Nimble" */,
+				C9F30DFC259CF0EE0008E5FC /* XCRemoteSwiftPackageReference "FluentIcons-SPM" */,
 			);
 			productRefGroup = C961B00F24ADD112008AF274 /* Products */;
 			projectDirPath = "";
@@ -867,6 +871,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		C9F30DFC259CF0EE0008E5FC /* XCRemoteSwiftPackageReference "FluentIcons-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/chathil/FluentIcons-SPM.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -929,6 +941,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C9C6A733258274CF00A4F15A /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = Realm;
+		};
+		C9F30DFD259CF0EF0008E5FC /* FluentIcons */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9F30DFC259CF0EE0008E5FC /* XCRemoteSwiftPackageReference "FluentIcons-SPM" */;
+			productName = FluentIcons;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
