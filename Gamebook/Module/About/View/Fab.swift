@@ -14,10 +14,10 @@ struct Fab: View {
         Image(systemName: systemImage)
             .foregroundColor(.black)
             .padding(24)
-            .background(Color("primary"))
+            .background(Color(.primary))
             .cornerRadius(Dimens.cornerRadius)
             .padding()
-            .shadow(color: Color("accent").opacity(0.6), radius: 16, x: 0, y: 0)
+            .shadow(color: Color(.primaryVariant).opacity(0.6), radius: 16, x: 0, y: 0)
     }
 }
 

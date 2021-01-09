@@ -18,7 +18,7 @@ struct AboutScreen: View {
         ScrollView {
             VStack(alignment: .leading) {
                 ZStack(alignment: .topLeading) {
-                    Circle().frame(width: 90, height: 90).padding(.top, 90).foregroundColor(Color("primary"))
+                    Circle().frame(width: 90, height: 90).padding(.top, 90).foregroundColor(.primary)
                     user.photo
                         .resizable()
                         .scaledToFill()
@@ -27,7 +27,7 @@ struct AboutScreen: View {
                         .padding(EdgeInsets(top: -56, leading: 62, bottom: 62, trailing: -120))
                     Circle().frame(width: 198, height: 156)
                         .padding(EdgeInsets(top: 220, leading: 36, bottom: 0, trailing: 0))
-                        .foregroundColor(Color("primary"))
+                        .foregroundColor(.primary)
                 }
                 
                 HStack {

@@ -35,7 +35,7 @@ struct EditProfileScreen: View {
                                 .padding(24)
                                 .clipShape(Rectangle())
                                 .frame(height: 56)
-                                .background(Color("primary-black"))
+                                .background(Color(.onSurfaceDark))
                                 .cornerRadius(Dimens.cornerRadius)
                                 .padding([.leading, .trailing])
                         }
@@ -45,7 +45,7 @@ struct EditProfileScreen: View {
                                 .padding(24)
                                 .clipShape(Rectangle())
                                 .frame(height: 56)
-                                .background(Color("primary-black"))
+                                .background(Color(.onSurfaceDark))
                                 .cornerRadius(Dimens.cornerRadius)
                                 .padding([.leading, .trailing])
                         }
@@ -61,7 +61,7 @@ struct EditProfileScreen: View {
                             .frame(width: 24, height: 24, alignment: .center)
                             .foregroundColor(.white)
                             .padding(Dimens.smallPadding)
-                            .background(Color("primary-black"))
+                            .background(Color(.onSurfaceDark))
                             .clipShape(Circle()).clipped().offset(x: 32, y: 16)
                     }.onTapGesture {
                         self.sourceType = .photoLibrary
@@ -74,7 +74,7 @@ struct EditProfileScreen: View {
                         .padding(24)
                         .clipShape(Rectangle())
                         .frame(height: 56)
-                        .background(Color("primary-black"))
+                        .background(Color(.onSurfaceDark))
                         .cornerRadius(Dimens.cornerRadius)
                         .padding([.leading, .trailing])
                 }
@@ -84,7 +84,7 @@ struct EditProfileScreen: View {
                     .padding(24)
                     .clipShape(Rectangle())
                     .frame(height: 56)
-                    .background(Color("primary-black"))
+                    .background(Color(.surfaceDark))
                     .cornerRadius(Dimens.cornerRadius)
                     .padding([.leading, .trailing, .bottom])
                 
@@ -109,7 +109,7 @@ struct EditProfileScreen: View {
                                 self.showingForm = false
                             }
                         }
-                }.background(Color(presenter.isFormValid ? "primary" : "primary-black"))
+                }.background(Color(presenter.isFormValid ? .primary : .surfaceDark))
                 .cornerRadius(16)
                 .frame(height: 56)
                 .padding([.leading, .trailing])
@@ -123,7 +123,7 @@ struct EditProfileScreen: View {
                         .onTapGesture {
                             self.showingForm = false
                         }
-                }.background(Color("primary"))
+                }.background(Color(.primary))
                 .cornerRadius(Dimens.cornerRadius)
                 .frame(height: 56)
                 .padding([.leading, .trailing])

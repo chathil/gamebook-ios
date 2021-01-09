@@ -13,43 +13,53 @@ import Game
 import Combine
 import User
 import Common
+import Introspect
+import SwiftUIPager
 
 struct HomeScreen: View {
     var homeRouter: HomeRouter
     
-    @ObservedObject var gamesPresenter: GamesPresenter
-    @ObservedObject var favoriteGamesPresenter: FavoriteGamesPresenter
-    @ObservedObject var updateFavoriteGamesPresenter: UpdateFavoriteGamesPresenter
-    @ObservedObject var search: Search
-    
-    @EnvironmentObject private var user: User
-    
+    var gamesPresenter: GamesPresenter
+    var favoriteGamesPresenter: FavoriteGamesPresenter
+    var updateFavoriteGamesPresenter: UpdateFavoriteGamesPresenter
+    var search: Search
+    @State var page2: Int = 0
+    var data = Array(0..<10)
     @State private var navBarHidden: Bool = true
-    
     var body: some View {
-        ZStack(alignment: .bottom) {
-            List {
-                self.aboutLinkBuilder {
-                    AccountSnippet().padding(EdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 0))
+        VStack {
+            HStack {
+                SearchBar(query: .constant("")).padding(.trailing, Dimens.smallPadding)
+                Circle()
+                    .fill(Color("primary"))
+                    .frame(width: 32, height: 32).padding(.horizontal, Dimens.smallPadding)
+                Circle()
+                    .fill(Color("primary"))
+                    .frame(width: 32, height: 32).padding(.trailing, Dimens.padding)
+            }.padding(.top, 24)
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 24) {
+                    Text("Explore").foregroundColor(self.page2 == 0 ? .yellow : .white)
+                    Text("Stores").foregroundColor(self.page2 == 1 ? .yellow : .white)
+                    Text("Platforms").foregroundColor(self.page2 == 2 ? .yellow : .white)
+                    Text("Genres").foregroundColor(self.page2 == 3 ? .yellow : .white)
+                    Text("Publisher").foregroundColor(self.page2 == 4 ? .yellow : .white)
                 }
-                self.favoriteLinkBuilder {
-                    FavoriteRow()
-                }
-                FindRow(query: $search.query)
-                if self.gamesPresenter.isLoading {
-                    ForEach(0...5, id: \.self) { _ in
-                        GameRowLoading()
-                    }
+            }.padding()
+            Divider()
+            Pager(page: self.$page2,
+                  data: self.data,
+                  id: \.self) { page in
+                if page == 0 {
+                    ExploreView()
+                } else if page == 1 {
+                    StoresView()
+                } else if page == 2 {
+                    PlatformsView()
                 } else {
-                    ForEach(self.gamesPresenter.list, id: \.id) { game in
-                        self.detailLinkBuilder(for: game) {
-                            GameRow(game: game, isLiked: favoriteGamesPresenter.list.contains(game)) {
-                                updateFavoriteGamesPresenter.getList(request: game)
-                                favoriteGamesPresenter.getList(request: nil)
-                            }
-                        }
-                    }
+                    ExploreView()
                 }
+                
             }
             if !gamesPresenter.errorMessage.isEmpty {
                 GeometryReader { geo in
@@ -61,13 +71,10 @@ struct HomeScreen: View {
                     }
                 }.background(Color("primary-black")).cornerRadius(Dimens.smallCornerRadius).frame(height: 56).padding([.leading, .trailing])
             }
-        }
-        .onAppear {
+        }.onAppear {
             gamesPresenter.getList(request: nil)
             favoriteGamesPresenter.getList(request: nil)
-        }
-        .environment(\.defaultMinListRowHeight, 132).listSeparatorStyleNone()
-        .navigationBarTitle("")
+        }.navigationBarTitle("")
         .navigationBarHidden(self.navBarHidden)
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
             self.navBarHidden = true
@@ -127,5 +134,44 @@ class Search: ObservableObject {
                     gamesPresenter.getList(request: searchField)
                 }
             }.store(in: &cancellables)
+    }
+}
+
+extension View {
+    
+    func hideListRowSeparator() -> some View {
+        return customListRowSeparator(insets: .init(), insetsColor: .clear)
+    }
+    
+    func customListRowSeparator(
+        insets: EdgeInsets,
+        insetsColor: Color) -> some View {
+        modifier(HideRowSeparatorModifier(insets: insets,
+                                          background: insetsColor
+        )) .onAppear {
+            UITableView.appearance().separatorStyle = .none
+            UITableView.appearance().separatorColor = .clear
+        }
+    }
+}
+
+// MARK: ViewModifier
+
+private struct HideRowSeparatorModifier: ViewModifier {
+    
+    var insets: EdgeInsets
+    var background: Color
+    
+    func body(content: Content) -> some View {
+        content
+            .padding(insets)
+            .frame(
+                minWidth: 0,
+                maxWidth: .infinity,
+                maxHeight: .infinity,
+                alignment: .leading
+            )
+            .listRowInsets(EdgeInsets())
+            .background(background)
     }
 }

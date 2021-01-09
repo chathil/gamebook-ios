@@ -43,7 +43,7 @@ struct DetailScreen: View {
                             .resizable()
                             .scaledToFill()
                             .frame(width: 24, height: 24, alignment: .center)
-                            .foregroundColor(Color("primary"))
+                            .foregroundColor(Color(.primary))
                         Text(String(game.gameRating)).font(.body).bold()
                     }.padding(.leading)
                     
