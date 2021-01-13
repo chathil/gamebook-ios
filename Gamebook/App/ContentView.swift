@@ -8,7 +8,7 @@
 
 import SwiftUI
 import Core
-import Game
+import Games
 
 struct ContentView: View {
     let gamesPresenter: GamesPresenter

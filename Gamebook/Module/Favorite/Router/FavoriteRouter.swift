@@ -8,7 +8,7 @@
 
 import SwiftUI
 import Cleanse
-import Game
+import Games
 
 class FavoriteRouter {
     let gamePresenter: Factory<GamePresenter.AssistedSeed>
@@ -17,7 +17,7 @@ class FavoriteRouter {
         self.gamePresenter = gamePresenter
     }
     
-    func makeDetailView(for game: GameModel) -> some View {
+    func makeDetailView(for game: GamesModel) -> some View {
         return DetailScreen(gamePresenter: gamePresenter.build(game))
     }
 }

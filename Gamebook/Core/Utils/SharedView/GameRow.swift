@@ -9,7 +9,7 @@
 import SwiftUI
 import CoreData
 import SDWebImageSwiftUI
-import Game
+import Games
 
 private struct GameRowDimens {
     static let imageWidth: CGFloat = 112
@@ -20,7 +20,7 @@ private struct GameRowDimens {
 }
 
 struct GameRow: View {
-    let game: GameModel
+    let game: GamesModel
     let isLiked: Bool
     let like: () -> Void
     @State var imageFailure = false

@@ -9,11 +9,10 @@
 import SwiftUI
 import Core
 import Cleanse
-import Game
+import Games
 import Combine
 import User
 import Common
-import Introspect
 import SwiftUIPager
 
 struct HomeScreen: View {
@@ -91,7 +90,7 @@ struct HomeScreen: View {
 extension HomeScreen {
     
     func detailLinkBuilder<Content: View>(
-        for game: GameModel,
+        for game: GamesModel,
         @ViewBuilder content: () -> Content
     ) -> some View {
         ZStack {

@@ -9,7 +9,7 @@
 import SwiftUI
 import Cleanse
 import SDWebImageSwiftUI
-import Game
+import Games
 import Core
 
 struct DetailScreen: View {
@@ -59,7 +59,7 @@ struct DetailScreen: View {
                             }
                         }
                     }
-                    Text(game.descriptionRaw).font(.body).padding()
+                    Text("No code yet").font(.body).padding()
                     
                 } else {
                     DetailLoading()

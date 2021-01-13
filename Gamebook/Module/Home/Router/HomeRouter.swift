@@ -8,7 +8,7 @@
 
 import SwiftUI
 import Cleanse
-import Game
+import Games
 import Core
 import User
 
@@ -23,7 +23,7 @@ class HomeRouter {
         self.updateFavoriteGamesPresenter = updateFavoriteGamesPresenter
     }
     
-    func makeDetailView(for game: GameModel) -> some View {
+    func makeDetailView(for game: GamesModel) -> some View {
         return DetailScreen(gamePresenter: gamePresenter.build(game))
     }
     

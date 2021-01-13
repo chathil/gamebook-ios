@@ -8,7 +8,7 @@
 
 import Cleanse
 import UIKit
-import Game
+import Games
 
 struct AppComponent: Cleanse.RootComponent {
     typealias Root = PropertyInjector<SceneDelegate>

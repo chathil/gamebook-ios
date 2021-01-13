@@ -9,7 +9,7 @@
 import SwiftUI
 import Core
 import CoreData
-import Game
+import Games
 import Common
 
 struct FavoriteScreen: View {
@@ -35,7 +35,7 @@ struct FavoriteScreen: View {
 
 extension FavoriteScreen {
     func detailLinkBuilder<Content: View>(
-            for game: GameModel,
+            for game: GamesModel,
             @ViewBuilder content: () -> Content
         ) -> some View {
             ZStack {

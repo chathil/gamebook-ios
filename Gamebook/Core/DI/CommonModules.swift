@@ -10,7 +10,7 @@ import Foundation
 import Cleanse
 import SwiftUI
 import Core
-import Game
+import Games
 import User
 
 struct FoundationCommonModule: Module {
