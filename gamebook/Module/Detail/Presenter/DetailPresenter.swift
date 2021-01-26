@@ -17,6 +17,7 @@ class DetailPresenter: ObservableObject {
     @Published var game: GameModel
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
+    @Published var likedIds: [GameModel] = []
     
     init(detailUseCase: DetailUseCase) {
         self.detailUseCase = detailUseCase
@@ -35,6 +36,24 @@ class DetailPresenter: ObservableObject {
                 self.game = $0 ?? self.game
             }).store(in: &cancellables)
     }
+  
+    func likeDislike(game: GameModel) {
+        detailUseCase.likeDislike(game: game).receive(on: RunLoop.main)
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: {
+                    self.likedIds = $0
+                  }).store(in: &cancellables)
+      
+    }
+  
+    func initialLiked() {
+      detailUseCase.likedGames().receive(on: RunLoop.main)
+            .sink(receiveCompletion: {_ in},
+                  receiveValue: {
+                    self.likedIds = $0
+                  }).store(in: &cancellables)
+    }
+  
 }
 
 extension DetailPresenter {

@@ -44,6 +44,10 @@ struct DetailScreen: View {
                         .frame(width: 24, height: 24, alignment: .center)
                         .foregroundColor(Color("primary"))
                     Text(String(presenter.game.gameRating)).font(.body).bold()
+                    Spacer()
+                  LikeButton(iconSystemName: presenter.likedIds.contains(presenter.game) ? "heart.fill" : "heart").onTapGesture {
+                    presenter.likeDislike(game: presenter.game)
+                    }.padding(.trailing)
                 }.padding(.leading)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -68,6 +72,7 @@ struct DetailScreen: View {
             }
         }.onAppear {
             self.presenter.getGame()
+            self.presenter.initialLiked()
         }.edgesIgnoringSafeArea(.all)
     }
 }

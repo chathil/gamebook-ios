@@ -12,6 +12,8 @@ import Combine
 protocol DetailUseCase {
     func getGame() -> AnyPublisher<GameModel?, Error>
     func getGame() -> GameModel
+    func likeDislike(game: GameModel) -> AnyPublisher<[GameModel], Error>
+    func likedGames() -> AnyPublisher<[GameModel], Error>
 }
 
 class DetailInteractor: DetailUseCase {
@@ -29,6 +31,15 @@ class DetailInteractor: DetailUseCase {
     func getGame() -> AnyPublisher<GameModel?, Error> {
         return repository.getGame(id: game.id)
     }
+  
+    func likeDislike(game: GameModel) -> AnyPublisher<[GameModel], Error> {
+        return repository.likeDislike(game: game)
+    }
+    
+    func likedGames() -> AnyPublisher<[GameModel], Error> {
+        return repository.likedGames()
+    }
+  
 }
 
 extension DetailInteractor {
@@ -49,6 +60,7 @@ extension DetailInteractor {
 }
 
 class DetailInteractorPreview: DetailUseCase {
+  
     func getGame() -> AnyPublisher<GameModel?, Error> {
         return Future<GameModel?, Error> { completion in
             completion(.success(GameResponse.fakeGame.toDomainModel()))
@@ -58,4 +70,17 @@ class DetailInteractorPreview: DetailUseCase {
     func getGame() -> GameModel {
         return GameResponse.fakeGame.toDomainModel()
     }
+  
+    func likeDislike(game: GameModel) -> AnyPublisher<[GameModel], Error> {
+        return Future<[GameModel], Error> { completion in
+            completion(.success([GameResponse.fakeGame.toDomainModel()]))
+        }.eraseToAnyPublisher()
+    }
+    
+    func likedGames() -> AnyPublisher<[GameModel], Error> {
+        return Future<[GameModel], Error> { completion in
+            completion(.success([GameResponse.fakeGame.toDomainModel()]))
+        }.eraseToAnyPublisher()
+    }
+  
 }
