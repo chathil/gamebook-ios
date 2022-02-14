@@ -15,14 +15,15 @@ public struct GetGameRemoteDataSource: DataSource {
     public typealias Request = Int32
     
     public typealias Response = GameResponse
-    
+    let apiKey = ""
     public func execute(request: Request?) -> AnyPublisher<Response, Error> {
         guard let request = request else {
             fatalError("an id is needed")
         }
         return Future<GameResponse, Error> { completion in
             if let url = URL(string: "\(API.baseUrl)/\(request)") {
-                AF.request(url).validate().responseDecodable(of: GameResponse.self) { response in
+              AF.request(url, interceptor: ApiKeyInterceptor())
+                .validate().responseDecodable(of: GameResponse.self) { response in
                     switch response.result {
                     case .success(let value): completion(.success(value))
                     case .failure: completion(.failure(URLError.invalidResponse))

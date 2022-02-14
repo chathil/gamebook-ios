@@ -96,6 +96,7 @@ public class User: ObservableObject {
         if !phoneNumber.isEmpty {
             completion += 0.2
         }
+        // I know
         if photo != nil {
             completion += 0.2
         }
@@ -107,7 +108,6 @@ public class User: ObservableObject {
         let fileURL = documentsDirectory.appendingPathComponent(User.photoName)
         guard let data = image?.jpegData(compressionQuality: 1) else { return }
         
-        //Checks if file exists, removes it if so.
         if FileManager.default.fileExists(atPath: fileURL.path) {
             do {
                 try FileManager.default.removeItem(atPath: fileURL.path)

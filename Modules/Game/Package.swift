@@ -31,7 +31,8 @@ let package = Package(
                 "Core",
                 "Alamofire",
                 "Cleanse"
-            ]),
+            ],
+            resources: [.process("RAWG-Info.plist")]),
         .testTarget(
             name: "GameTests",
             dependencies: ["Game", "Nimble"])

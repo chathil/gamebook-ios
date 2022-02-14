@@ -95,9 +95,3 @@ struct GameRowLoading: View {
         }.padding(GameRowDimens.gameRowEdgeInsets)
     }
 }
-
-//struct GameRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GameRow(game: GameResponse.fakeGame.toDomainModel(), isLiked: false, like: {})
-//    }
-//}

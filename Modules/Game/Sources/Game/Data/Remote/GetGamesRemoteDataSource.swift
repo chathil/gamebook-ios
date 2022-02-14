@@ -21,7 +21,7 @@ public struct GetGamesRemoteDataSource: DataSource {
             let queryMap = ["search": request]
             return Future<GamesResponse, Error> { completion in
                 if let url = URL(string: API.baseUrl) {
-                    AF.request(url, parameters: queryMap).validate().responseDecodable(of: GamesResponse.self) { response in
+                    AF.request(url, parameters: queryMap, interceptor: ApiKeyInterceptor()).validate().responseDecodable(of: GamesResponse.self) { response in
                         switch response.result {
                         case .success(let value): completion(.success(value))
                         case .failure: completion(.failure(URLError.invalidResponse))
@@ -32,7 +32,7 @@ public struct GetGamesRemoteDataSource: DataSource {
         } else {
             return Future<GamesResponse, Error> { completion in
                 if let url = URL(string: API.baseUrl) {
-                    AF.request(url).validate().responseDecodable(of: GamesResponse.self) { response in
+                  AF.request(url, interceptor: ApiKeyInterceptor()).validate().responseDecodable(of: GamesResponse.self) { response in
                         switch response.result {
                         case .success(let value): completion(.success(value))
                         case .failure: completion(.failure(URLError.invalidResponse))
